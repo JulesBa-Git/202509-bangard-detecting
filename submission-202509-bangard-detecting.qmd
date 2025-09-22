@@ -1,0 +1,352 @@
+# Introduction{#sec-intro}
+There are inherent limitations of clinical trials (RCTs) done before a medication is authorised in terms of cost, surveillance time, size and a lack of diversity of patients included (e.g. that pregnant woman, children and elderly often are not included) [@sanson2007limitations]. Another issue is that RCTs are limited in their ability to detect rare adverse drug reactions (ADRs) and potential drug interactions (DDIs) since they usually only include a few thousand participants at most. Moreover, the use of multiple medications is often an exclusion criterion in RCTs, leaving gaps in the assessment of polypharmacy risks. As a result, tested drug combinations tend to be limited to those where physicians and pharmacologists have existing clinical experience or hypotheses about potential interactions [@van2002assessment]. This means that monitoring of the safety of medications and the potential for DDIs after marketing is essential. This monitoring is often referred as post-authorization pharmacovigilance.
+
+Elderly individuals are commonly prescribed multiple medications due to the increasing prevalence of comorbidities associated with aging. One study suggested that patients aged $75$ or older in Austria took on average $7.5$ drugs [@schuler2008polypharmacy]. Among this demographic, $10\%$ of hospitalizations were attributed to ADRs, and $18.7\%$ of these ADRs were caused by a combination of more than one drug, a drug-drug interaction. More broadly, a meta-analysis attributed approximately $22.2\%$ of hospitalizations caused by adverse drug reactions to DDIs [@dechanont2014hospital].
+
+Disproportionality analysis (DA) encompass widely used methods in pharmacovigilance to detect ADRs by assessing the frequency of adverse events associated with specific drug consumption relative to what would be expected. Most established disproportionality methods like the proportional reporting ratio (PRR)[@evans2001use], reporting odds ratio (ROR)[@vanPuijenbroek2002ACO], Bayesian Confidence Propagation Neural Network (BCPNN) [@bate1998bayesian],  and the Gamma Poisson Shrinker (GPS) [@dumouchel1999bayesian] allow for the identification of signals that warrant further investigation in the context of single drug assessment. Fewer DAs methods are available to use for multiple drugs consumption, such as the $\Omega$ shrinkage method [@noren2008statistical]. This method allows the use of a DA measure in order to detect sets of the type *Drug-Drug-Adverse Event* and stands as the standard measure when it comes to detecting the interactions of two drugs. PRR have also been adapted to DDIs [@wang2020propensity]. The chi-square method [@gosho2017utilization] allows to control the false positive rate when few patients represent the event in the database.
+
+
+Other methods than DA measures exist in order to detect DDIs. Among them, well known methods encompass logistic models [@van2000detecting;@van1999signalling] and association rules methods [@noguchi2018new;@ibrahim2016mining]. One can refer to multiple reviews for a more detailed overview of existing methods [@ibrahim2021signal;@hauben2023artificial]. While previous work showed that further practical experiences should be of interest for high-order drug interaction testing [@Tekin2018prevalence], it is hard to know which exact combination one should test and easy to miss an important combination in the overwhelming space of high-order drug cocktails. Our R package, _emcAdr_, guides pharmacology researchers toward drug combinations that require more rigorous monitoring.
+
+
+# Methods
+
+## ATC Tree and Cocktail Definition{#sec-cocktail}
+
+Multiple classifications of drug active ingredients exist, one being the ATC classification. This system is structured hierarchically and can be represented as a tree with five levels containing, at the time, $6809$ nodes. The leaves of this tree are the active ingredients, while the first level consists of nodes representing organs or systems affected by the descendant active ingredients. The remaining nodes correspond to therapeutic or pharmacological families [@noguchi2020improved].
+
+By applying a Depth-First Search algorithm to enumerate each node of the ATC tree, we can define a drug cocktail as a set of integer corresponding to specific nodes in the tree.  More formally, a cocktail $C$ of size $k$ is defined by $C = (x_1, \dots, x_k) \in \Delta^{k}$ where $k \in \mathbb{N}$ , and $\Delta$ represents the set of numbered nodes of the ATC tree $T$. @fig-mut shows examples in a simplified tree, the green nodes denoting the considered cocktail.
+
+Considered cocktails can include internal nodes of the tree (thus representing families of active ingredients), allowing for the detection of more general signals. For example, paracetamol might send a weak signal, while if we move up the tree, analgesics as a whole could represent a stronger and more general signal. Therefore, all patients taking at least one drug from this drug family will be considered in the computation of the risk.
+
+
+## Cocktail Risk Characterization{#sec-risk}
+
+In the field of pharmacology, accurately characterizing the risk associated with drug administration is a hard task.
+Highly used methods to evaluate drug interactions are limited to the evaluation of two concomitant drugs [@noren2008statistical; @wang2020propensity], while other, like the PRR [@evans2001use; @wang2020propensity], are biased toward drugs or drugs cocktails taken by few patients, assigning high risk to them (also see @fig-comparison_score). In order to mitigate this phenomenon, we propose to use the hypergeometric distribution to evaluate the hazard of medication cocktails. Consider a dataset of $N$ patients, among which $K$ experience the adverse event AE. Let $n_C$ be the number of people taking a cocktail $C$ and $x$ the number of patients taking $C$ and experiencing AE . We define the risk to be
+$$
+H(C) = -\log(\mathbb{P}(X \ge x))
+$$
+where $X \sim \mathcal{H}(n_C, K, N)$. This measure is the log p-value under the null hypothesis that the number of people with AE in a uniform sample of $n_C$ out of $N$ people follow the hypergeometric distribution. It has the advantage to take into account the relative number of patients taking the cocktail $C$. For example, $H(C)$ will be greater for a cocktail taken by $100$ patients, among whom $50$ experience AE, than for a cocktail taken by 10 patients, among whom 5 experience AE. In contrast, the PRR @evans2001use makes no distinction between the two.
+
+Such measures are commonplace in bioinformatics, especially when working on functional enrichment analysis @grossmann2007improved.
+
+## Signal Identification
+
+### High-risk Drug Cocktails Identification{#sec-genetic}
+
+Due to combinatorial complexity of high-order drug cocktails, it is obviously not possible to compute $H(C)$ for each possible cocktail $C$ included in the dataset. Instead, to explore the space of cocktails and locate those at high-risk of AE, we use a genetic algorithm [@petrowski2017evolutionary]. This algorithm result in a list of signals of drug cocktails. The main idea is to simulate the evolution of a population of cocktails according to the principle of natural selection. The goal is to search for the most performing individuals with respect to an evaluation criterion based on $H$. The steps of the algorithm are the following, the algorithm repeating them until a user-defined number of iterations is reached.
+
+Initialization. 
+: The genetic algorithm's population consists of $m$ cocktails. These cocktails are randomly initialized and can vary in size.
+
+Evaluation and selection.
+: At each iteration, the population undergoes an evaluation and selection phase. The evaluation computes the score $H(C)$ for each cocktail $C$ in the population. In order to avoid all the cocktail of the population to converge to a single high-score cocktail, scores of similar cocktails are penalized as further explained in @sec-diversity. The scores enable tournament selections, where $d$ individuals are drawn from the population, and the one with the highest $H(C)$ among these $d$ is retained for the reproduction phase ; where $d$ is a hyperparameter. Such tournaments are conducted until the desired number of individuals for reproduction is reached.
+
+Modification and population replacement.
+: The evolution of the population occurs in two stages, each aiming to improve performance according to the evaluation criterion. First, a crossover operation allows two cocktails to exchange information. Here, the crossover involves exchanging sub-trees between two cocktails as follows:
+: * an internal node $v$ of the ATC tree is randomly selected;
+: * the nodes of the subtree rooted at $v$ are exchanged between the two sequences.
+
+: After performing the crossover, a mutation is applied to the resulting individuals, chosen from two types. The first type is a local mutation which changes a randomly selected node of the cocktail to one of its free neighboring nodes. This mutation is further explained in @sec-MCMC. The second type is an addition/deletion mutation which operates as follows, with $k$ being the cocktail length and $\alpha$ a chosen hyperparameter:
+: * with probability $\min(1,\frac{\alpha}{k})$, a node uniformly drawn from $\Delta$ is added to the sequence;
+: * with probability $1 - \min(1,\frac{\alpha}{k})$, a uniformly drawn node from the cocktail is removed.
+
+: An example of crossover and mutations can be seen on @fig-mut (a), (c) and (d).
+
+![Cocktail modifications used for the genetic algorithm (a, c and d) and the MCMC algorithm (b and c). Green nodes are part of considered cocktails. In Crossover, the orange node represents the selected internal node whose subtrees are being swapped. In local mutations, orange nodes represent legal moves](figures/all_mutations.svg){#fig-mut}
+
+### Distance between drug cocktails definition and cocktail penalisation{#sec-diversity}
+
+When a signal is identified, the genetic algorithm may converge to a population consisting entirely of that cocktail. To avoid this uniformization phenomenon, similar cocktails are penalized in the evaluation phase as follows,
+
+$$H_{pen}(C) = \frac{H(C)}{\sum_{C_i \in \mathcal{C}} \text{Sim}(C,C_i) }$$
+
+The computation of the similarity $\text{Sim}(C,C')$ is based on a distance inspired by the Levenshtein distance [@levenshtein1966binary]. However, unlike the traditional Levenshtein distance, sequences are treated as unordered sets. For two drug cocktails, $C_1$ and $C_2$, of sizes $n_1$ and $n_2$, the distance $d(C_1 , C_2)$ is defined as the minimal cost required to transform $C_1$ into $C_2$ using three elementary operations.
+
+* $\text{Ins}_a(C)$ consists of adding $a$ to the cocktail $C$.
+* $\text{Del}_a(C)$ consists of deleting $a$ from the cocktail $C$.
+* $\text{Sub}_{a,b}(C)$ consists of substituting $a \in C$ by $b$.
+
+An associated cost is defined for each operation.
+
+
+Substitution.
+: The cost associated with the substitution operation is chosen to be consistent with the conceptual similarity of cocktails. If $a$ is a drug belonging to $C$, the cost should increase as the drug $b$ diverges further from drug $a$. For example, if $a$ is a drug, and $b$ a drug family that contains $a$, the cost should be moderate. Conversely, if $b$ is a drug family not containing $a$ the cost should be higher. This distance is thus defined by the maximal distance between $a$ and $b$ to their Lowest Common Ancestor.
+    
+Insertion, Deletion.
+: The deletion and insertion cost are chosen as $\frac{depth(T)}{2}$. This choice implies that a substitution always costs less than a deletion followed by an insertion. The latter are used only when the two cocktails do not have the same length. 
+
+A transformation $f$ from $C_1$ to $C_2$ is a composition of elementary operations that go from $C_1$ to $C_2$. The associated cost $\text{cost}(f)$ is defined as the sum of the cost of the operations used in $f$. Finally, $d(C_1,C_2) = \min\limits_{f} \text{cost}(f : f(C_1) = C_2 )$.
+
+Finally, the maximum distance between $C_1$ and $C_2$ being $(n_1 + n_2) \frac{depth(T)}{2}$,  we define the similarity as 
+$$ Sim(C_1,C_2) = 1 - \frac{2D(C_1,C_2)}{(n_1 + n_2)depth(T)}$$
+
+The computation of the similarity is achievable in $\mathcal{O}(n \times m \times   \text{depth}(T) + |\Delta|)$ operations in the worst case, where $n$ and $m$ denotes the size of the cocktails $C_1$ and $C_2$, respectively. The algorithm to compute the similarity is detailed in the @sec-appA (see @alg-dist).
+
+### Output clustering{#sec-clust}
+
+Despite the diversity mechanisms integrated into the genetic algorithm, not all drug cocktails retrieved within the genetic algorithm population are unique. It is moreover common to encounter solutions that are merely variations of others, differing only by transformations such as changing a node in the ATC tree to its parent or child. To streamline analysis and enhance the efficiency, a post-treatment clustering of similar drug cocktails is implemented. This method allows to focus on the most risky cocktails within each cluster or to interpret pharmaceutically clusters rather than individual cocktails.
+
+To do so, drug cocktails are embedded into a two-dimensional space using the UMAP algorithm [@mcinnes2018umap], which aims to preserve similarity in the latent space. This representation enables the effective use of conventional machine learning clustering algorithms in $\mathbb{R}^2$. Specifically, the DBSCAN algorithm [@ester1996density] is applied to identify clusters of similar drug cocktails with an intuitive way of choosing hyperparameters.
+
+
+## P-Value Assignment for Drug Cocktails{#sec-MCMC}
+
+Once a list of signals has been established by the genetic algorithm, an important step of the analysis is the attribution of a p-value to their scores to decide if they are significant. Such a p-value measures the probability that a randomly chosen cocktail has a score greater than the observed score. However, a naive sampling of cocktails leads to essentially only cocktails taken by no patient in the dataset. We therefore use a Metropolis-Hastings MCMC algorithm to sample under a null distribution of scores of cocktails of a given size. Indeed, such a method can be used by conditioning on the fact that all visited cocktails are present in the dataset [@au2001estimation].
+
+To employ such an algorithm, it is necessary to define a state space $\mathcal{C} = \{C_{1}, \dots, C_{p}\}$, a computable target measure $f(C_{i})$, and conditional laws $q(.|C_{i})$ under which simulation is possible and new states can be proposed.
+
+State set.
+: The state set is made of all cocktails of $k$ drugs for a fixed $k$.
+
+
+Proposal law.
+: The proposal law is defined as a mixture of two mutation laws of the current cocktail. They operate as follows:
+: * Random mutation consists of a completely random movement in the cocktail space.
+: * Local mutation involves a local movement relative to the structure of the drug tree. Here, a node $x_p$ of the state $C_i$ is changed to one of its free neighboring nodes.
+
+At each iteration, the random and local mutations have probability $p_R$ and $1-p_R$, where $p_R$ is a hyperparameter.  
+    
+@fig-mut (b, c) presents examples of a random and a local mutations.
+
+State evaluation.
+: The evaluation of a drug cocktail is based on the score $H(C)$. The chosen target measure is then:
+$$f_{T}(C_i) = \frac{1}{Z(T)} \times {e^{\frac{H(C_i)}{T}}}$$
+
+: where $Z(T) = \sum_{C} e^{\frac{H(C)}{T}}$. $T$ is a parameter known as temperature, which modulates space exploration by more readily accepting cocktails with moderate scores (high $T$) or, conversely, by strongly favoring combinations of drugs with high scores (low $T$).
+
+: The acceptance probability of cocktail $C_{i+1}$ from cocktail $C_{i}$ is given by: 
+
+$$\min\left(1,\frac{f_T(C_{i+1})}{f_T(C_{i})} \times \frac{q(C_{i}|C_{i+1})}{q(C_{i+1}|C_{i})}\right)$$
+
+The theory related to the Metropolis-Hastings algorithm [@Robert2004] ensures that the empirical distribution of $f_T(C_i)$ for the constructed cocktail chain converges to the distribution of $f_T(C)$. A very long realization of such a walk, therefore, allows for the approximation of the distribution that can be used to determine an empirical p-value for the score of a cocktail of interest. This enable the possibility to say whether or not a high-risk is truly significant (e.g. among the top 5\% of scores). It defines what a high risk is in our case.
+
+
+
+## Datasets{#sec-datasets}
+
+### Simulated data{#sec-simu_data}
+
+Multiple datasets were simulated to evaluate the method performance against known outcomes. The datasets, designed to challenge the algorithm, simulate various patient scenarios. Each patient record includes prescribed medications and the corresponding occurrence of an adverse event $AE$.
+
+The first dataset is composed of 200,000 patients, and has the following characteristics: 
+
+* $1\%$ of the patients take a size-3 drug cocktail $C_1$ and have a $\frac{1}{100}$ chance of having $AE$.
+* $1\%$ take a size-3 drug cocktail $C_2$ and have a $\frac{1}{200}$ chance of having $AE$.
+* $1\%$ take a size-2 drug cocktail $C_3$ and have a $\frac{1}{100}$ chance of having $AE$.
+* $1\%$ take a size-2 drug cocktail $C_4$ and have a $\frac{1}{200}$ chance of having $AE$.
+
+
+A small percentage of the dataset ($1.5 \%$ per combination) are combinations of 2 out of the 3 drugs from $C_1$ and $C_2$, but with no risk of $AE$. This helps to mitigate the false identification of sub-cocktails of $C_1$ and $C_2$ as high risk cocktail because those who take two drugs of these cocktails will almost surely take the remaining drug of the cocktail.
+
+The remaining $87\%$ of the datasets consists of patients assigned with random cocktails drawn uniformly. The size $s$ of each cocktail is drawn according to a Poisson distribution with $\lambda = 4$ (mean size of drugs cocktail taken by patients in the dataset). For each cocktail, $s$ nodes of the ATC tree are selected uniformly, with each combination assigned an adverse event with probability $\frac{1}{15000}$.
+
+Three others datasets were similarly constructed, the difference lying in the size of the cocktails inducing $AE$. One has only size-two cocktails, other only size-three cocktails and the last one, size-two, three and four cocktails.
+
+
+### FAERS Data{#sec-FAERS}
+
+The method was also assessed using the FAERS dataset, which consists of ICSRs submitted by healthcare professionals, consumers, and manufacturers. These reports include details on patient drug intake and the side effects experienced. We deployed our methods on FAERS data from the second quarter of $2013$ to the second quarter of $2015$.
+
+Significant refinement of the FAERS data was required. Duplicate reports were removed, retaining only the report with the most recent ID. Subsequently, a link was established between the prescribed drugs and the ATC codes of each active ingredient. This process involved matching drug names to their respective active ingredients and converting these ingredients to their corresponding ATC codes. The DiANA dictionary [@fusaroli2024enhancing] facilitated the standardization of FAERS drug names to ATC codes. Reports with unmatchable drug names in the DiANA dictionary were excluded, reducing the dataset from 2,043,231 to 1,612,931 patients.
+
+For this study, we focused on myopathy as the selected adverse event outcome. It is a clinically concerning condition with a sufficient number of reported cases in the dataset ($536$ cases). To validate our results, we compared the identified drug-myopathy associations with known drugs already established to cause myopathy [@miernik2024drug; @hall2011musculoskeletal @valiyil2010drug]. Code for data refinement is available [on GitHub](https://github.com/JulesBa-Git/FAERS-xml-parser).
+
+
+# Results
+
+## Score Comparison
+
+To support the use of the hypergeometric score $H(C)$ introduced in @sec-risk, we compared it to other risk scores on simulated data. @fig-comparison_score illustrates the performance of various risk scoring methods for detecting high-risk drug combinations, including the Relative Risk (RR), PRR, our Hypergeometric Score $H(C)$, CSS, and Omega Shrinkage. Each subplot displays the score values for cocktails representing true solutions (green) and cocktails not representing true solutions (red). The bottom-right panel presents the Precision-Recall (PR) curve, comparing the detection power of the scores in identifying high-risk cocktails. PRR is a special score because its value is either one or zero, which allows the computation of only one value of precision and recall. PRR is therefore represented by a single point rather than a PR curve. 
+
+The scores that assigned higher risk to solutions known to give the AE (true solutions) were the hypergeometric score and the Omega Shrinkage measure. Other scores appeared to assign higher risk to cocktails that are not true solutions. It must be emphasized that the Omega Shrinkage measure is difficult to compare using a threshold, as the original article [@noren2008statistical] suggests signaling a cocktail when the score exceeds zero. However, in the simulations, the computed score never exceeded zero, as depicted by the x-axis of its jitter plot. Despite these considerations, these two methods are the least biased toward cocktails taken by only a few patients.
+
+
+Moreover among the listed scores, the hypergeometric score is the only one that can be easily generalized to larger sized cocktails. Another method has been proposed in order to compute scores of larger size cocktails [@zhang2015mixture], but the  computational cost constrains the authors to limit the study to the $20$ most distributed drugs.
+
+![Comparison of scores for cocktail of size-two. Each dots denotes a cocktail while his risk computed on the formerly presented synthetic dataset (@sec-simu_data) is showed on the x-axis. Red dots represent cocktails that do not induce adverse event (negative controls), green ones represent cocktail inducing adverse event (positive controls). The bottom-right corner shows the Precision-Recall curves for each score. The perfect classification corresponds to the upper right corner. The areas under the curves allow to compare different methods](figures/comparison_metrics_omega_025_compressed.svg){#fig-comparison_score}
+
+
+
+
+## Application to  the Simulated Dataset
+
+### Estimation of Risk Distribution
+
+Risk distribution was estimated for size-two drug cocktails on @sec-simu_data dataset. Estimation of risk distribution for higher cocktails sizes are possible but it is nearly impossible to compare it to the true distribution as it is computationally prohibitive to obtain. The distribution estimated by the MCMC algorithm, is compared to the true risk distributions in @fig-distri_simu.
+
+The left panels display the distributions of risk scores for both the estimated (top-left) and true (bottom-left) risk values. Both distributions share a similar shape, with the majority of risk scores concentrated at low values, as $95\%$ of the scores fall below 11. However, some differences can be observed, particularly in the tail of the distribution, where cocktails of higher risks are under-represented in the estimated distribution.
+
+![Comparison of estimated and true risk distributions for size-two drug cocktails. Left panels show comparison of risk distribution among size-two cocktails, right panels allows to compare probabilities and quantiles of both distributions](figures/simu_plt.svg){#fig-distri_simu}
+
+The right panel of @fig-distri_simu presents a Probability-Probability (PP) plot (top) and a Quantile-Quantile (QQ) plot (bottom), comparing the quantiles and probabilities of the estimated and true risk distributions. While the right panel of the figure demonstrates good agreement at lower risks, where most of the data lie, deviations at higher risk values suggest that the estimated distribution slightly underrepresents the risk for more extreme values.
+
+Results indicate that the method performs well in estimating risk scores for the majority of cocktails, capturing the overall risk distribution with reasonable accuracy. The slight underestimations which are present for high-risk cocktails are not a problem since the interest of the method is to assign p-values. P-values are still reliable as shown in the PP-plot, @fig-distri_simu. Consequently, we can assign robust empirical p-values to any size-two cocktails based on their risks. Furthermore the calibration under the null hypothesis for the p-values attributed by the algorithm is assessed in @sec-appB.
+
+### Genetic algorithm output and clustering
+
+The genetic algorithm was applied to the simulated dataset to identify high-risk drug cocktails. Multiple runs of the algorithm were conducted using different hyperparameter sets to ensure robustness, and the results were subsequently combined to create a comprehensive list of high-risk cocktails.
+
+The genetic algorithm successfully identified nearly all high-risk size-two and size-three drug cocktails in the simulated dataset (@fig-cluster_simu). For size-two cocktails, the algorithm consistently found the exact high-risk combinations. However, for size-three cocktails, the algorithm sometimes identified cocktails that were very close to the true high-risk combinations, missing only one drug from the correct cocktail in a few cases (oftentimes, choosing parent nodes instead of the actual drugs).
+
+
+To streamline the analysis of the large set of results, significant cocktails were filtered using the empirical p-value by setting a threshold of $5\%$. Clustering techniques were then applied to group similar cocktails together. As discussed in @sec-clust, the UMAP algorithm has been used for dimensionality reduction, followed by the DBSCAN clustering method. This post-processing step allows to reduce redundancy by grouping cocktails that differed only slightly, such as by substituting a drug for another within the same pharmacological family. Such cocktail would have similar medical interpretations.
+
+![Clustering of high-risk drug cocktails identified by the genetic algorithm on the simulated dataset. Each dot represents a drug cocktail, true cocktail solutions are the centers of the squares](figures/clustering_simu_svg.svg){#fig-cluster_simu}
+
+@fig-cluster_simu illustrates the results of the clustering process. Each point represents a drug cocktail, and different clusters are colored distinctly to highlight groups of similar cocktails. The clustering of solutions effectively captured the diversity of the drug cocktails identified by the genetic algorithm. We can see that the algorithm effectively found expected solutions or very similar solutions. In addition, the number of clusters corresponding to cocktails that are not supposed to induce an adverse event is limited, as only clusters $3$, $4$ and $5$ correspond to cocktails that are not meant to be found. It is possible to argue that the second cluster may be further split into two distinct clusters, one corresponding to the real solution while the other would correspond to no real solutions.
+
+## Application to the FAERS Spontaneous Reporting Data
+
+### Estimation of Risk Distribution
+
+The risk estimation method was applied to the FAERS spontaneous reporting dataset presented in @sec-FAERS. @fig-qqplot_FAERS presents a comparison between the estimated risk distribution and the true risk distribution for size-two drug cocktails. The left panel of the figure shows the distributions of risk scores, while the right panel presents the QQ plot and the PP plot, comparing the quantiles and probabilities of both distributions.
+
+![Comparison of estimated and true risk distributions for size-two drug cocktails on the FAERS dataset presented @sec-datasets. Left panels show comparison of risk distribution among size-two cocktails, right panels allows to compare probabilities and quantiles of both distributions](figures/FAERS_plt.svg){#fig-qqplot_FAERS}
+
+The histogram reveals that the estimated distribution aligns well with the true distribution for the majority of cocktails with lower risk scores. However, deviations begin to emerge in the tail of the distribution. Specifically, 15 of the riskiest cocktails in the true distribution were not captured by the estimated distribution as we see in the QQ plot. This explains the observed shift in the QQ plot at the highest quantiles since higher risk cocktails have not been found by the MCMC algorithm, highlighting the need of a complementary method like the genetic algorithm in order to find riskiest cocktails.
+
+Despite this slight deviation, the empirical p-values remain robust for both lower and higher-risk cocktails as shown by the PP-plot in the @fig-qqplot_FAERS.
+
+
+### Genetic algorithm output and clustering
+
+The genetic algorithm was applied on the FAERS data focusing on the myopathy AE  by running $180$ parallel executions of the genetic algorithm on varying population sizes (from $100$ to $1000$ cocktails per generation). The whole procedure run in less than $8$ hours on a $24$-core server. 
+
+Cocktail sizes present in the merged final populations vary from $1$ to $6$. The MCMC algorithm was run for each cocktail size in this range to assign an empirical p-value to each solution. All solutions having a p-value lower than $0.05$ were kept. No multiple testing correction was made in order to avoid false negatives, that is disregarding interesting cocktails, even if this may inflate the number of false positives. 
+$682$ drug cocktails composes the final list. 
+The previous clustering procedure was applied, leading to $15$ clusters. 
+
+To validate the results, some drugs or drug families known to be linked to myopathy adverse events were considered, that is hypolipemic drugs, Colchicine, corticosteroids, Ciclosporine, Beta blocking agents, Fluoroquinolones, and anti-malaria drugs [@miernik2024drug; @hall2011musculoskeletal; @valiyil2010drug]. The first $150$ solutions were tagged with the families they correspond to, if any.  
+
+The final result is a table of $682$ rows, one per selected cocktail, indicating its composition, the number of patients taking it, the number of patient taking it and facing myopathy, hypergeometric and RR score. It also contains the cluster it belongs to and the tagged families. The entire table is available [on this link](https://docs.google.com/spreadsheets/d/1TmbrExi26QNr2TmvltmEzyl_EQht3fIsrtsWrAqmRik/edit?gid=2108693123#gid=2108693123). @tbl-cluster_table summarizes the cluster assignments for the top $150$ cocktails identified in the genetic algorithm. Among these, eleven cocktails could not be assigned to any drug or drug family listed in the table headers. Note that a cocktail can be associated with more than one drug or drug family.
+
+
+|  Cluster   |  Hypolipemic Drugs  |   Colchicine | Steroids   |   Cyclosporine  | Beta blocking agents |  Domperidone | Fluoroquinolones |
+|:----------:|:-------------------:|:------------:|:----------:|:---------------:|:--------------------:|:------------:|:----------------:|
+|      1     |         **31**      |      0       |       3    |         0       |      0               |       0      |      4           |
+|      2     |            0        |    **11**    |       0    |         4       |      0               |       0      |      0           |
+|      3     |            7        |      0       |       0    |         0       |   **19**             |       0      |      0           |
+|      4     |            0        |      0       |       0    |         0       |      0               |     **50**   |      0           |
+|      5     |            0        |      0       |       0    |         0       |      0               |     **19**   |      0           |
+|      6     |            0        |      0       |       0    |         0       |      0               |       0      |     **4**        |
+
+: Summary of clustering applied to the identified solutions. Each row corresponds to a cluster. The $150$ cocktails with the highest risk were analyzed. Box $(i,j)$ in the table represents the number of cocktails in cluster $i$ that include the drug or drug family $j$ {#tbl-cluster_table}
+
+This table highlights the ability of the clustering method to group cocktails with similar pharmacological interpretations and showcase the method's capability to detect known signals from the FAERS dataset. Specifically, cluster $1$ corresponds to cocktails containing Hypolipemic Drugs, cluster $2$ to Colchicine and Cyclosporine, cluster $3$ to beta blocking agents and  cluster $6$ to Fluoroquinolones. These clusters align with previously reported pharmacological associations [@miernik2024drug]. Similarly, clusters $4$ and $5$ correspond to Domperidone-containing cocktails which have been associated with adverse effects, including potential cardiac complications, as reported by the British Medicines and Healthcare products Regulatory Agency [@MHRA2014].
+
+Interestingly, additional drug families reported in [@miernik2024drug], such as anti-malarial drugs, were also identified but at later ranks. For instance, anti-malarial drugs are primarily grouped in cluster $9$, as shown in the complete solution table. 
+
+
+# Conclusion
+
+As co-medication becomes increasingly common, there is a growing need for methods capable of detecting signals of harmful drug combinations from the available large databases for further assessment. The proposed method addresses this need by identifying signals and assigning them a p-value using a hypergeometric disproportionality analysis measure. Additionally, the method enables the identification of broader signals within the ATC hierarchy by proposing "cocktails" of not only active substances but also chemical, therapeutic, and anatomical families, leveraging the hierarchical classification of active substances.
+
+ Application on synthetic datasets demonstrated that using the hypergeometric score reduces the false positives from cocktails taken by a small number of patients, enhancing the robustness of the measure. The results on these datasets of our MCMC algorithm to estimate the distributions of cocktail risks were encouraging, as the estimated distributions closely aligned with the true distributions, indicating reliable p-value assignment. Furthermore, the genetic algorithm effectively identified the majority of the harmful cocktails, with a high success rate, highlighting its efficiency in navigating the large solution space.
+
+Applying this method to previous FAERS data for the myopathy adverse event yielded promising results. A literature review confirmed the intersection between the identified signals and drugs known to have a higher likelihood of causing myopathy, demonstrating the effectiveness of the proposed methodology. Results also indicate that certain drug combinations are more strongly associated with myopathy than individual medications. Notably, the cyclosporine/colchicine combination exhibits a higher hypergeometric score (73.1 vs. 63.4) and PRR (879.4 vs. 57.1) compared to colchicine alone, reinforcing the importance of analyzing drug interactions in pharmacovigilance. This combination is known to be more likely to induce myopathy [@ducloux1997colchicine].
+
+Furthermore, our approach identified a size-four drug cocktail (metformin, prasugrel, bisoprolol, simvastatin) associated with an increased risk signal (hypergeometric score $= 72.2$, RR = $3060.6$). This combination was observed in nine patients, all of whom experienced the adverse event. While this finding demonstrates the feasibility of detecting higher-order drug interactions, we emphasize that no clinical validation is currently available for this specific combination. This underscores both the potential of the method in identifying complex drug interactions and the need for further validation through complementary studies.
+
+This approach can also be extended to other settings where adverse events are explored. For instance, the method could be applied using the ICD diagnosis classification or the MedDRA system, both of which are hierarchical classifications. Such an application would facilitate the identification of symptoms associated with the consumption of drug combinations.
+
+The proposed method is implemented as an R package _emcAdr_, available on GitHub and on the CRAN [@R-emcAdr]. A tool allowing the process of quarterly FAERS xml files to csv file directly usable by our method is also available on [Github](https://github.com/JulesBa-Git/FAERS-xml-parser).
+
+# Funding {.unnumbered}
+
+This work was partially supported by the “PHC AURORA” programme (project number: 49704QC), funded by the French Ministry for Europe and Foreign Affairs, the French Ministry for Higher Education and Research and the Norwegian Council for Research.
+
+# Appendices {.appendix}
+
+## Appendix A : Distance Pseudo-code Algorithm{.appendix #sec-appA}
+
+```pseudocode
+#| label: alg-dist
+#| html-indent-size: "1.2em"
+#| html-comment-delimiter: "//"
+#| html-line-number: true
+#| html-line-number-punc: ":"
+#| html-no-end: false
+#| pdf-placement: "htb!"
+#| pdf-line-number: true
+
+\begin{algorithm}[H]
+\caption{CalculateDistance}
+\begin{algorithmic}[1]
+\Require Matrix $M$, Lists $idxC_1$, $idxC_2$
+\Ensure Cost of the distance calculation
+\State $height \gets 0$
+\State $cost \gets 0$
+\While{$idxC_1 \neq \varnothing$ \textbf{and} $idxC_2 \neq \varnothing$}
+  \ForAll{$iC_1 \in idxC_1$}
+    \ForAll{$iC_2 \in idxC_2$}
+      \If{$M[iC_1][height] = M[iC_2][height]$}
+        \State $cost \gets cost + height - \min\!\Big(M[iC_1].\mathrm{count}( M[iC_1][0]),\ \!M[iC_2].\mathrm{count}(M[iC_2][0])\Big) + 1$
+        \State \textbf{remove} $iC_1$ \textbf{from} $idxC_1$
+        \State \textbf{remove} $iC_2$ \textbf{from} $idxC_2$
+        \State \textbf{break}
+      \EndIf
+    \EndFor
+  \EndFor
+  \State $height \gets height + 1$
+\EndWhile
+\State $insertion\_cost \gets \mathrm{ATC\_HEIGHT} / 2$
+\State $cost \gets cost + (|idxC_1| + |idxC_2|) \times insertion\_cost$
+\State \Return $cost$
+\end{algorithmic}
+\end{algorithm}
+```
+
+@alg-dist computes the distance between two cocktails, $C_1$ and $C_2$, based on three inputs.
+
+The first input is an integer matrix $M$. This matrix represents the nodes of $C_1$ and $C_2$, as well as their corresponding parent nodes. The matrix has dimensions $(PN, \text{ATC\_HEIGHT})$, where $P$ and $N$ denote the sizes of $C_1$ and $C_2$, respectively. For example, consider the simplified tree shown in Figure 1 of the article. In this tree, $C_1$ could be the cocktail containing only the node $\begin{bmatrix} 3 \end{bmatrix}$, and $C_2$ could be the cocktail containing only the node $\begin{bmatrix} 2 \end{bmatrix}$ ($P = 1$ and $N = 1$).
+
+The corresponding matrix $M$ would be:
+$$
+M = \begin{bmatrix}
+    3 & 1 & 0 \\
+    2 & 2 & 0
+\end{bmatrix}
+$$
+
+The second input consists of $idxC_1$ and $idxC_2$, which represent the indices of the rows in $M$ that contain the nodes of $C_1$ and $C_2$, respectively.
+
+## Appendix B : Calibration Under the Null{.appendix #sec-appB}
+
+To assess p-value calibration under the null, we plotted the empirical distribution of p-values for cocktails presumed not to increase the adverse-event rate on the synthetic dataset. Under valid calibration these p-values should follow a Uniform(0, 1) distribution. @fig-calibration shows a histogram of these p-values, which appears approximately flat.
+
+![Histogram of p-values for cocktails presumed to satisfy the null hypothesis on synthetic dataset (no elevated adverse-event risk)](figures/accuracy_under_the_null.svg){#fig-calibration}
+
+
+## Appendix C : FAERS Clustering{.appendix}
+
+@fig-cluster_FAERS shows the clustering applied to the results of the genetic algorithm ran on the FAERS datasets.
+
+![Clustering of High-Risk Drug Cocktails Identified by the Genetic Algorithm on the FAERS dataset. This Figure allows to see proximity between multiple clusters and better understand why some cluster like the $4$ and $5$ exhibits similarities (Domperidone related cocktails).](figures/clustering_FAERS_Myopathy.svg){#fig-cluster_FAERS}
+
+# Code and Results{.appendix}
+
+See the complete results of application of methodology on the FAERS dataset [on this link](https://docs.google.com/spreadsheets/d/1TmbrExi26QNr2TmvltmEzyl_EQht3fIsrtsWrAqmRik/edit?usp=sharing).
+
+Code to reproduce the experiments conducted in this article can be found here :
+
+* GitHub link of the data refinement code : [JulesBa-Git/FAERS-xml-parser](https://github.com/JulesBa-Git/FAERS-xml-parser).
+* GitHub link to the latest release of the R package of the complete methodology : [JulesBa-Git/emcAdr](https://github.com/JulesBa-Git/emcAdr).
+* The code of the methodology is also available on the [CRAN](https://cran.r-project.org/web/packages/emcAdr/index.html).
+* The code to obtain figures is available on the `figures/scripts` folder of this repository.
+
+
+
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+
+# Session information {.appendix .unnumbered}
+
+```{r session-info}
+sessionInfo()
+```

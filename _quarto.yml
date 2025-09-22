@@ -1,29 +1,52 @@
 project:
   type: default
   render:
-    - template-computo-R.qmd
+    - submission-202509-bangard-detecting.qmd
     - README.qmd
 
-title: "Template for contribution to Computo"
-subtitle: "Example dedicated to `R` users"
+title: "Detecting adverse high-order drug interactions from individual case safety reports using computational statistics on disproportionality measures"
+subtitle: ""
 author:
-  - name: Jane Doe
+  - name: Jules Bangard
     corresponding: true
-    email: janedoe@nowhere.moon
-    url: https://janedoe.someplace.themoon.org
-    orcid: 0000-0000-0000-0000
+    email: jules.bangard@math.unistra.fr
+    url: https://bangard.xyz
+    orcid: 0009-0007-4670-7860
     affiliations:
-      - name: Name of Affiliation one
-        department: Statistics
-        url: https://someplace.themoon.org
-  - name: John Doe
-    email: johndoe@nowhere.moon
-    url: https://johndoe.someplace.themoon.org
-    orcid: 0000-0000-0000-0000
+      - name: Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France
+        department:
+        url: https://irma.math.unistra.fr/
+  - name: Einar Holsbø
+    email: einar.j.holsbo@uit.no
+    url: https://einar.sh/
+    orcid: 0000-0002-9728-2088
     affiliations:
-      - name: Name of Affiliation two
-        department: Computer Science
-        url: https://someplace.themoon.org
+      - name: Faculty of Science and Technology, UiT-The Arctic University of Norway, PO, Box 6050 Stakkevollan, N-9037 Tromsø, Norway
+        department:
+        url: https://en.uit.no/startsida/
+  - name: Kristian Svendsen
+    email: kristian.svendsen@uit.no
+    url: https://en.uit.no/ansatte/kristian.svendsen/
+    orcid: 0000-0003-3481-3539
+    affiliations:
+      - name: Faculty of Health Sciences, UiT the Arctic University of Norway, Tromsø, Norway
+        department:
+        url: https://en.uit.no/startsida
+  - name: Vittorio Perduca
+    email: vittorio.perduca@parisdescartes.fr
+    url: https://helios2.mi.parisdescartes.fr/~vperduca/
+    orcid: 0000-0003-0339-0473
+    affiliations:
+      - name: CNRS, MAP5, Université Paris Cité, F-75006 Paris, France
+        url: https://irma.math.unistra.fr/
+  - name: Étienne Birmelé
+    email: birmele@unistra.fr
+    url: https://irma.math.unistra.fr/~birmele/
+    orcid: 0000-0002-6996-4014
+    affiliations:
+      - name: Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France
+        department:
+        url: https://irma.math.unistra.fr/
 date: last-modified
 date-modified: last-modified
 description: |
@@ -31,11 +54,26 @@ description: |
   
   For a detailed, step-by-step guide on preparing your article, setting up the continuous integration and submitting it to Computo, please consult the [guidelines for authors](https://computo-journal.org/site/guidelines-authors.html).
 abstract: >+
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere vestibulum facilisis. Aenean pretium orci augue, quis lobortis libero accumsan eu. Nam mollis lorem sit amet pellentesque ullamcorper. Curabitur lobortis libero eget malesuada vestibulum. Nam nec nibh massa. Pellentesque porttitor cursus tellus. Mauris urna erat, rhoncus sed faucibus sit amet, venenatis eu ipsum.
-keywords: [key1, key2, key3]
+  Adverse drug interactions are a critical concern in pharmacovigilance, as both
+  clinical trials and spontaneous reporting systems often lack the breadth to detect
+  complex drug interactions. This study introduces a computational framework for
+  adverse drug interaction detection, leveraging disproportionality analysis on individual
+  case safety reports. By integrating the Anatomical Therapeutic Chemical classification,
+  the framework extends beyond drug interactions to capture hierarchical pharmacological
+  relationships. This enables exploration of the space of drug interactions beyond pairwise
+  interactions. To address biases inherent in existing disproportionality measures, we
+  employ a hypergeometric risk metric, while a Markov Chain Monte Carlo algorithm
+  provides robust empirical p-value estimation for the risk associated to cocktails. A
+  genetic algorithm further facilitates efficient identification of high-risk drug cocktails.
+  Validation on synthetic and FDA Adverse Event Reporting System data demonstrates
+  the method’s efficacy in detecting established drugs and drug interactions associated
+  with myopathy-related adverse events. Implemented as an R package, this framework
+  offers a reproducible, scalable tool for post-market drug safety surveillance.
+keywords: [Disproportionality Analysis, Drug-Interactions, Genetic Algorithm, Markov
+  Chain Monte Carlo, Pharmacovigilance, Spontaneous Reporting Systems]
 bibliography: references.bib
-github-user: computorg
-repo: "template-computo-r"
+github-user: JulesBa-Git
+repo: "202509-bangard-detecting"
 draft: true # set to false once the build is running
 published: false # will be set to true once accepted
 license: CC-BY-4.0
