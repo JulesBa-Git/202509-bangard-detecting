@@ -5,7 +5,6 @@ project:
     - README.qmd
 
 title: "Detecting adverse high-order drug interactions from individual case safety reports using computational statistics on disproportionality measures"
-subtitle: ""
 author:
   - name: Jules Bangard
     corresponding: true
@@ -50,9 +49,7 @@ author:
 date: last-modified
 date-modified: last-modified
 description: |
-  Template for preparing a submission to Computo, using the [quarto journal extension](https://github.com/computorg/computo-quarto-extension), the knitr kernel (R user) and [renv](https://rstudio.github.io/renv/articles/renv.html) to set-up the dependencies.
-  
-  For a detailed, step-by-step guide on preparing your article, setting up the continuous integration and submitting it to Computo, please consult the [guidelines for authors](https://computo-journal.org/site/guidelines-authors.html).
+  Adverse drug interaction detection using individual case safety reports
 abstract: >+
   Adverse drug interactions are a critical concern in pharmacovigilance, as both
   clinical trials and spontaneous reporting systems often lack the breadth to detect
