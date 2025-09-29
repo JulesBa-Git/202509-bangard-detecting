@@ -1,5 +1,5 @@
 # Detecting adverse high-order drug interactions from individual case safety reports using computational statistics on disproportionality measures
-Jules Bangard, Einar Holsbo, Kristian Svendsen, Vittorio Perduca, Etienne Birmele
+Jules Bangard, Einar Holsbø, Kristian Svendsen, Vittorio Perduca, Étienne Birmelé
 2025-09-29
 
 *Adverse drug interaction detection using individual case safety reports*
@@ -8,11 +8,11 @@ Jules Bangard, Einar Holsbo, Kristian Svendsen, Vittorio Perduca, Etienne Birmel
 
 ### Authors
 
-- [Jules Bangard](https://bangard.xyz) (Institut de Recherche Mathematique Avancee, UMR 7501 Universite de Strasbourg et CNRS 7 rue Rene-Descartes, 67000 Strasbourg, France)
-- [Einar Holsbo](https://einar.sh/) (Faculty of Science and Technology, UiT-The Arctic University of Norway, PO, Box 6050 Stakkevollan, N-9037 Tromso, Norway)
-- [Kristian Svendsen](https://en.uit.no/ansatte/kristian.svendsen/) (Faculty of Health Sciences, UiT the Arctic University of Norway, Tromso, Norway)
-- [Vittorio Perduca](https://helios2.mi.parisdescartes.fr/~vperduca/) (CNRS, MAP5, Universite Paris Cite, F-75006 Paris, France)
-- [Etienne Birmele](https://irma.math.unistra.fr/~birmele/) (Institut de Recherche Mathematique Avancee, UMR 7501 Universite de Strasbourg et CNRS 7 rue Rene-Descartes, 67000 Strasbourg, France)
+- [Jules Bangard](https://bangard.xyz) (Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France)
+- [Einar Holsbø](https://einar.sh/) (Faculty of Science and Technology, UiT-The Arctic University of Norway, PO, Box 6050 Stakkevollan, N-9037 Tromsø, Norway)
+- [Kristian Svendsen](https://en.uit.no/ansatte/kristian.svendsen/) (Faculty of Health Sciences, UiT the Arctic University of Norway, Tromsø, Norway)
+- [Vittorio Perduca](https://helios2.mi.parisdescartes.fr/~vperduca/) (CNRS, MAP5, Université Paris Cité, F-75006 Paris, France)
+- [Étienne Birmelé](https://irma.math.unistra.fr/~birmele/) (Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France)
 
 ### Abstract
 

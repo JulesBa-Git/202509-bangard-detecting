@@ -13,37 +13,36 @@ author:
     url: https://bangard.xyz
     orcid: 0009-0007-4670-7860
     affiliations:
-      - name: Institut de Recherche Mathematique Avancee, UMR 7501 Universite de Strasbourg et CNRS 7 rue Rene-Descartes, 67000 Strasbourg, France
+      - name: Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France
         url: https://irma.math.unistra.fr/
-  - name: Einar Holsbo
+  - name: Einar Holsbø
     email: einar.j.holsbo@uit.no
     url: https://einar.sh/
     orcid: 0000-0002-9728-2088
     affiliations:
-      - name: Faculty of Science and Technology, UiT-The Arctic University of Norway, PO, Box 6050 Stakkevollan, N-9037 Tromso, Norway
+      - name: Faculty of Science and Technology, UiT-The Arctic University of Norway, PO, Box 6050 Stakkevollan, N-9037 Tromsø, Norway
         url: https://en.uit.no/startsida/
   - name: Kristian Svendsen
     email: kristian.svendsen@uit.no
     url: https://en.uit.no/ansatte/kristian.svendsen/
     orcid: 0000-0003-3481-3539
     affiliations:
-      - name: Faculty of Health Sciences, UiT the Arctic University of Norway, Tromso, Norway
+      - name: Faculty of Health Sciences, UiT the Arctic University of Norway, Tromsø, Norway
         url: https://en.uit.no/startsida/
   - name: Vittorio Perduca
     email: vittorio.perduca@parisdescartes.fr
     url: https://helios2.mi.parisdescartes.fr/~vperduca/
     orcid: 0000-0003-0339-0473
     affiliations:
-      - name: CNRS, MAP5, Universite Paris Cite, F-75006 Paris, France
+      - name: CNRS, MAP5, Université Paris Cité, F-75006 Paris, France
         url: https://irma.math.unistra.fr/
-  - name: Etienne Birmele
+  - name: Étienne Birmelé
     email: birmele@unistra.fr
     url: https://irma.math.unistra.fr/~birmele/
     orcid: 0000-0002-6996-4014
     affiliations:
-      - name: Institut de Recherche Mathematique Avancee, UMR 7501 Universite de Strasbourg et CNRS 7 rue Rene-Descartes, 67000 Strasbourg, France
+      - name: Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France
         url: https://irma.math.unistra.fr/
-lang: en
 date: last-modified
 date-modified: last-modified
 description: |
