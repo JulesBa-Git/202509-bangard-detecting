@@ -4,7 +4,8 @@ project:
     - submission-202509-bangard-detecting.qmd
     - README.qmd
 
-title: "Detecting adverse high-order drug interactions from individual case safety reports using computational statistics on disproportionality measures"
+title: >- 
+  Detecting adverse high-order drug interactions from individual case safety reports using computational statistics on disproportionality measures
 author:
   - name: Jules Bangard
     corresponding: true
@@ -13,7 +14,6 @@ author:
     orcid: 0009-0007-4670-7860
     affiliations:
       - name: Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France
-        department:
         url: https://irma.math.unistra.fr/
   - name: Einar Holsbø
     email: einar.j.holsbo@uit.no
@@ -21,7 +21,6 @@ author:
     orcid: 0000-0002-9728-2088
     affiliations:
       - name: Faculty of Science and Technology, UiT-The Arctic University of Norway, PO, Box 6050 Stakkevollan, N-9037 Tromsø, Norway
-        department:
         url: https://en.uit.no/startsida/
   - name: Kristian Svendsen
     email: kristian.svendsen@uit.no
@@ -29,8 +28,7 @@ author:
     orcid: 0000-0003-3481-3539
     affiliations:
       - name: Faculty of Health Sciences, UiT the Arctic University of Norway, Tromsø, Norway
-        department:
-        url: https://en.uit.no/startsida
+        url: https://en.uit.no/startsida/
   - name: Vittorio Perduca
     email: vittorio.perduca@parisdescartes.fr
     url: https://helios2.mi.parisdescartes.fr/~vperduca/
@@ -44,7 +42,6 @@ author:
     orcid: 0000-0002-6996-4014
     affiliations:
       - name: Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France
-        department:
         url: https://irma.math.unistra.fr/
 date: last-modified
 date-modified: last-modified
