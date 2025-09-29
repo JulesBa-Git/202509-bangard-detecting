@@ -1,3 +1,74 @@
+---
+execute: { keep-md: true }
+
+title: >-
+  Detecting adverse high-order drug interactions from individual case safety reports using computational statistics on disproportionality measures
+
+author:
+  - name: "Jules Bangard"
+    corresponding: true
+    email: jules.bangard@math.unistra.fr
+    url: https://bangard.xyz
+    orcid: 0009-0007-4670-7860
+    affiliations:
+      - name: "Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France"
+        url: https://irma.math.unistra.fr/
+  - name: "Einar Holsbø"
+    email: einar.j.holsbo@uit.no
+    url: https://einar.sh/
+    orcid: 0000-0002-9728-2088
+    affiliations:
+      - name: "Faculty of Science and Technology, UiT-The Arctic University of Norway, PO, Box 6050 Stakkevollan, N-9037 Tromsø, Norway"
+        url: https://en.uit.no/startsida/
+  - name: "Kristian Svendsen"
+    email: kristian.svendsen@uit.no
+    url: https://en.uit.no/ansatte/kristian.svendsen/
+    orcid: 0000-0003-3481-3539
+    affiliations:
+      - name: "Faculty of Health Sciences, UiT the Arctic University of Norway, Tromsø, Norway"
+        url: https://en.uit.no/startsida/
+  - name: "Vittorio Perduca"
+    email: vittorio.perduca@parisdescartes.fr
+    url: https://helios2.mi.parisdescartes.fr/~vperduca/
+    orcid: 0000-0003-0339-0473
+    affiliations:
+      - name: "CNRS, MAP5, Université Paris Cité, F-75006 Paris, France"
+        url: https://irma.math.unistra.fr/
+  - name: "Étienne Birmelé"
+    email: birmele@unistra.fr
+    url: https://irma.math.unistra.fr/~birmele/
+    orcid: 0000-0002-6996-4014
+    affiliations:
+      - name: "Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France"
+        url: https://irma.math.unistra.fr/
+
+lang: en
+date: last-modified
+date-modified: last-modified
+description: >
+  Adverse drug interaction detection using individual case safety reports
+abstract: >-
+  Adverse drug interactions are a critical concern in pharmacovigilance, as both clinical trials and spontaneous reporting systems often lack the breadth to detect complex drug interactions. This study introduces a computational framework for adverse drug interaction detection, leveraging disproportionality analysis on individual case safety reports. By integrating the Anatomical Therapeutic Chemical classification, the framework extends beyond drug interactions to capture hierarchical pharmacological relationships. This enables exploration of the space of drug interactions beyond pairwise interactions. To address biases inherent in existing disproportionality measures, we employ a hypergeometric risk metric, while a Markov Chain Monte Carlo algorithm provides robust empirical p-value estimation for the risk associated to cocktails. A genetic algorithm further facilitates efficient identification of high-risk drug cocktails. Validation on synthetic and FDA Adverse Event Reporting System data demonstrates the method’s efficacy in detecting established drugs and drug interactions associated with myopathy-related adverse events. Implemented as an R package, this framework offers a reproducible, scalable tool for post-market drug safety surveillance.
+
+keywords:
+  - Disproportionality Analysis
+  - Drug-Interactions
+  - Genetic Algorithm
+  - Markov Chain Monte Carlo
+  - Pharmacovigilance
+  - Spontaneous Reporting Systems
+
+bibliography: references.bib
+github-user: JulesBa-Git
+repo: "202509-bangard-detecting"
+draft: true
+published: false
+license: CC-BY-4.0
+
+format:
+  computo-html: default
+  computo-pdf: default
+---
 # Introduction{#sec-intro}
 There are inherent limitations of clinical trials (RCTs) done before a medication is authorised in terms of cost, surveillance time, size and a lack of diversity of patients included (e.g. that pregnant woman, children and elderly often are not included) [@sanson2007limitations]. Another issue is that RCTs are limited in their ability to detect rare adverse drug reactions (ADRs) and potential drug interactions (DDIs) since they usually only include a few thousand participants at most. Moreover, the use of multiple medications is often an exclusion criterion in RCTs, leaving gaps in the assessment of polypharmacy risks. As a result, tested drug combinations tend to be limited to those where physicians and pharmacologists have existing clinical experience or hypotheses about potential interactions [@van2002assessment]. This means that monitoring of the safety of medications and the potential for DDIs after marketing is essential. This monitoring is often referred as post-authorization pharmacovigilance.
 
