@@ -260,7 +260,7 @@ This work was partially supported by the “PHC AURORA” programme (project num
 # Appendices {.appendix}
 
 ## Appendix A : Distance Pseudo-code Algorithm{.appendix #sec-appA}
-
+<!--
 ```pseudocode
 #| label: alg-dist
 #| html-indent-size: "1.2em"
@@ -296,7 +296,7 @@ This work was partially supported by the “PHC AURORA” programme (project num
 \State \Return $cost$
 \end{algorithmic}
 \end{algorithm}
-```
+```-->
 
 @alg-dist computes the distance between two cocktails, $C_1$ and $C_2$, based on three inputs.
 
