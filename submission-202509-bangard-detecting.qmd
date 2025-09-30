@@ -82,7 +82,7 @@ A transformation $f$ from $C_1$ to $C_2$ is a composition of elementary operatio
 Finally, the maximum distance between $C_1$ and $C_2$ being $(n_1 + n_2) \frac{depth(T)}{2}$,  we define the similarity as 
 $$ Sim(C_1,C_2) = 1 - \frac{2D(C_1,C_2)}{(n_1 + n_2)depth(T)}$$
 
-The computation of the similarity is achievable in $\mathcal{O}(n \times m \times   \text{depth}(T) + |\Delta|)$ operations in the worst case, where $n$ and $m$ denotes the size of the cocktails $C_1$ and $C_2$, respectively. The algorithm to compute the similarity is detailed in the @sec-appA (see @alg-dist).
+The computation of the similarity is achievable in $\mathcal{O}(n \times m \times   \text{depth}(T) + |\Delta|)$ operations in the worst case, where $n$ and $m$ denotes the size of the cocktails $C_1$ and $C_2$, respectively. The algorithm to compute the similarity is detailed in the @sec-appA (see <!--@alg-dist-->).
 
 ### Output clustering{#sec-clust}
 
@@ -165,7 +165,7 @@ The scores that assigned higher risk to solutions known to give the AE (true sol
 
 Moreover among the listed scores, the hypergeometric score is the only one that can be easily generalized to larger sized cocktails. Another method has been proposed in order to compute scores of larger size cocktails [@zhang2015mixture], but the  computational cost constrains the authors to limit the study to the $20$ most distributed drugs.
 
-![Comparison of scores for cocktail of size-two. Each dots denotes a cocktail while his risk computed on the formerly presented synthetic dataset (@sec-simu_data) is showed on the x-axis. Red dots represent cocktails that do not induce adverse event (negative controls), green ones represent cocktail inducing adverse event (positive controls). The bottom-right corner shows the Precision-Recall curves for each score. The perfect classification corresponds to the upper right corner. The areas under the curves allow to compare different methods](figures/comparison_metrics_omega_025_compressed.svg){#fig-comparison_score}
+![Comparison of scores for cocktail of size-two. Each dots denotes a cocktail while his risk computed on the formerly presented synthetic dataset (@sec-simu_data) is showed on the x-axis. Red dots represent cocktails that do not induce adverse event (negative controls), green ones represent cocktail inducing adverse event (positive controls). The bottom-right corner shows the Precision-Recall curves for each score. The perfect classification corresponds to the upper right corner. The areas under the curves allow to compare different methods](figures/comparison_metrics_omega_025.svg){#fig-comparison_score}
 
 
 
@@ -193,7 +193,7 @@ The genetic algorithm successfully identified nearly all high-risk size-two and 
 
 To streamline the analysis of the large set of results, significant cocktails were filtered using the empirical p-value by setting a threshold of $5\%$. Clustering techniques were then applied to group similar cocktails together. As discussed in @sec-clust, the UMAP algorithm has been used for dimensionality reduction, followed by the DBSCAN clustering method. This post-processing step allows to reduce redundancy by grouping cocktails that differed only slightly, such as by substituting a drug for another within the same pharmacological family. Such cocktail would have similar medical interpretations.
 
-![Clustering of high-risk drug cocktails identified by the genetic algorithm on the simulated dataset. Each dot represents a drug cocktail, true cocktail solutions are the centers of the squares](figures/clustering_simu_svg.svg){#fig-cluster_simu}
+![Clustering of high-risk drug cocktails identified by the genetic algorithm on the simulated dataset. Each dot represents a drug cocktail, true cocktail solutions are the centers of the squares](figures/clustering_simu.svg){#fig-cluster_simu}
 
 @fig-cluster_simu illustrates the results of the clustering process. Each point represents a drug cocktail, and different clusters are colored distinctly to highlight groups of similar cocktails. The clustering of solutions effectively captured the diversity of the drug cocktails identified by the genetic algorithm. We can see that the algorithm effectively found expected solutions or very similar solutions. In addition, the number of clusters corresponding to cocktails that are not supposed to induce an adverse event is limited, as only clusters $3$, $4$ and $5$ correspond to cocktails that are not meant to be found. It is possible to argue that the second cluster may be further split into two distinct clusters, one corresponding to the real solution while the other would correspond to no real solutions.
 
@@ -298,7 +298,7 @@ This work was partially supported by the “PHC AURORA” programme (project num
 \end{algorithm}
 ```-->
 
-@alg-dist computes the distance between two cocktails, $C_1$ and $C_2$, based on three inputs.
+<!--@alg-dist -->computes the distance between two cocktails, $C_1$ and $C_2$, based on three inputs.
 
 The first input is an integer matrix $M$. This matrix represents the nodes of $C_1$ and $C_2$, as well as their corresponding parent nodes. The matrix has dimensions $(PN, \text{ATC\_HEIGHT})$, where $P$ and $N$ denote the sizes of $C_1$ and $C_2$, respectively. For example, consider the simplified tree shown in Figure 1 of the article. In this tree, $C_1$ could be the cocktail containing only the node $\begin{bmatrix} 3 \end{bmatrix}$, and $C_2$ could be the cocktail containing only the node $\begin{bmatrix} 2 \end{bmatrix}$ ($P = 1$ and $N = 1$).
 
