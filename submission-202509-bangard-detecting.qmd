@@ -82,7 +82,7 @@ A transformation $f$ from $C_1$ to $C_2$ is a composition of elementary operatio
 Finally, the maximum distance between $C_1$ and $C_2$ being $(n_1 + n_2) \frac{depth(T)}{2}$,  we define the similarity as 
 $$ Sim(C_1,C_2) = 1 - \frac{2D(C_1,C_2)}{(n_1 + n_2)depth(T)}$$
 
-The computation of the similarity is achievable in $\mathcal{O}(n \times m \times   \text{depth}(T) + |\Delta|)$ operations in the worst case, where $n$ and $m$ denotes the size of the cocktails $C_1$ and $C_2$, respectively. The algorithm to compute the similarity is detailed in the @sec-appA (see @notanalgo-distance).
+The computation of the similarity is achievable in $\mathcal{O}(n \times m \times   \text{depth}(T) + |\Delta|)$ operations in the worst case, where $n$ and $m$ denotes the size of the cocktails $C_1$ and $C_2$, respectively. The algorithm to compute the similarity is detailed in the @sec-appA (see @algo-distance).
 
 ### Output clustering{#sec-clust}
 
@@ -263,7 +263,7 @@ This work was partially supported by the “PHC AURORA” programme (project num
 
 
 ```pseudocode
-#| label: notanalgo-distance
+#| label: algo-distance
 #| html-indent-size: "1.2em"
 #| html-comment-delimiter: "//"
 #| html-line-number: true
@@ -299,7 +299,7 @@ This work was partially supported by the “PHC AURORA” programme (project num
 \end{algorithm}
 ```
 
-@notanalgo-distance computes the distance between two cocktails, $C_1$ and $C_2$, based on three inputs.
+@algo-distance computes the distance between two cocktails, $C_1$ and $C_2$, based on three inputs.
 
 The first input is an integer matrix $M$. This matrix represents the nodes of $C_1$ and $C_2$, as well as their corresponding parent nodes. The matrix has dimensions $(PN, \text{ATC\_HEIGHT})$, where $P$ and $N$ denote the sizes of $C_1$ and $C_2$, respectively. For example, consider the simplified tree shown in Figure 1 of the article. In this tree, $C_1$ could be the cocktail containing only the node $\begin{bmatrix} 3 \end{bmatrix}$, and $C_2$ could be the cocktail containing only the node $\begin{bmatrix} 2 \end{bmatrix}$ ($P = 1$ and $N = 1$).
 

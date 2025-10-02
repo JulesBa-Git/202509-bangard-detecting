@@ -3,14 +3,6 @@ project:
   render:
     - submission-202509-bangard-detecting.qmd
     - README.qmd
-crossref:
-  custom:
-    - kind: float
-      key: notanalgo
-      reference-prefix: "Algorithm"
-      caption-prefix: "Algorithm"
-      latex-env: algo
-      latex-list-of-description: Algorithm
 title: >- 
   Detecting adverse high-order drug interactions from individual case safety reports using computational statistics on disproportionality measures
 author:
