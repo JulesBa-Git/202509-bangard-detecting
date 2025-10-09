@@ -2,7 +2,7 @@ library(emcAdr)
 library(ggplot2)
 library(cowplot)
 
-load("../datasets/Figure2.RData")
+load("figures/datasets/Figure2.RData")
 
 # Here is how the `Metrics_computation_size2_1M_count`is computed, since it takes 
 # time. We pre-computed it in order to use it directly for plots. 
@@ -15,13 +15,13 @@ Metrics_computation_size2_1M_count <- computeMetrics(total_population_dataset_2_
 # Create the red/green plot showing the signal status for each score (Figure 2)##
 # There are a lot of point, in order to facilitate the computation of the plot ##
 # we can reduce the number of 0 since it does not impact the plot              ##
-Metrics_computation_size2_1M_count$omega_025[Metrics_computation_size2_1M_count$omega_025 <= -2+09] <- -4
+Metrics_computation_size2_1M_count$omega_025[Metrics_computation_size2_1M_count$omega_025 <= -2e+09] <- -4
 zero_score <- Metrics_computation_size2_1M_count[Metrics_computation_size2_1M_count$RR == 0, ]
 non_zero_score <- Metrics_computation_size2_1M_count[Metrics_computation_size2_1M_count$RR != 0, ]
 set.seed(42)
 
-# We keep approximately 10% of zero score
-zero_score_sample <- zero_score[sample(nrow(zero_score), size = 0.1 * nrow(zero_score)), ]
+# We keep approximately 5% of zero score
+zero_score_sample <- zero_score[sample(nrow(zero_score), size = 0.05 * nrow(zero_score)), ]
 reduced_data <- rbind(non_zero_score, zero_score_sample)
 
 
@@ -31,7 +31,7 @@ ggplot(reduced_data, aes(x = phyper, y = as.factor(Label), color = as.factor(Lab
   labs(title = "phyper by Label", x = "phyper", y = "Label", color = "Label") +
   theme_minimal()
 # In order to have each subfigure you have to replace x axis of the ggplot command 
-# with the desired score  available score : ("RR", "phyper", "PRR", "CSS", "omega_025")
+# with the desired score  available score : ("phyper", "PRR", "CSS", "omega_025")
 
 
 ################# Now create the AUROC curves ##################################
@@ -90,7 +90,7 @@ combined_pr_data_with_point <- bind_rows(
 )
 ################################# And plot them ################################
 ggplot(combined_pr_data_with_point, aes(x = recall, y = precision, color = Curve, linetype = Curve)) +
-  geom_line(data = combined_pr_data, size = 1.1) +
+  geom_line(data = combined_pr_data, linewidth = 1.1) +
   geom_point(data = single_pr_point, size = 6, shape = 17) +
   labs(title = "Precision-Recall Curves for Cocktail Score",
        x = "Recall",

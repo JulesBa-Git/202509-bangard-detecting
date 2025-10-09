@@ -67,4 +67,3 @@ pp_plot <- ggplot(pp_df, aes(x = EmpiricalCP1, y = EmpiricalCP2)) +
        y = "Cumulative Probabilities of True Distribution",
        title = "PP Plot of Estimated vs True Distribution")
 pp_plot
-

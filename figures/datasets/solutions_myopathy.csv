@@ -1,0 +1,1252 @@
+score ; Cocktail ; n patient taking C ; n patient taking C and having AE ; RR
+343.315;hmg coa reductase inhibitors;67774;217;15.5088
+337.113;lipid modifying agents, plain;79540;227;14.1623
+337.113;lipid modifying agents;79540;227;14.1623
+227.745;simvastatin;19051;111;21.851
+184.454;cardiovascular system;237354;266;5.70961
+155.968;atorvastatin;31121;103;12.0907
+145.011;simvastatin:atorvastatin;814;36;142.595
+80.5794;hmg coa reductase inhibitors:nervous system;33251;72;7.37189
+76.72;lipid modifying agents, plain:nervous system;38778;75;6.60423
+76.72;lipid modifying agents:nervous system;38778;75;6.60423
+74.8326;corticosteroids for systemic use, plain;56225;88;5.43853
+73.8369;corticosteroids for systemic use;57008;88;5.36114
+73.1773;hmg coa reductase inhibitors:analgesics;24628;60;8.12921
+73.1197;ciclosporin:colchicine;42;12;879.438
+73.1197;ciclosporin:preparations with no effect on uric acid metabolism;42;12;879.438
+72.2428;lipid modifying agents, plain:analgesics;28119;63;7.50684
+72.2428;lipid modifying agents:analgesics;28119;63;7.50684
+72.1524;metformin:prasugrel:bisoprolol:simvastatin;9;9;3060.57
+70.8531;metformin:platelet aggregation inhibitors excl. heparin:bisoprolol:simvastatin;29;11;1165.32
+69.8501;metformin:prasugrel:bisoprolol:ramipril:analgesics;10;9;2754.51
+69.8501;metformin:prasugrel:bisoprolol:ramipril:nervous system;10;9;2754.51
+69.8501;metformin:prasugrel:bisoprolol:ramipril;10;9;2754.51
+67.8509;calcineurin inhibitors:colchicine;62;12;595.741
+67.8509;calcineurin inhibitors:preparations with no effect on uric acid metabolism;62;12;595.741
+66.7596;metformin:prasugrel:bisoprolol:ace inhibitors, plain:nervous system;12;9;2295.43
+66.7596;blood glucose lowering drugs, excl. insulins:prasugrel:ramipril:acetylsalicylic acid;12;9;2295.43
+66.7596;blood glucose lowering drugs, excl. insulins:prasugrel:beta blocking agents:ramipril:lipid modifying agents;12;9;2295.43
+66.7596;drugs used in diabetes:prasugrel:ramipril:acetylsalicylic acid;12;9;2295.43
+66.7596;drugs used in diabetes:prasugrel:ramipril:salicylic acid and derivatives;12;9;2295.43
+66.7596;drugs used in diabetes:prasugrel:ramipril:analgesics;12;9;2295.43
+66.7596;drugs used in diabetes:prasugrel:beta blocking agents:ramipril:lipid modifying agents;12;9;2295.43
+66.4919;glucocorticoids;54859;82;5.12977
+65.5813;metformin:prasugrel:ramipril:nervous system;13;9;2118.85
+64.5519;drugs used in diabetes:prasugrel:ramipril;14;9;1967.51
+63.433;colchicine;1094;20;57.1063
+63.433;preparations with no effect on uric acid metabolism;1094;20;57.1063
+60.3407;lipid modifying agents:other analgesics and antipyretics;25978;55;6.98515
+59.5648;metformin:prasugrel:bisoprolol:nervous system;21;9;1311.66
+59.5194;systemic hormonal preparations, excl. sex hormones and insulins;110827;113;3.6207
+58.6963;metformin:antithrombotic agents:bisoprolol:simvastatin;77;11;438.872
+57.5372;ciclosporin:antigout preparations;139;12;265.713
+57.5372;ciclosporin:antigout preparations;139;12;265.713
+57.3414;hmg coa reductase inhibitors:antiinfectives for systemic use;5859;30;16.2623
+56.6912;drugs used in diabetes:hmg coa reductase inhibitors;14924;42;9.10365
+56.6729;telbivudine;149;12;247.879
+55.13;lipid modifying agents, plain:acetylsalicylic acid;18380;45;7.95104
+55.13;lipid modifying agents:acetylsalicylic acid;18380;45;7.95104
+54.9262;lipid modifying agents:salicylic acid and derivatives;18475;45;7.90968
+54.926;lipid modifying agents, plain:antiinfectives for systemic use;7015;31;14.0529
+54.926;lipid modifying agents:antiinfectives for systemic use;7015;31;14.0529
+54.8779;hmg coa reductase inhibitors:acetylsalicylic acid;16588;43;8.39371
+54.4511;prasugrel:bisoprolol:salicylic acid and derivatives;64;10;479.107
+54.3843;alimentary tract and metabolism:prasugrel:beta blocking agents:ramipril:lipid modifying agents;34;9;810.139
+54.2843;prasugrel:bisoprolol:other analgesics and antipyretics;65;10;471.736
+54.1203;prasugrel:bisoprolol:nervous system;66;10;464.588
+53.9403;metformin:platelet aggregation inhibitors excl. heparin:bisoprolol:hmg coa reductase inhibitors;116;11;291.313
+53.8601;hmg coa reductase inhibitors:antibacterials for systemic use;4320;26;18.9832
+53.5894;antiinfectives for systemic use;108472;107;3.45931
+53.2516;prasugrel:bisoprolol:ramipril:analgesics;38;9;724.86
+53.2516;prasugrel:bisoprolol:ramipril:nervous system;38;9;724.86
+53.1893;prasugrel:bisoprolol;72;10;425.871
+53.0676;lipid modifying agents, plain:antibacterials for systemic use;5006;27;17.0381
+53.0676;lipid modifying agents:antibacterials for systemic use;5006;27;17.0381
+51.7834;alimentary tract and metabolism:prasugrel:ramipril:acetylsalicylic acid;44;9;626.013
+50.934;metformin:platelet aggregation inhibitors excl. heparin:bisoprolol;151;11;223.785
+50.3552;immunosuppressants:colchicine;249;12;148.32
+50.3552;immunosuppressants:preparations with no effect on uric acid metabolism;249;12;148.32
+50.3288;metformin:prasugrel:hmg coa reductase inhibitors;51;9;540.087
+50.2576;calcineurin inhibitors:antigout preparations;251;12;147.138
+50.0593;hmg coa reductase inhibitors:ezetimibe;2986;22;23.0771
+49.4282;atorvastatin:nervous system;12518;36;9.20512
+49.3068;alimentary tract and metabolism:analgesics;60847;75;4.14989
+48.0846;domperidone:naproxen:antidepressants:codeine;6;6;3043.25
+48.0846;domperidone:naproxen:psychoanaleptics:codeine;6;6;3043.25
+48.0846;domperidone:naproxen:other analgesics and antipyretics:amitriptyline;6;6;3043.25
+48.0846;domperidone:naproxen:other analgesics and antipyretics:non-selective monoamine reuptake inhibitors;6;6;3043.25
+48.0846;domperidone:naproxen:analgesics:amitriptyline;6;6;3043.25
+48.0846;domperidone:naproxen:analgesics:non-selective monoamine reuptake inhibitors;6;6;3043.25
+48.0846;domperidone:propionic acid derivatives:paracetamol:amitriptyline:respiratory system;6;6;3043.25
+48.0846;domperidone:propionic acid derivatives:other analgesics and antipyretics:amitriptyline;6;6;3043.25
+48.0846;domperidone:propionic acid derivatives:analgesics:amitriptyline;6;6;3043.25
+48.0846;domperidone:antiinflammatory and antirheumatic products, non-steroids:non-selective monoamine reuptake inhibitors:codeine;6;6;3043.25
+48.0846;domperidone:antiinflammatory and antirheumatic products, non-steroids:paracetamol:amitriptyline:respiratory system;6;6;3043.25
+48.0846;domperidone:antiinflammatory and antirheumatic products, non-steroids:anilides:non-selective monoamine reuptake inhibitors:respiratory system;6;6;3043.25
+48.0846;domperidone:antiinflammatory and antirheumatic products:amitriptyline:codeine;6;6;3043.25
+48.0846;domperidone:antiinflammatory and antirheumatic products:non-selective monoamine reuptake inhibitors:codeine;6;6;3043.25
+48.0846;domperidone:antiinflammatory and antirheumatic products:paracetamol:amitriptyline:respiratory system;6;6;3043.25
+48.0846;domperidone:antiinflammatory and antirheumatic products:anilides:amitriptyline:cough and cold preparations;6;6;3043.25
+48.0846;domperidone:antiinflammatory and antirheumatic products:anilides:amitriptyline:respiratory system;6;6;3043.25
+48.0846;omeprazole:domperidone:paracetamol:amitriptyline:codeine;6;6;3043.25
+48.0846;omeprazole:domperidone:paracetamol:amitriptyline:opium alkaloids and derivatives;6;6;3043.25
+48.0846;omeprazole:domperidone:paracetamol:amitriptyline:cough suppressants, excl. combinations with expectorants;6;6;3043.25
+48.0846;omeprazole:domperidone:paracetamol:non-selective monoamine reuptake inhibitors:codeine;6;6;3043.25
+48.0846;omeprazole:domperidone:paracetamol:non-selective monoamine reuptake inhibitors:opium alkaloids and derivatives;6;6;3043.25
+48.0846;omeprazole:domperidone:anilides:amitriptyline:codeine;6;6;3043.25
+48.0846;omeprazole:domperidone:naproxen:analgesics:amitriptyline;6;6;3043.25
+48.0846;omeprazole:domperidone:antiinflammatory and antirheumatic products, non-steroids:amitriptyline;6;6;3043.25
+48.0846;omeprazole:domperidone:antiinflammatory and antirheumatic products, non-steroids:psychoanaleptics:codeine;6;6;3043.25
+48.0846;omeprazole:domperidone:antiinflammatory and antirheumatic products, non-steroids:analgesics:amitriptyline;6;6;3043.25
+48.0846;omeprazole:domperidone:antiinflammatory and antirheumatic products:amitriptyline:codeine;6;6;3043.25
+48.0846;omeprazole:domperidone:antiinflammatory and antirheumatic products:amitriptyline;6;6;3043.25
+48.0846;omeprazole:domperidone:antiinflammatory and antirheumatic products:non-selective monoamine reuptake inhibitors:codeine;6;6;3043.25
+48.0846;omeprazole:domperidone:antiinflammatory and antirheumatic products:antidepressants:codeine;6;6;3043.25
+48.0846;omeprazole:domperidone:antiinflammatory and antirheumatic products:psychoanaleptics:codeine;6;6;3043.25
+48.0846;omeprazole:domperidone:antiinflammatory and antirheumatic products:psychoanaleptics:opium alkaloids and derivatives;6;6;3043.25
+48.0846;omeprazole:domperidone:antiinflammatory and antirheumatic products:anilides:amitriptyline;6;6;3043.25
+48.0846;omeprazole:domperidone:antiinflammatory and antirheumatic products:other analgesics and antipyretics:amitriptyline;6;6;3043.25
+48.0846;omeprazole:domperidone:antiinflammatory and antirheumatic products:analgesics:amitriptyline;6;6;3043.25
+48.0846;omeprazole:domperidone:musculo-skeletal system:amitriptyline:codeine;6;6;3043.25
+48.0846;omeprazole:domperidone:musculo-skeletal system:non-selective monoamine reuptake inhibitors:codeine;6;6;3043.25
+48.0846;proton pump inhibitors:domperidone:paracetamol:amitriptyline:codeine;6;6;3043.25
+48.0846;proton pump inhibitors:domperidone:anilides:amitriptyline:codeine;6;6;3043.25
+48.0846;proton pump inhibitors:domperidone:antiinflammatory and antirheumatic products:amitriptyline:codeine;6;6;3043.25
+48.0846;proton pump inhibitors:domperidone:antiinflammatory and antirheumatic products:psychoanaleptics:codeine;6;6;3043.25
+48.0846;proton pump inhibitors:domperidone:musculo-skeletal system:amitriptyline:codeine;6;6;3043.25
+48.0846;drugs for peptic ulcer and gastro-oesophageal reflux disease (gord):domperidone:paracetamol:amitriptyline:cough and cold preparations;6;6;3043.25
+48.0846;drugs for peptic ulcer and gastro-oesophageal reflux disease (gord):domperidone:naproxen:non-selective monoamine reuptake inhibitors;6;6;3043.25
+48.0846;drugs for acid related disorders:domperidone:paracetamol:amitriptyline:cough and cold preparations;6;6;3043.25
+48.0846;drugs for acid related disorders:domperidone:paracetamol:non-selective monoamine reuptake inhibitors:cough and cold preparations;6;6;3043.25
+48.0846;drugs for acid related disorders:domperidone:naproxen:non-selective monoamine reuptake inhibitors;6;6;3043.25
+47.9809;prasugrel:simvastatin;65;9;423.757
+46.743;metformin:prasugrel;74;9;372.217
+46.743;biguanides:prasugrel;74;9;372.217
+46.6154;blood glucose lowering drugs, excl. insulins:prasugrel:salicylic acid and derivatives;75;9;367.254
+46.5458;cardiovascular system:antibacterials for systemic use;12785;35;8.74358
+46.3555;amlodipine:hmg coa reductase inhibitors;7938;29;11.5652
+46.139;blood glucose lowering drugs, excl. insulins:vitamin b1, plain:mineral supplements:ciprofloxacin;7;6;2608.5
+46.139;blood glucose lowering drugs, excl. insulins:vitamin b1, plain and in combination with vitamin b6 and b12:mineral supplements:ciprofloxacin;7;6;2608.5
+46.139;domperidone:paracetamol:amitriptyline:codeine;7;6;2608.5
+46.139;domperidone:paracetamol:amitriptyline:opium alkaloids and derivatives;7;6;2608.5
+46.139;domperidone:paracetamol:amitriptyline:cough suppressants, excl. combinations with expectorants;7;6;2608.5
+46.139;domperidone:paracetamol:amitriptyline:cough and cold preparations;7;6;2608.5
+46.139;domperidone:paracetamol:non-selective monoamine reuptake inhibitors:codeine;7;6;2608.5
+46.139;domperidone:paracetamol:non-selective monoamine reuptake inhibitors:opium alkaloids and derivatives;7;6;2608.5
+46.139;domperidone:anilides:amitriptyline:codeine;7;6;2608.5
+46.139;domperidone:anilides:amitriptyline:cough and cold preparations;7;6;2608.5
+46.139;domperidone:anilides:non-selective monoamine reuptake inhibitors:cough suppressants, excl. combinations with expectorants;7;6;2608.5
+46.139;domperidone:other analgesics and antipyretics:non-selective monoamine reuptake inhibitors:codeine;7;6;2608.5
+46.139;domperidone:antiinflammatory and antirheumatic products, non-steroids:psychoanaleptics:codeine;7;6;2608.5
+46.139;domperidone:antiinflammatory and antirheumatic products, non-steroids:paracetamol:amitriptyline;7;6;2608.5
+46.139;domperidone:antiinflammatory and antirheumatic products:amitriptyline:respiratory system;7;6;2608.5
+46.139;domperidone:antiinflammatory and antirheumatic products:antidepressants:codeine;7;6;2608.5
+46.139;domperidone:antiinflammatory and antirheumatic products:psychoanaleptics:codeine;7;6;2608.5
+46.139;domperidone:antiinflammatory and antirheumatic products:paracetamol:amitriptyline;7;6;2608.5
+46.139;domperidone:musculo-skeletal system:non-selective monoamine reuptake inhibitors:codeine;7;6;2608.5
+46.139;omeprazole:domperidone:paracetamol:amitriptyline;7;6;2608.5
+46.139;omeprazole:domperidone:anilides:amitriptyline;7;6;2608.5
+46.139;omeprazole:domperidone:musculo-skeletal system:psychoanaleptics:codeine;7;6;2608.5
+46.139;omeprazole:domperidone:musculo-skeletal system:other analgesics and antipyretics:amitriptyline;7;6;2608.5
+46.016;drugs used in diabetes:platelet aggregation inhibitors excl. heparin:beta blocking agents:ramipril:lipid modifying agents;143;10;214.415
+45.0553;alimentary tract and metabolism:other analgesics and antipyretics;48794;64;4.34657
+44.753;blood glucose lowering drugs, excl. insulins:thiamine (vit b1):ciprofloxacin;8;6;2282.44
+44.753;blood glucose lowering drugs, excl. insulins:thiamine (vit b1):cardiovascular system:ciprofloxacin;8;6;2282.44
+44.753;blood glucose lowering drugs, excl. insulins:vitamin b1, plain:ciprofloxacin;8;6;2282.44
+44.753;blood glucose lowering drugs, excl. insulins:vitamin b1, plain:cardiovascular system:ciprofloxacin;8;6;2282.44
+44.753;blood glucose lowering drugs, excl. insulins:vitamin b1, plain and in combination with vitamin b6 and b12:ciprofloxacin;8;6;2282.44
+44.753;drugs used in diabetes:vitamin b1, plain and in combination with vitamin b6 and b12:mineral supplements:ciprofloxacin;8;6;2282.44
+44.753;domperidone:other analgesics and antipyretics:non-selective monoamine reuptake inhibitors:opium alkaloids and derivatives;8;6;2282.44
+44.753;domperidone:naproxen:non-selective monoamine reuptake inhibitors;8;6;2282.44
+44.753;domperidone:naproxen:analgesics:psychoanaleptics;8;6;2282.44
+44.753;domperidone:propionic acid derivatives:amitriptyline;8;6;2282.44
+44.753;domperidone:antiinflammatory and antirheumatic products:psychoanaleptics:opium alkaloids and derivatives;8;6;2282.44
+44.753;domperidone:antiinflammatory and antirheumatic products:other analgesics and antipyretics:amitriptyline;8;6;2282.44
+44.753;omeprazole:domperidone:antiinflammatory and antirheumatic products:non-selective monoamine reuptake inhibitors;8;6;2282.44
+44.753;omeprazole:domperidone:musculo-skeletal system:amitriptyline;8;6;2282.44
+44.4846;blood glucose lowering drugs, excl. insulins:prasugrel;94;9;293.018
+43.6547;proton pump inhibitors:domperidone:antiinflammatory and antirheumatic products, non-steroids:amitriptyline;9;6;2028.83
+43.6547;proton pump inhibitors:domperidone:antiinflammatory and antirheumatic products:amitriptyline;9;6;2028.83
+43.6547;drugs for acid related disorders:domperidone:propionic acid derivatives:non-selective monoamine reuptake inhibitors;9;6;2028.83
+43.6039;alimentary tract and metabolism:hmg coa reductase inhibitors:acetylsalicylic acid;12199;33;8.60876
+43.5457;drugs used in diabetes:platelet aggregation inhibitors excl. heparin:ramipril:acetylsalicylic acid;182;10;168.465
+42.7387;blood glucose lowering drugs, excl. insulins:thiamine (vit b1):cardiovascular system:quinolone antibacterials;10;6;1825.95
+42.7387;blood glucose lowering drugs, excl. insulins:vitamin b1, plain:cardiovascular system:quinolone antibacterials;10;6;1825.95
+42.7387;drugs used in diabetes:thiamine (vit b1):ciprofloxacin;10;6;1825.95
+42.7387;drugs used in diabetes:vitamin b1, plain:ciprofloxacin;10;6;1825.95
+42.7387;drugs used in diabetes:vitamin b1, plain and in combination with vitamin b6 and b12:ciprofloxacin;10;6;1825.95
+42.7387;domperidone:musculo-skeletal system:paracetamol:amitriptyline:respiratory system;10;6;1825.95
+42.7387;omeprazole:domperidone:paracetamol:non-selective monoamine reuptake inhibitors;10;6;1825.95
+42.7387;omeprazole:domperidone:anilides:non-selective monoamine reuptake inhibitors;10;6;1825.95
+42.7387;omeprazole:propulsives:paracetamol:amitriptyline:codeine;10;6;1825.95
+42.7387;omeprazole:propulsives:naproxen:analgesics:amitriptyline;10;6;1825.95
+42.7387;omeprazole:propulsives:antiinflammatory and antirheumatic products:amitriptyline:codeine;10;6;1825.95
+42.1564;bisoprolol:hmg coa reductase inhibitors;3257;20;19.1558
+42.1269;propulsives:antiinflammatory and antirheumatic products:paracetamol:amitriptyline;28;7;762.241
+42.0489;ciclosporin:musculo-skeletal system;495;12;74.598
+42.0405;nucleoside and nucleotide reverse transcriptase inhibitors;11051;31;8.89813
+41.9505;blood glucose lowering drugs, excl. insulins:thiamine (vit b1):fluoroquinolones;11;6;1659.95
+41.9505;blood glucose lowering drugs, excl. insulins:vitamin b1, plain:fluoroquinolones;11;6;1659.95
+41.9505;domperidone:musculo-skeletal system:antidepressants:codeine;11;6;1659.95
+41.9505;omeprazole:propulsives:paracetamol:amitriptyline:opium alkaloids and derivatives;11;6;1659.95
+41.8509;propulsives:antiinflammatory and antirheumatic products:amitriptyline:respiratory system;29;7;735.957
+41.2576;domperidone:naproxen:codeine;12;6;1521.62
+41.2576;domperidone:naproxen:opium alkaloids and derivatives;12;6;1521.62
+41.2576;domperidone:naproxen:cough and cold preparations;12;6;1521.62
+41.2576;domperidone:naproxen:psychoanaleptics;12;6;1521.62
+41.2576;domperidone:naproxen:nervous system:codeine;12;6;1521.62
+41.2576;propulsives:naproxen:paracetamol:amitriptyline;12;6;1521.62
+41.2576;propulsives:naproxen:other analgesics and antipyretics:amitriptyline;12;6;1521.62
+41.16;bisoprolol:lipid modifying agents;3432;20;18.1771
+40.4032;prasugrel:beta blocking agents, selective;248;10;123.627
+40.0795;drugs for acid related disorders:domperidone:paracetamol:amitriptyline;14;6;1304.25
+40.0659;thiamine (vit b1):ramipril:ciprofloxacin;5;5;3037.53
+40.0659;vitamin b1, plain:ramipril:ciprofloxacin;5;5;3037.53
+40.0659;vitamin b1, plain:aldosterone antagonists and other potassium-sparing agents:agents acting on the renin-angiotensin system:ciprofloxacin;5;5;3037.53
+40.0659;vitamin b1, plain and in combination with vitamin b6 and b12:aldosterone antagonists:ace inhibitors, plain:quinolone antibacterials;5;5;3037.53
+40.0659;vitamin b1, plain and in combination with vitamin b6 and b12:aldosterone antagonists and other potassium-sparing agents:ace inhibitors, plain:fluoroquinolones;5;5;3037.53
+40.0659;vitamin b1, plain and in combination with vitamin b6 and b12:aldosterone antagonists and other potassium-sparing agents:ace inhibitors, plain:quinolone antibacterials;5;5;3037.53
+40.0659;vitamin b1, plain and in combination with vitamin b6 and b12:aldosterone antagonists and other potassium-sparing agents:agents acting on the renin-angiotensin system:ciprofloxacin;5;5;3037.53
+40.0659;vitamin b1, plain and in combination with vitamin b6 and b12:aldosterone antagonists and other potassium-sparing agents:agents acting on the renin-angiotensin system:fluoroquinolones;5;5;3037.53
+40.0659;vitamin b1, plain and in combination with vitamin b6 and b12:aldosterone antagonists and other potassium-sparing agents:agents acting on the renin-angiotensin system:quinolone antibacterials;5;5;3037.53
+40.0659;vitamin b1, plain and in combination with vitamin b6 and b12:diuretics:ace inhibitors, plain:ciprofloxacin;5;5;3037.53
+40.0659;vitamin b1, plain and in combination with vitamin b6 and b12:diuretics:ace inhibitors, plain:ciprofloxacin;5;5;3037.53
+40.0659;colecalciferol:thiamine (vit b1):ramipril:ciprofloxacin;5;5;3037.53
+40.0659;colecalciferol:thiamine (vit b1):ace inhibitors, plain:quinolone antibacterials;5;5;3037.53
+40.0659;colecalciferol:thiamine (vit b1):ace inhibitors, plain:quinolone antibacterials;5;5;3037.53
+40.0659;colecalciferol:thiamine (vit b1):agents acting on the renin-angiotensin system:quinolone antibacterials;5;5;3037.53
+40.0659;colecalciferol:vitamin b1, plain:ramipril:ciprofloxacin;5;5;3037.53
+40.0659;colecalciferol:vitamin b1, plain:ramipril:fluoroquinolones;5;5;3037.53
+40.0659;colecalciferol:vitamin b1, plain:ace inhibitors, plain:quinolone antibacterials;5;5;3037.53
+40.0659;colecalciferol:vitamin b1, plain:ace inhibitors, plain:quinolone antibacterials;5;5;3037.53
+40.0659;colecalciferol:vitamin b1, plain:agents acting on the renin-angiotensin system:quinolone antibacterials;5;5;3037.53
+40.0659;colecalciferol:vitamin b1, plain and in combination with vitamin b6 and b12:ramipril:fluoroquinolones;5;5;3037.53
+40.0659;colecalciferol:vitamin b1, plain and in combination with vitamin b6 and b12:ace inhibitors, plain:quinolone antibacterials;5;5;3037.53
+39.569;drugs used in diabetes:thiamine (vit b1):fluoroquinolones;15;6;1217.3
+39.569;drugs used in diabetes:thiamine (vit b1):quinolone antibacterials;15;6;1217.3
+39.569;domperidone:naproxen:respiratory system;15;6;1217.3
+39.569;omeprazole:domperidone:antiinflammatory and antirheumatic products:codeine;15;6;1217.3
+39.569;omeprazole:domperidone:antiinflammatory and antirheumatic products:nervous system:codeine;15;6;1217.3
+39.4621;hmg coa reductase inhibitors:other lipid modifying agents;5622;23;12.818
+39.143;metformin:hmg coa reductase inhibitors;8735;27;9.74183
+39.1374;biguanides:hmg coa reductase inhibitors;8737;27;9.73959
+39.0993;domperidone:naproxen:paracetamol;16;6;1141.21
+39.0993;domperidone:naproxen:anilides;16;6;1141.21
+39.0993;domperidone:naproxen:other analgesics and antipyretics;16;6;1141.21
+39.0993;domperidone:naproxen:analgesics;16;6;1141.21
+38.7433;metformin:lipid modifying agents, plain;9729;28;9.08269
+38.7433;metformin:lipid modifying agents;9729;28;9.08269
+38.6642;domperidone:paracetamol:amitriptyline;17;6;1074.08
+38.6642;domperidone:anilides:amitriptyline;17;6;1074.08
+38.3828;drugs used in diabetes:platelet aggregation inhibitors excl. heparin:ramipril;303;10;101.183
+38.3209;drugs used in diabetes:dihydrocodeine;46;7;463.968
+38.2744;clonazepam:zotepine;6;5;2531.27
+38.2744;benzodiazepine derivatives:zotepine;6;5;2531.27
+38.2744;thiamine (vit b1):ramipril:fluoroquinolones;6;5;2531.27
+38.2744;vitamin b1, plain:ramipril:fluoroquinolones;6;5;2531.27
+38.2744;vitamin b1, plain and in combination with vitamin b6 and b12:diuretics:ace inhibitors, plain:quinolone antibacterials;6;5;2531.27
+38.2744;metformin:thiamine (vit b1):ciprofloxacin;6;5;2531.27
+38.2744;biguanides:thiamine (vit b1):ciprofloxacin;6;5;2531.27
+38.2744;biguanides:vitamin b1, plain:ciprofloxacin;6;5;2531.27
+38.2744;biguanides:vitamin b1, plain and in combination with vitamin b6 and b12:ciprofloxacin;6;5;2531.27
+38.259;proton pump inhibitors:propulsives:musculo-skeletal system:amitriptyline:codeine;18;6;1014.41
+38.1855;prasugrel:beta blocking agents;309;10;99.2175
+38.0177;metformin:platelet aggregation inhibitors excl. heparin;1611;15;28.7965
+38.0177;biguanides:platelet aggregation inhibitors excl. heparin;1611;15;28.7965
+37.8798;blood glucose lowering drugs, excl. insulins:vitamins:mineral supplements:ciprofloxacin;19;6;961.02
+37.7013;alimentary tract and metabolism:nervous system;91012;84;3.10766
+37.3625;metformin:ramipril;1320;14;32.7449
+37.1873;domperidone:amitriptyline:codeine;21;6;869.493
+37.1873;domperidone:non-selective monoamine reuptake inhibitors:codeine;21;6;869.493
+37.1873;domperidone:analgesics:non-selective monoamine reuptake inhibitors:codeine;21;6;869.493
+37.1873;domperidone:musculo-skeletal system:amitriptyline;21;6;869.493
+37.1873;propulsives:naproxen:codeine;21;6;869.493
+37.1873;omeprazole:domperidone:amitriptyline:opium alkaloids and derivatives;21;6;869.493
+37.0219;metformin:thiamine (vit b1):cardiovascular system:quinolone antibacterials;7;5;2169.66
+37.0219;biguanides:thiamine (vit b1):cardiovascular system:quinolone antibacterials;7;5;2169.66
+37.0219;blood glucose lowering drugs, excl. insulins:thiamine (vit b1):hmg coa reductase inhibitors:ciprofloxacin;7;5;2169.66
+37.0219;blood glucose lowering drugs, excl. insulins:thiamine (vit b1):lipid modifying agents, plain:ciprofloxacin;7;5;2169.66
+36.982;omeprazole:paracetamol:psychoanaleptics:codeine;116;8;210.66
+36.8691;domperidone:amitriptyline:cough suppressants, excl. combinations with expectorants;22;6;829.97
+36.8691;domperidone:amitriptyline:cough and cold preparations;22;6;829.97
+36.8691;domperidone:paracetamol:non-selective monoamine reuptake inhibitors;22;6;829.97
+36.8691;omeprazole:domperidone:psychoanaleptics:codeine;22;6;829.97
+36.6194;atorvastatin:antiinfectives for systemic use;2201;16;22.5175
+36.5977;calcineurin inhibitors:musculo-skeletal system;782;12;47.2116
+36.5671;thiamine (vit b1):mineral supplements:ciprofloxacin;23;6;793.884
+36.5671;domperidone:propionic acid derivatives:respiratory system;23;6;793.884
+36.3838;beta blocking agents:lipid modifying agents;20135;37;5.86556
+36.377;bisoprolol;8078;25;9.71965
+36.0413;metformin:thiamine (vit b1):fluoroquinolones;8;5;1898.45
+36.0413;biguanides:thiamine (vit b1):fluoroquinolones;8;5;1898.45
+36.0413;drugs used in diabetes:thiamine (vit b1):hmg coa reductase inhibitors:ciprofloxacin;8;5;1898.45
+36.0055;drugs for acid related disorders:domperidone:naproxen;25;6;730.373
+35.99;omeprazole:antiinflammatory and antirheumatic products:psychoanaleptics:codeine;63;7;338.767
+35.9045;drugs used in diabetes:acetylsalicylic acid;9101;26;8.98405
+35.8051;drugs used in diabetes:salicylic acid and derivatives;9140;26;8.9455
+35.7434;propulsives:antiinflammatory and antirheumatic products:psychoanaleptics:codeine;26;6;702.281
+35.7347;other lipid modifying agents;13928;31;7.04743
+35.2515;omeprazole:domperidone:musculo-skeletal system:psychoanaleptics;28;6;652.117
+35.2307;vitamin b1, plain and in combination with vitamin b6 and b12:aldosterone antagonists:ace inhibitors, plain:antibacterials for systemic use;9;5;1687.51
+35.2307;colecalciferol:ramipril:ciprofloxacin;9;5;1687.51
+35.2305;antibacterials for systemic use;54997;61;3.63786
+34.8213;daptomycin;1224;13;32.73
+34.7972;propulsives:paracetamol:amitriptyline:codeine;30;6;608.642
+34.7972;omeprazole:anilides:amitriptyline:codeine;30;6;608.642
+34.5823;naproxen:paracetamol:non-selective monoamine reuptake inhibitors:codeine;31;6;589.008
+34.5823;naproxen:anilides:non-selective monoamine reuptake inhibitors:codeine;31;6;589.008
+34.4562;omeprazole:analgesics;9688;26;8.43662
+34.375;naproxen:amitriptyline:codeine;32;6;570.601
+34.1746;naproxen:other analgesics and antipyretics:non-selective monoamine reuptake inhibitors:codeine;33;6;553.31
+34.1746;drugs for acid related disorders:domperidone:paracetamol:cough and cold preparations;33;6;553.31
+34.1021;omeprazole:musculo-skeletal system:amitriptyline;291;9;94.6403
+33.8001;musculo-skeletal system:other analgesics and antipyretics:amitriptyline;991;12;37.2499
+33.7929;propulsives:paracetamol:amitriptyline:opium alkaloids and derivatives;35;6;521.691
+33.7929;propulsives:paracetamol:amitriptyline:cough suppressants, excl. combinations with expectorants;35;6;521.691
+33.6109;thiamine (vit b1):ciprofloxacin;36;6;507.2
+33.6109;vitamin b1, plain:ciprofloxacin;36;6;507.2
+33.6109;domperidone:propionic acid derivatives:paracetamol;36;6;507.2
+33.6109;domperidone:propionic acid derivatives:anilides;36;6;507.2
+33.4342;domperidone:other analgesics and antipyretics:non-selective monoamine reuptake inhibitors;37;6;493.491
+33.4342;propulsives:paracetamol:amitriptyline:cough and cold preparations;37;6;493.491
+33.0811;omeprazole:paracetamol:non-selective monoamine reuptake inhibitors:opium alkaloids and derivatives;94;7;227.041
+32.9318;blood and blood forming organs:hmg coa reductase inhibitors;18897;34;5.71321
+32.908;biguanides:calcium:ciprofloxacin;13;5;1168.27
+32.7757;thiamine (vit b1):mineral supplements:fluoroquinolones;41;6;445.345
+32.7757;blood glucose lowering drugs, excl. insulins:vitamins:ciprofloxacin;41;6;445.345
+32.707;antiinflammatory and antirheumatic products, non-steroids:paracetamol:amitriptyline:respiratory system;196;8;124.67
+32.6658;antiinflammatory and antirheumatic products:anilides:amitriptyline:respiratory system;197;8;124.037
+32.1827;propulsives:naproxen:paracetamol;45;6;405.757
+32.0728;cardiovascular system:antibacterials for systemic use:antiinflammatory and antirheumatic products, non-steroids:hypnotics and sedatives;212;8;115.26
+32.0489;clonazepam:valproic acid:olanzapine:zotepine;4;4;3031.82
+32.0489;clonazepam:fatty acid derivatives:olanzapine:zotepine;4;4;3031.82
+32.0489;benzodiazepine derivatives:valproic acid:olanzapine:zotepine;4;4;3031.82
+32.0489;benzodiazepine derivatives:fatty acid derivatives:olanzapine:zotepine;4;4;3031.82
+32.0489;diclofenac:dihydrocodeine:quinine;4;4;3031.82
+32.0489;diclofenac:dihydrocodeine:methanolquinolines;4;4;3031.82
+32.0489;acetic acid derivatives and related substances:dihydrocodeine:quinine;4;4;3031.82
+32.0489;atorvastatin:dihydrocodeine:antiprotozoals;4;4;3031.82
+32.0489;atorvastatin:dihydrocodeine:antiparasitic products, insecticides and repellents;4;4;3031.82
+32.0489;hmg coa reductase inhibitors:acetic acid derivatives and related substances:dihydrocodeine:quinine;4;4;3031.82
+32.0489;folic acid:hydrochlorothiazide:simvastatin:opioids:lorazepam;4;4;3031.82
+32.0489;folic acid:thiazides, plain:lipid modifying agents:paracetamol:lorazepam:psychoanaleptics;4;4;3031.82
+32.0489;folic acid:low-ceiling diuretics, thiazides:lipid modifying agents, plain:paracetamol:lorazepam:psychoanaleptics;4;4;3031.82
+32.0489;folic acid:low-ceiling diuretics, thiazides:lipid modifying agents:paracetamol:lorazepam:antidepressants;4;4;3031.82
+32.0489;folic acid:low-ceiling diuretics, thiazides:lipid modifying agents:paracetamol:lorazepam:psychoanaleptics;4;4;3031.82
+32.0489;folic acid:low-ceiling diuretics, thiazides:lipid modifying agents:anilides:lorazepam:antidepressants;4;4;3031.82
+32.0489;folic acid and derivatives:hydrochlorothiazide:simvastatin:opioids:lorazepam;4;4;3031.82
+32.0489;clopidogrel:diclofenac:quinine;4;4;3031.82
+32.0489;clopidogrel:diclofenac:methanolquinolines;4;4;3031.82
+32.0489;clopidogrel:acetic acid derivatives and related substances:quinine;4;4;3031.82
+32.0489;clopidogrel:antiinflammatory and antirheumatic products, non-steroids:quinine;4;4;3031.82
+32.0489;platelet aggregation inhibitors excl. heparin:diclofenac:quinine;4;4;3031.82
+32.0489;sitagliptin:dihydrocodeine;4;4;3031.82
+32.0489;sitagliptin:diclofenac:antimalarials;4;4;3031.82
+32.0489;sitagliptin:diclofenac:antiprotozoals;4;4;3031.82
+32.0489;dipeptidyl peptidase 4 (dpp-4) inhibitors:dihydrocodeine;4;4;3031.82
+32.0489;metformin:diclofenac:dihydrocodeine:quinine;4;4;3031.82
+32.0489;bisacodyl:dipeptidyl peptidase 4 (dpp-4) inhibitors:quinine;4;4;3031.82
+32.0489;bisacodyl:metformin:dihydrocodeine;4;4;3031.82
+32.0489;bisacodyl:biguanides:dihydrocodeine;4;4;3031.82
+32.0489;bisacodyl:drugs used in diabetes:quinine;4;4;3031.82
+32.0489;contact laxatives:dihydrocodeine:antiparasitic products, insecticides and repellents;4;4;3031.82
+32.0489;contact laxatives:hmg coa reductase inhibitors:quinine;4;4;3031.82
+32.0489;contact laxatives:clopidogrel:diclofenac;4;4;3031.82
+32.0489;contact laxatives:drugs used in diabetes:quinine;4;4;3031.82
+32.0489;omeprazole:sitagliptin:dihydrocodeine;4;4;3031.82
+32.0489;omeprazole:sitagliptin:cardiovascular system:dihydrocodeine;4;4;3031.82
+32.0489;omeprazole:dipeptidyl peptidase 4 (dpp-4) inhibitors:dihydrocodeine;4;4;3031.82
+32.0489;omeprazole:biguanides:sitagliptin:cardiovascular system:dihydrocodeine;4;4;3031.82
+32.0489;omeprazole:bisacodyl:antiinflammatory and antirheumatic products:antiprotozoals;4;4;3031.82
+32.0489;omeprazole:bisacodyl:musculo-skeletal system:antiparasitic products, insecticides and repellents;4;4;3031.82
+32.0489;proton pump inhibitors:diclofenac:natural opium alkaloids:methanolquinolines;4;4;3031.82
+32.0489;proton pump inhibitors:sitagliptin:cardiovascular system:dihydrocodeine;4;4;3031.82
+32.0489;drugs for acid related disorders:sitagliptin:dihydrocodeine;4;4;3031.82
+32.0489;drugs for acid related disorders:dipeptidyl peptidase 4 (dpp-4) inhibitors:dihydrocodeine;4;4;3031.82
+32.0489;drugs for acid related disorders:contact laxatives:hmg coa reductase inhibitors:quinine;4;4;3031.82
+31.9856;omeprazole:musculo-skeletal system:non-selective monoamine reuptake inhibitors;368;9;74.8343
+31.9219;cardiovascular system:antibacterials for systemic use:antiinflammatory and antirheumatic products:hypnotics and sedatives;216;8;113.125
+31.9169;prasugrel:acetylsalicylic acid;579;10;52.9414
+31.9169;prasugrel:salicylic acid and derivatives;579;10;52.9414
+31.9069;drugs for acid related disorders:domperidone:propionic acid derivatives;47;6;388.491
+31.8908;salicylic acid and derivatives;43191;51;3.82176
+31.7737;domperidone:paracetamol:codeine;48;6;380.397
+31.7737;domperidone:anilides:codeine;48;6;380.397
+31.6868;vitamins:aldosterone antagonists and other potassium-sparing agents:ace inhibitors, plain:quinolone antibacterials;16;5;949.22
+31.6617;metformin:simvastatin;3046;16;16.2623
+31.6617;biguanides:simvastatin;3046;16;16.2623
+31.56;alimentary tract and metabolism:salicylic acid and derivatives;24895;38;4.86746
+31.5158;naproxen:amitriptyline:opium alkaloids and derivatives;50;6;365.181
+31.5158;naproxen:amitriptyline:cough and cold preparations;50;6;365.181
+31.3885;propionic acid derivatives:paracetamol:amitriptyline:respiratory system;119;7;179.341
+31.354;beta blocking agents, selective;39214;48;3.94736
+31.162;platelet aggregation inhibitors excl. heparin:bisoprolol;1241;12;29.7413
+31.1487;blood glucose lowering drugs, excl. insulins:mineral supplements:ciprofloxacin;53;6;344.509
+30.9932;calcium:fluoroquinolones;411;9;67.0031
+30.9932;calcium:fluoroquinolones;411;9;67.0031
+30.9069;omeprazole:paracetamol:non-selective monoamine reuptake inhibitors;245;8;99.7332
+30.815;antigout preparations;10374;25;7.55764
+30.815;antigout preparations;10374;25;7.55764
+30.7954;blood glucose lowering drugs, excl. insulins:platelet aggregation inhibitors excl. heparin;3226;16;15.3532
+30.7712;acetylsalicylic acid;42927;50;3.76274
+30.692;propulsives:naproxen:respiratory system;57;6;320.332
+30.5771;proton pump inhibitors:musculo-skeletal system:amitriptyline;663;10;46.2315
+30.4761;propionic acid derivatives:amitriptyline:codeine;59;6;309.473
+30.4398;vitamin b12 and folic acid:hydrochlorothiazide:simvastatin:opioids:lorazepam;5;4;2425.45
+30.4398;dipeptidyl peptidase 4 (dpp-4) inhibitors:diclofenac:antimalarials;5;4;2425.45
+30.4398;bisacodyl:quinine;5;4;2425.45
+30.4398;bisacodyl:methanolquinolines;5;4;2425.45
+30.4398;contact laxatives:quinine;5;4;2425.45
+30.4398;contact laxatives:methanolquinolines;5;4;2425.45
+30.4398;contact laxatives:antithrombotic agents:quinine;5;4;2425.45
+30.4398;contact laxatives:blood and blood forming organs:quinine;5;4;2425.45
+30.4398;omeprazole:bisacodyl:quinine;5;4;2425.45
+30.4398;omeprazole:bisacodyl:methanolquinolines;5;4;2425.45
+30.4398;omeprazole:contact laxatives:methanolquinolines;5;4;2425.45
+30.4377;antithrombotic agents:lipid modifying agents;15877;30;5.96378
+30.4211;antiepileptics:zotepine;20;5;759.374
+30.4147;vitamins:mineral supplements:systemic hormonal preparations, excl. sex hormones and insulins:musculo-skeletal system:psycholeptics;674;10;45.4767
+30.3205;omeprazole:musculo-skeletal system;6142;20;10.1398
+30.1638;alimentary tract and metabolism:acetylsalicylic acid;24733;37;4.76134
+30.0971;platelet aggregation inhibitors excl. heparin:hmg coa reductase inhibitors;7040;21;9.30155
+30.0665;drugs used in diabetes:vitamins:ciprofloxacin;63;6;289.824
+29.7202;alimentary tract and metabolism:bisoprolol;4813;18;11.6103
+29.682;hmg coa reductase inhibitors:diclofenac;726;10;42.218
+29.655;drugs for peptic ulcer and gastro-oesophageal reflux disease (gord):musculo-skeletal system:amitriptyline;728;10;42.102
+29.5911;domperidone:codeine;68;6;268.512
+29.4163;prednisone;20171;33;5.18047
+29.3414;diclofenac:natural opium alkaloids:quinine;6;4;2021.21
+29.3414;folic acid:hydrochlorothiazide:simvastatin:opioids:benzodiazepine derivatives;6;4;2021.21
+29.3414;omeprazole:bisacodyl:antimalarials;6;4;2021.21
+29.1908;other antibacterials:acetic acid derivatives and related substances:hypnotics and sedatives;25;5;607.498
+28.9864;platelet aggregation inhibitors excl. heparin:lipid modifying agents;7468;21;8.76613
+28.9835;thiamine (vit b1):fluoroquinolones;75;6;243.45
+28.9661;blood and blood forming organs:lipid modifying agents;21789;34;4.94592
+28.5845;domperidone:opium alkaloids and derivatives;80;6;228.234
+28.4944;vitamin k antagonists:natural opium alkaloids:antidepressants:chlorhexidine;7;4;1732.46
+28.4944;vitamin k antagonists:natural opium alkaloids:psychoanaleptics:chlorhexidine;7;4;1732.46
+28.4865;lovastatin;1562;12;23.6246
+28.4355;mineral supplements:systemic hormonal preparations, excl. sex hormones and insulins:musculo-skeletal system:psycholeptics;1165;11;28.9874
+28.4321;domperidone:cough suppressants, excl. combinations with expectorants;82;6;222.667
+28.3736;musculo-skeletal system:anilides:amitriptyline;551;9;49.9744
+28.3307;omeprazole:antiinflammatory and antirheumatic products, non-steroids:codeine;183;7;116.616
+28.2336;lipid modifying agents, plain:colchicine;342;8;71.442
+28.2336;lipid modifying agents, plain:preparations with no effect on uric acid metabolism;342;8;71.442
+28.2336;lipid modifying agents:colchicine;342;8;71.442
+28.2336;lipid modifying agents:preparations with no effect on uric acid metabolism;342;8;71.442
+28.225;nicotinamide:hmg coa reductase inhibitors;2069;13;19.3526
+28.1845;omeprazole:antiinflammatory and antirheumatic products, non-steroids;3197;15;14.4966
+28.1669;omeprazole:antiinflammatory and antirheumatic products;3201;15;14.4784
+28.1206;omeprazole:nervous system;13924;27;6.09161
+28.1178;antiinflammatory and antirheumatic products:amitriptyline:respiratory system;347;8;70.4124
+28.041;lipid modifying agents:diclofenac;858;10;35.72
+27.9276;other antibacterials:antiinflammatory and antirheumatic products, non-steroids:hypnotics and sedatives;89;6;205.153
+27.7217;proton pump inhibitors:musculo-skeletal system;15319;28;5.74824
+27.7049;drugs for acid related disorders:analgesics;28314;38;4.27049
+27.5375;metformin:thiamine (vit b1):calcium;34;5;446.687
+27.5375;metformin:thiamine (vit b1):calcium;34;5;446.687
+27.5375;metformin:vitamin b1, plain:calcium;34;5;446.687
+27.5375;metformin:vitamin b1, plain and in combination with vitamin b6 and b12:calcium;34;5;446.687
+27.5375;biguanides:vitamin b1, plain and in combination with vitamin b6 and b12:calcium;34;5;446.687
+27.4328;omeprazole:non-selective monoamine reuptake inhibitors;913;10;33.5671
+27.214;sitagliptin:nervous system:quinine;9;4;1347.47
+27.214;dipeptidyl peptidase 4 (dpp-4) inhibitors:nervous system:quinine;9;4;1347.47
+27.2074;drugs used in diabetes:bisoprolol;1745;12;21.1446
+27.2071;domperidone:respiratory system;389;8;62.8084
+27.0895;vitamin b1, plain and in combination with vitamin b6 and b12:aldosterone antagonists and other potassium-sparing agents:agents acting on the renin-angiotensin system;37;5;410.468
+26.9709;omeprazole:hmg coa reductase inhibitors:analgesics;3486;15;13.2924
+26.9487;metformin:thiamine (vit b1):mineral supplements;38;5;399.666
+26.9487;metformin:vitamin b1, plain:mineral supplements;38;5;399.666
+26.9487;biguanides:thiamine (vit b1):mineral supplements;38;5;399.666
+26.7835;dihydropyridine derivatives;32150;40;3.96524
+26.7034;clopidogrel:diclofenac:antimalarials;10;4;1212.72
+26.7034;warfarin:selective serotonin reuptake inhibitors:throat preparations;10;4;1212.72
+26.7034;vitamin k antagonists:selective serotonin reuptake inhibitors:chlorhexidine;10;4;1212.72
+26.7034;vitamin k antagonists:selective serotonin reuptake inhibitors:antiseptics;10;4;1212.72
+26.7034;bisacodyl:antimalarials;10;4;1212.72
+26.6767;omeprazole:amitriptyline;667;9;41.2802
+26.6464;beta blocking agents;53141;53;3.22081
+26.4109;domperidone:cough and cold preparations;114;6;160.161
+26.2517;olanzapine:zotepine;11;4;1102.47
+26.2517;dihydrocodeine:quinine;11;4;1102.47
+26.2517;dihydrocodeine:methanolquinolines;11;4;1102.47
+26.2517;diclofenac:quinine;11;4;1102.47
+26.2517;warfarin:antidepressants:antiseptics;11;4;1102.47
+26.2517;warfarin:antidepressants:throat preparations;11;4;1102.47
+26.2517;warfarin:antidepressants:throat preparations;11;4;1102.47
+26.2517;warfarin:psychoanaleptics:chlorhexidine;11;4;1102.47
+26.2517;warfarin:psychoanaleptics:throat preparations;11;4;1102.47
+26.2517;warfarin:psychoanaleptics:throat preparations;11;4;1102.47
+26.2517;vitamin k antagonists:antidepressants:chlorhexidine;11;4;1102.47
+26.2517;vitamin k antagonists:antidepressants:throat preparations;11;4;1102.47
+26.2517;vitamin k antagonists:psychoanaleptics:chlorhexidine;11;4;1102.47
+26.2517;vitamin k antagonists:psychoanaleptics:throat preparations;11;4;1102.47
+26.2517;blood and blood forming organs:vancomycin:proteasome inhibitors;11;4;1102.47
+26.2099;vitamins:mineral supplements:corticosteroids for systemic use:musculo-skeletal system:psycholeptics;441;8;55.4006
+26.061;zotepine;45;5;337.494
+25.8465;folic acid:diuretics:lipid modifying agents:paracetamol:lorazepam:antidepressants;12;4;1010.6
+25.6364;cardiovascular system:diclofenac;2001;12;18.4365
+25.6214;paracetamol:non-selective monoamine reuptake inhibitors:codeine;269;7;79.3293
+25.5052;hmg coa reductase inhibitors:ciprofloxacin;482;8;50.6868
+25.479;folic acid and derivatives:simvastatin:opioids:lorazepam;13;4;932.862
+25.479;alimentary tract and metabolism:warfarin:opioids:antiseptics;13;4;932.862
+25.4429;amlodipine;26243;35;4.22385
+25.4394;proton pump inhibitors:analgesics;24837;34;4.33064
+25.2658;calcium channel blockers;35359;41;3.69545
+25.215;omeprazole:antiinflammatory and antirheumatic products, non-steroids:opium alkaloids and derivatives;500;8;48.8615
+25.0681;other antibacterials;2673;13;14.974
+25.0317;naproxen:analgesics:amitriptyline;143;6;127.678
+25.0151;insulins and analogues:acetylsalicylic acid;3319;14;13.0068
+24.8421;omeprazole:other analgesics and antipyretics;8350;20;7.44827
+24.8372;prasugrel;1192;10;25.7059
+24.6975;hmg coa reductase inhibitors:colchicine;307;7;69.5084
+24.6909;ace inhibitors, plain:lipid modifying agents;15005;26;5.42905
+24.641;ace inhibitors, plain:lipid modifying agents, plain;15040;26;5.4163
+24.5455;bisacodyl:biguanides:natural opium alkaloids;16;4;757.949
+24.5407;aldosterone antagonists and other potassium-sparing agents:lipid modifying agents;2791;13;14.3399
+24.4831;alimentary tract and metabolism:systemic hormonal preparations, excl. sex hormones and insulins:musculo-skeletal system;11671;23;6.15126
+24.381;colecalciferol:calcium;4975;16;9.94484
+24.2775;warfarin:opioids:chlorhexidine;17;4;713.363
+24.2775;contact laxatives:antiprotozoals;17;4;713.363
+24.1554;blood glucose lowering drugs, excl. insulins:thiamine (vit b1):lipid modifying agents;65;5;233.647
+24.0473;proton pump inhibitors:antiinflammatory and antirheumatic products, non-steroids:codeine;337;7;63.3195
+24.0339;metamizole sodium:lorazepam:flurazepam;3;3;3026.13
+24.0339;metamizole sodium:lorazepam:benzodiazepine derivatives;3;3;3026.13
+24.0339;metamizole sodium:benzodiazepine derivatives:flurazepam;3;3;3026.13
+24.0339;pyrazolones:lorazepam:flurazepam;3;3;3026.13
+24.0339;simvastatin:amantadine:dopamine agonists:tolcapone;3;3;3026.13
+24.0339;simvastatin:adamantane derivatives:ropinirole:tolcapone;3;3;3026.13
+24.0339;simvastatin:adamantane derivatives:dopamine agonists:tolcapone;3;3;3026.13
+24.0339;hmg coa reductase inhibitors:ropinirole:tolcapone;3;3;3026.13
+24.0339;hmg coa reductase inhibitors:adamantane derivatives:ropinirole:tolcapone;3;3;3026.13
+24.0339;lipid modifying agents, plain:ropinirole:tolcapone;3;3;3026.13
+24.0339;lipid modifying agents:ropinirole:tolcapone;3;3;3026.13
+24.0339;lipid modifying agents:amantadine:tolcapone;3;3;3026.13
+24.0339;lipid modifying agents:amantadine:ropinirole:tolcapone;3;3;3026.13
+24.0339;lipid modifying agents:pyrazolones:lorazepam:flurazepam;3;3;3026.13
+24.0339;cardiovascular system:amantadine:tolcapone;3;3;3026.13
+24.0339;cardiovascular system:adamantane derivatives:tolcapone;3;3;3026.13
+24.0339;propulsives:potassium:other mineral supplements:prednisone:budesonide;3;3;3026.13
+23.8637;dihydrocodeine;346;7;61.6721
+23.8236;drugs for peptic ulcer and gastro-oesophageal reflux disease (gord):antiinflammatory and antirheumatic products:amitriptyline;348;7;61.3176
+23.7903;antithrombotic agents:psychoanaleptics:chlorhexidine;19;4;638.271
+23.7666;rosuvastatin;10995;22;6.23605
+23.7206;agents acting on the renin-angiotensin system;74179;62;2.71332
+23.6432;antimalarials;6995;18;7.9778
+23.2816;hmg coa reductase inhibitors:antivertigo preparations;191;6;95.5887
+22.9652;benzodiazepine derivatives:valproic acid:olanzapine:other antipsychotics;23;4;527.266
+22.7973;propulsives:codeine;207;6;88.1993
+22.695;ciclosporin;6484;17;8.11531
+22.6478;duloxetine:dexchlorpheniramine;4;3;2269.6
+22.6478;ropinirole:tolcapone;4;3;2269.6
+22.6478;amantadine:tolcapone;4;3;2269.6
+22.6478;amantadine:ropinirole:tolcapone;4;3;2269.6
+22.6478;amantadine:dopamine agonists:tolcapone;4;3;2269.6
+22.6478;adamantane derivatives:tolcapone;4;3;2269.6
+22.6478;adamantane derivatives:ropinirole:tolcapone;4;3;2269.6
+22.6478;adamantane derivatives:dopamine agonists:tolcapone;4;3;2269.6
+22.6478;glucosamine:cinnarizine;4;3;2269.6
+22.6478;other antiinflammatory and antirheumatic agents, non-steroids:cinnarizine;4;3;2269.6
+22.6478;simvastatin:adamantane derivatives:ropinirole:other dopaminergic agents;4;3;2269.6
+22.6478;dihydropyridine derivatives:dexamethasone:pamidronic acid:opioids:gabapentin;4;3;2269.6
+22.6478;selective calcium channel blockers with mainly vascular effects:dexamethasone:pamidronic acid:opioids:gabapentin;4;3;2269.6
+22.6478;selective calcium channel blockers with mainly vascular effects:glucocorticoids:pamidronic acid:opioids:gabapentin;4;3;2269.6
+22.6478;cardiovascular system:amantadine:ropinirole:other dopaminergic agents;4;3;2269.6
+22.4423;natural opium alkaloids:psychoanaleptics:chlorhexidine;26;4;466.427
+22.4074;proton pump inhibitors:amitriptyline;1534;10;19.9706
+22.2908;vitamins;49258;47;3.05111
+22.2822;vancomycin:proteasome inhibitors;27;4;449.152
+22.2269;antiprotozoals;7651;18;7.2908
+22.1283;glycopeptide antibacterials:proteasome inhibitors;28;4;433.11
+21.9801;warfarin:analgesics:throat preparations;29;4;418.175
+21.9178;fluvastatin;458;7;46.5875
+21.8397;paracetamol:amitriptyline:respiratory system;768;8;31.8056
+21.8197;dexamethasone;12216;22;5.60847
+21.7318;metamizole sodium:flurazepam;5;3;1815.68
+21.7318;pyrazolones:flurazepam;5;3;1815.68
+21.7318;simvastatin:tolcapone;5;3;1815.68
+21.7318;amlodipine:pamidronic acid:gabapentinoids;5;3;1815.68
+21.612;vitamin b1, plain and in combination with vitamin b6 and b12:diuretics:ace inhibitors, plain;107;5;141.931
+21.5662;warfarin:chlorhexidine;32;4;378.971
+21.5423;prednisolone;9031;19;6.52686
+21.5182;biguanides:thiamine (vit b1);109;5;139.327
+21.4372;warfarin:antiseptics;33;4;367.486
+21.4372;warfarin:nervous system:throat preparations;33;4;367.486
+21.3357;ascorbic acid (vitamin c), incl. combinations:mineral supplements:systemic hormonal preparations, excl. sex hormones and insulins:musculo-skeletal system:psycholeptics;113;5;134.395
+21.212;colecalciferol;10313;20;6.02317
+21.1912;vitamin k antagonists:chlorhexidine;35;4;346.487
+21.0389;hmg coa reductase inhibitors:tolcapone;6;3;1513.06
+21.0389;hmg coa reductase inhibitors:levodopa and decarboxylase inhibitor:tolcapone;6;3;1513.06
+21.0389;ascorbic acid (vit c):dexamethasone:pamidronic acid:paracetamol;6;3;1513.06
+21.0389;ascorbic acid (vit c):dexamethasone:pamidronic acid:anilides;6;3;1513.06
+21.0389;ascorbic acid (vitamin c), plain:dexamethasone:pamidronic acid:paracetamol;6;3;1513.06
+20.9979;paracetamol:amitriptyline;1275;9;21.5871
+20.9911;anilides:amitriptyline;1276;9;21.5702
+20.9832;metformin:atorvastatin;3022;12;12.1999
+20.9832;biguanides:atorvastatin;3022;12;12.1999
+20.9593;proton pump inhibitors:antiinflammatory and antirheumatic products, non-steroids;7283;17;7.2214
+20.8615;paracetamol:non-selective monoamine reuptake inhibitors;1804;10;16.9788
+20.6822;omeprazole:opioids;3105;12;11.8732
+20.6412;colecalciferol:hmg coa reductase inhibitors;2444;11;13.8067
+20.6355;blood glucose lowering drugs, excl. insulins:dihydrocodeine;40;4;303.175
+20.4805;ciprofloxacin;5603;15;8.25919
+20.4757;naproxen:non-selective monoamine reuptake inhibitors;305;6;59.8562
+20.4378;direct acting antivirals;45135;43;3.02969
+20.4378;antivirals for systemic use;45135;43;3.02969
+20.4333;drugs for constipation:quinine;42;4;288.738
+20.1488;drugs used in diabetes:natural opium alkaloids;1945;10;15.7466
+20.1263;omeprazole;22933;29;3.96575
+20.0098;simvastatin:levodopa and decarboxylase inhibitor:amantadine;8;3;1134.8
+20.0098;simvastatin:levodopa and decarboxylase inhibitor:adamantane derivatives;8;3;1134.8
+20.0098;simvastatin:dopa and dopa derivatives:amantadine;8;3;1134.8
+20.0098;lipid modifying agents:ropinirole:other dopaminergic agents;8;3;1134.8
+19.998;omeprazole:hmg coa reductase inhibitors;5810;15;7.9639
+19.741;analgesics:amitriptyline;3381;12;10.9021
+19.6605;nicotinamide;5960;15;7.76274
+19.6175;fluoroquinolones;13800;22;4.9598
+19.6046;sildenafil:cinnarizine;9;3;1008.71
+19.6046;drugs used in erectile dysfunction:cinnarizine;9;3;1008.71
+19.6046;hmg coa reductase inhibitors:drugs used in erectile dysfunction:cinnarizine;9;3;1008.71
+19.3226;blood glucose lowering drugs, excl. insulins:nervous system:quinine;55;4;220.489
+19.3226;blood glucose lowering drugs, excl. insulins:nervous system:methanolquinolines;55;4;220.489
+19.2481;dopamine agonists:tolcapone;10;3;907.835
+19.2481;glucosamine:antivertigo preparations;10;3;907.835
+19.2481;sildenafil:antivertigo preparations;10;3;907.835
+19.2481;sildenafil:antivertigo preparations;10;3;907.835
+19.1762;hmg coa reductase inhibitors:dihydrocodeine;57;4;212.752
+19.1366;vitamins:mineral supplements:systemic hormonal preparations, excl. sex hormones and insulins:musculo-skeletal system:anxiolytics;382;6;47.7887
+19.1051;digestives, incl. enzymes:gemcitabine;58;4;209.084
+19.1051;digestives, incl. enzymes:gemcitabine;58;4;209.084
+19.0351;sitagliptin:diclofenac;59;4;205.54
+18.8234;vitamin a and d, incl. combinations of the two:hmg coa reductase inhibitors;5397;14;7.9885
+18.6599;propulsives:opium alkaloids and derivatives;414;6;44.094
+18.6425;levodopa and decarboxylase inhibitor:tolcapone;12;3;756.529
+18.4769;propulsives:cough suppressants, excl. combinations with expectorants;427;6;42.7512
+18.3804;drugs used in erectile dysfunction:antivertigo preparations;13;3;698.334
+18.3;analgesics;178533;104;1.9342
+18.2697;contact laxatives:antithrombotic agents;208;5;73.0082
+18.1682;musculo-skeletal system:other analgesics and antipyretics;25099;29;3.61858
+18.1477;lipid modifying agents:antigout preparations;3121;11;10.8072
+18.1477;lipid modifying agents:antigout preparations;3121;11;10.8072
+18.1395;dopa and dopa derivatives:tolcapone;14;3;648.452
+18.1395;oxycodone:antipsychotics:antiseptics;14;3;648.452
+18.1165;aminoquinolines;5715;14;7.5425
+18.0779;metformin:acetylsalicylic acid;4802;13;8.32416
+17.8978;antithrombotic agents:chlorhexidine;78;4;155.471
+17.8978;antithrombotic agents:chlorhexidine;78;4;155.471
+17.8262;antiparasitic products, insecticides and repellents;11404;19;5.16107
+17.7092;tolcapone;16;3;567.395
+17.6458;antithrombotic agents:antiseptics;83;4;146.105
+17.5329;methylprednisolone;7014;15;6.5919
+17.3138;chloroquine;252;5;60.2591
+17.0756;diclofenac;6223;14;6.9246
+16.9993;hmg coa reductase inhibitors:levodopa and decarboxylase inhibitor:amantadine;20;3;453.915
+16.9741;anilides:amitriptyline:cough and cold preparations;551;6;33.1277
+16.9528;vitamin b1, plain:hmg coa reductase inhibitors;271;5;56.0337
+16.9528;vitamin b1, plain and in combination with vitamin b6 and b12:hmg coa reductase inhibitors;271;5;56.0337
+16.9508;blood glucose lowering drugs, excl. insulins:acetylsalicylic acid;7339;15;6.29871
+16.9465;domperidone;1448;8;16.8622
+16.9061;hmg coa reductase inhibitors:antigout preparations;2753;10;11.1194
+16.9061;hmg coa reductase inhibitors:antigout preparations;2753;10;11.1194
+16.8923;multienzymes (lipase, protease etc.):pyrimidine analogues;100;4;121.265
+16.8454;duloxetine:substituted alkylamines;21;3;432.3
+16.8062;hmg coa reductase inhibitors:other nervous system drugs;1475;8;16.5532
+16.7774;calcineurin inhibitors;13511;20;4.58834
+16.7035;antivertigo preparations;577;6;31.6344
+16.6991;propulsives:potassium:other mineral supplements:prednisone;22;3;412.649
+16.645;vitamin d and analogues;23804;27;3.54123
+16.4819;clonazepam:olanzapine;298;5;50.9559
+16.4819;benzodiazepine derivatives:olanzapine;298;5;50.9559
+16.3998;multienzymes (lipase, protease etc.):antimetabolites;113;4;107.314
+16.2987;adamantane derivatives:ropinirole:other dopaminergic agents;25;3;363.131
+16.2227;warfarin:psychoanaleptics;2233;9;12.3185
+16.0739;vitamin a and d, incl. combinations of the two;24506;27;3.43827
+16.0207;macrolides, lincosamides and streptogramins:other antibacterials:bortezomib:antipsychotics;2;2;3020.47
+16.0207;other antianemic preparations:macrolides, lincosamides and streptogramins:other antibacterials:bortezomib:antipsychotics;2;2;3020.47
+16.0207;other antianemic preparations:third-generation cephalosporins:bortezomib:phenothiazines with piperazine structure;2;2;3020.47
+16.0207;other antianemic preparations:third-generation cephalosporins:bortezomib:antipsychotics;2;2;3020.47
+16.0207;magnesium:vancomycin:oxycodone:prochlorperazine;2;2;3020.47
+16.0207;magnesium:glycopeptide antibacterials:oxycodone:prochlorperazine;2;2;3020.47
+15.9304;blood and blood forming organs:chlorhexidine;127;4;95.483
+15.8989;omeprazole:contact laxatives;128;4;94.737
+15.8511;angiotensin ii receptor blockers (arbs), plain:hmg coa reductase inhibitors;10392;17;5.05116
+15.8511;angiotensin ii receptor blockers (arbs), plain:hmg coa reductase inhibitors;10392;17;5.05116
+15.7453;mineral supplements:hmg coa reductase inhibitors;8070;15;5.72555
+15.6738;cardiac therapy:lipid modifying agents;8116;15;5.69294
+15.6654;proton pump inhibitors;61299;47;2.4329
+15.6635;vitamins:corticosteroids for systemic use, plain;6998;14;6.15476
+15.6601;drugs for peptic ulcer and gastro-oesophageal reflux disease (gord);71338;52;2.3217
+15.4424;pamidronic acid;716;6;25.4909
+15.3744;corticosteroids for systemic use:respiratory system;12052;18;4.61575
+15.3521;metformin;35615;33;2.90557
+15.3447;selective immunosuppressants:colchicine;34;3;267.006
+15.3428;biguanides;35630;33;2.90432
+15.2128;hmg coa reductase inhibitors:tramadol;1822;8;13.3978
+15.1686;mebeverine:systemic hormonal preparations, excl. sex hormones and insulins;36;3;252.172
+15.1572;cardiac therapy:hmg coa reductase inhibitors;7303;14;5.89659
+15.0865;lipid modifying agents:other nervous system drugs;1853;8;13.1734
+15.0555;hmg coa reductase inhibitors:methanolquinolines;158;4;76.7475
+15.0052;sitagliptin:natural opium alkaloids;160;4;75.7881
+14.9868;hmg coa reductase inhibitors:corticosteroids for systemic use, plain;5262;12;6.99674
+14.9683;thiamine (vit b1):lipid modifying agents;405;5;37.491
+14.9223;vancomycin:carfilzomib;3;2;2013.64
+14.9223;macrolides, lincosamides and streptogramins:vancomycin:fluconazole:cough and cold preparations;3;2;2013.64
+14.9223;tetracosactide:sultiame;3;2;2013.64
+14.9223;acth:sultiame;3;2;2013.64
+14.9223;blood and blood forming organs:vancomycin:carfilzomib;3;2;2013.64
+14.9223;other mineral supplements:vancomycin:oxycodone:prochlorperazine;3;2;2013.64
+14.896;vitamin b1, plain and in combination with vitamin b6 and b12:lipid modifying agents;411;5;36.9436
+14.892;hmg coa reductase inhibitors:corticosteroids for systemic use;5310;12;6.93329
+14.8907;acetic acid derivatives and related substances;8641;15;5.3453
+14.7326;vitamin a and d, incl. combinations of the two:lipid modifying agents, plain;7571;14;5.68691
+14.5528;lipid modifying agents:dexchlorpheniramine;44;3;206.322
+14.3437;chlorhexidine;460;5;33.0073
+14.2897;lipid modifying agents:paracetamol;6713;13;5.94743
+14.2881;lipid modifying agents:anilides;6714;13;5.94654
+14.2294;amoxicillin:vancomycin:drugs affecting bone structure and mineralization;4;2;1510.23
+14.2294;amoxicillin:glycopeptide antibacterials:bisphosphonates;4;2;1510.23
+14.2294;amoxicillin:glycopeptide antibacterials:drugs affecting bone structure and mineralization;4;2;1510.23
+14.1903;angiotensin ii receptor blockers (arbs), plain:lipid modifying agents;11734;17;4.46972
+14.1903;angiotensin ii receptor blockers (arbs), plain:lipid modifying agents, plain;11734;17;4.46972
+14.0686;mineral supplements:lipid modifying agents;10514;16;4.68947
+13.9788;contact laxatives:hmg coa reductase inhibitors;207;4;58.5785
+13.827;calcium:acetylsalicylic acid;3869;10;7.90657
+13.7748;proton pump inhibitors:hmg coa reductase inhibitors;14928;19;3.93404
+13.7717;gemcitabine;3005;9;9.14942
+13.7188;macrolides, lincosamides and streptogramins:vancomycin:fluconazole:respiratory system;5;2;1208.18
+13.7188;amoxicillin:vancomycin:aciclovir;5;2;1208.18
+13.7188;magnesium:vancomycin:prochlorperazine;5;2;1208.18
+13.7188;pantoprazole:beta blocking agents:antiseptics and disinfectants:levothyroxine sodium;5;2;1208.18
+13.7188;pantoprazole:beta blocking agents:antiseptics and disinfectants:levothyroxine sodium;5;2;1208.18
+13.6567;drugs for peptic ulcer and gastro-oesophageal reflux disease (gord):hmg coa reductase inhibitors;16531;20;3.74303
+13.4594;lipid modifying agents:other dopaminergic agents;63;3;144.096
+13.3136;vancomycin:fluconazole:cough and cold preparations;6;2;1006.82
+13.3136;tetracosactide:other antiepileptics;6;2;1006.82
+13.3136;other antianemic preparations:third-generation cephalosporins:antipsychotics;6;2;1006.82
+13.3136;vitamins:warfarin:opioids:antiseptics;6;2;1006.82
+13.2728;amantadine:dopamine agonists:other dopaminergic agents;67;3;135.493
+13.1879;antiseptics;583;5;26.0415
+13.1837;hmg coa reductase inhibitors:daptomycin;69;3;131.566
+12.9681;pitavastatin;610;5;24.8884
+12.9315;lipid modifying agents:daptomycin;75;3;121.04
+12.8676;vitamins:mineral supplements:systemic hormonal preparations, excl. sex hormones and insulins:antiinflammatory and antirheumatic products:psycholeptics;274;4;44.2527
+12.7745;cinnarizine;79;3;114.911
+12.6898;other mineral supplements:vancomycin:prochlorperazine;8;2;755.114
+12.6379;other plain vitamin preparations;10400;15;4.43636
+12.6379;other plain vitamin preparations;10400;15;4.43636
+12.6072;corticosteroids for systemic use, plain:aminoquinolines;1822;7;11.7009
+12.4718;emtricitabine;5583;11;6.0322
+12.4388;vancomycin:oxycodone:prochlorperazine;9;2;671.212
+12.2666;pravastatin;5707;11;5.90068
+12.2505;ropinirole:other dopaminergic agents;94;3;96.5732
+12.2505;amantadine:other dopaminergic agents;94;3;96.5732
+12.2158;vancomycin:oxycodone:phenothiazines with piperazine structure;10;2;604.09
+12.2158;organic nitrates:trimetazidine:hydrochlorothiazide;10;2;604.09
+12.2158;organic nitrates:trimetazidine:low-ceiling diuretics, thiazides;10;2;604.09
+12.2158;proton pump inhibitors:beta blocking agents:antiseptics and disinfectants:levothyroxine sodium;10;2;604.09
+12.0406;hydrochlorothiazide:amiloride;338;4;35.8721
+12.0174;thiazides, plain:amiloride;340;4;35.661
+12.0154;amoxicillin:vancomycin:nucleosides and nucleotides excl. reverse transcriptase inhibitors;11;2;549.173
+12.0154;penicillins with extended spectrum:glycopeptide antibacterials:bisphosphonates;11;2;549.173
+12.0035;antimycotics for systemic use;7051;12;5.2157
+11.951;lipid modifying agents:macrolides;753;5;20.1601
+11.8676;calcium:analgesics;8407;13;4.74402
+11.8333;telbivudine:peginterferon alfa-2a;12;2;503.408
+11.8333;vancomycin:natural opium alkaloids:prochlorperazine;12;2;503.408
+11.8333;vasodilators used in cardiac diseases:trimetazidine:low-ceiling diuretics, thiazides;12;2;503.408
+11.7177;diuretics;48200;36;2.33736
+11.6697;drugs for peptic ulcer and gastro-oesophageal reflux disease (gord):lipid modifying agents;18933;20;3.26324
+11.6664;nicotinic acid and derivatives;13;2;464.684
+11.5721;drugs for acid related disorders:lipid modifying agents;19063;20;3.24072
+11.5677;omeprazole:colchicine;118;3;76.9301
+11.5366;amiodarone:hmg coa reductase inhibitors;1416;6;12.8839
+11.5281;beta blocking agents:antiinfectives for systemic use;6181;11;5.44657
+11.5152;platelet aggregation inhibitors excl. heparin:acetylsalicylic acid;8695;13;4.58607
+11.5125;metformin:clopidogrel:bisoprolol:simvastatin;14;2;431.492
+11.5071;hmg coa reductase inhibitors:macrolides, lincosamides and streptogramins;826;5;18.3776
+11.4434;hmg coa reductase inhibitors:amantadine;123;3;73.8026
+11.4381;clonazepam:other antipsychotics;838;5;18.1143
+11.4381;benzodiazepine derivatives:other antipsychotics;838;5;18.1143
+11.438;lipid modifying agents:glucocorticoids;6242;11;5.39314
+11.4049;propionic acid derivatives:anilides;5111;10;5.98061
+11.3699;antiarrhythmics, class i and iii:hmg coa reductase inhibitors;2208;7;9.65304
+11.3577;corticosteroids for systemic use, plain:psycholeptics;6297;11;5.34585
+11.1951;amiodarone:lipid modifying agents;1505;6;12.1213
+11.0776;omeprazole:high-ceiling diuretics:non-selective monoamine reuptake inhibitors;139;3;65.3067
+10.9938;macrolides, lincosamides and streptogramins:glycopeptide antibacterials:fluconazole;18;2;335.604
+10.9775;bisphosphonates;23296;22;2.92062
+10.8691;antiarrhythmics, class i and iii:lipid modifying agents;2389;7;8.92069
+10.86;lipid modifying agents:macrolides, lincosamides and streptogramins;946;5;16.0452
+10.8364;omeprazole:drugs for treatment of bone diseases;1605;6;11.3654
+10.7525;lipid modifying agents:adamantane derivatives;155;3;58.5648
+10.7103;hydrochlorothiazide:hmg coa reductase inhibitors;5549;10;5.50705
+10.6394;alimentary tract and metabolism:warfarin:opioids;991;5;15.3162
+10.5662;hmg coa reductase inhibitors:metamizole sodium;165;3;55.015
+10.5482;lipid modifying agents:betahistine;166;3;54.6836
+10.5004;lipid modifying agents:anxiolytics;5690;10;5.37011
+10.4982;amantadine;1021;5;14.8659
+10.4982;adamantane derivatives;1021;5;14.8659
+10.492;amoxicillin:other antibacterials:drugs affecting bone structure and mineralization;23;2;262.646
+10.492;tetracosactide;23;2;262.646
+10.492;antithrombotic agents:sulfonamides, plain:chlorhexidine;23;2;262.646
+10.4052;vancomycin:bortezomib;24;2;251.702
+10.3573;lipid modifying agents:metamizole sodium;177;3;51.2848
+10.3509;antiarrhythmics, class iii:hmg coa reductase inhibitors;1752;6;10.4108
+10.322;glycopeptide antibacterials:bortezomib;25;2;241.634
+10.2422;thyroid preparations:chlorhexidine;26;2;232.34
+10.1849;hmg coa reductase inhibitors:anxiolytics;4731;9;5.80522
+10.1774;paracetamol;45750;33;2.24737
+10.0878;drugs for peptic ulcer and gastro-oesophageal reflux disease (gord):atorvastatin;5980;10;5.10876
+10.0393;vitamins:other mineral supplements:systemic hormonal preparations, excl. sex hormones and insulins:musculo-skeletal system:psycholeptics;197;3;46.0777
+10.0203;thyroid hormones:antiseptics;29;2;208.305
+9.90688;hmg coa reductase inhibitors:substituted alkylamines;206;3;44.0643
+9.8401;drugs for constipation:lipid modifying agents;2815;7;7.5687
+9.8401;drugs for constipation:lipid modifying agents;2815;7;7.5687
+9.82077;preparations with no effect on uric acid metabolism:amitriptyline;32;2;188.776
+9.80116;omeprazole:agents acting on the renin-angiotensin system;6192;10;4.9332
+9.75847;sultiame;33;2;183.055
+9.26376;ascorbic acid (vitamin c), incl. combinations:glucocorticoids;691;4;17.5428
+9.22184;sitagliptin:lipid modifying agents;2154;6;8.46574
+9.19033;codeine;5398;9;5.0858
+9.18161;ascorbic acid (vitamin c), incl. combinations:corticosteroids for systemic use;706;4;17.17
+9.17491;clonazepam:diazepines, oxazepines, thiazepines and oxepines;1354;5;11.2075
+9.16001;alimentary tract and metabolism:gemcitabine;710;4;17.0732
+9.13815;lipid modifying agents:gabapentinoids;5436;9;5.05012
+9.04501;penicillins with extended spectrum:vancomycin:aciclovir;47;2;128.527
+8.97897;lipid modifying agents:gabapentin;3238;7;6.57822
+8.94572;hmg coa reductase inhibitors:antimalarials;751;4;16.1407
+8.78686;hmg coa reductase inhibitors:antiprotozoals;783;4;15.4807
+8.7823;propulsives;5704;9;4.81204
+8.73731;systemic hormonal preparations, excl. sex hormones and insulins:sulfamethoxazole;2357;6;7.73564
+8.70789;hmg coa reductase inhibitors:prednisone;2370;6;7.69315
+8.68157;quinine;805;4;15.0575
+8.66517;other cardiac preparations:lipid modifying agents;1512;5;10.0353
+8.6576;cardiovascular system:macrolides, lincosamides and streptogramins:antiinflammatory and antirheumatic products:hypnotics and sedatives;57;2;105.978
+8.59881;other cardiac preparations:lipid modifying agents;1534;5;9.89128
+8.58112;hmg coa reductase inhibitors:triazole and tetrazole derivatives;323;3;28.1009
+8.56304;lipid modifying agents, plain:caffeine;325;3;27.9279
+8.56304;lipid modifying agents:xanthine derivatives;325;3;27.9279
+8.53349;spironolactone:hmg coa reductase inhibitors;1556;5;9.7513
+8.52478;hmg coa reductase inhibitors:gabapentinoids;4648;8;5.24267
+8.45706;mineral supplements:calcium homeostasis:musculo-skeletal system:psycholeptics;63;2;95.8842
+8.34948;vitamin b1, plain and in combination with vitamin b6 and b12;2535;6;7.19168
+8.2802;ranolazine:hmg coa reductase inhibitors;358;3;25.3531
+8.27205;cardiovascular system:amantadine;359;3;25.2824
+8.12375;hmg coa reductase inhibitors:antiparasitic products, insecticides and repellents;933;4;12.9907
+8.11972;hmg coa reductase inhibitors:prednisolone;934;4;12.9767
+8.06813;ranolazine:lipid modifying agents;385;3;23.5747
+8.06047;multienzymes (lipase, protease etc.);1726;5;8.78993
+8.05303;hmg coa reductase inhibitors:antimycotics for systemic use;387;3;23.4528
+8.05303;hmg coa reductase inhibitors:antimycotics for systemic use;387;3;23.4528
+8.03802;lipid modifying agents:triazole and tetrazole derivatives;389;3;23.3322
+8.00943;crizotinib:levamisole;1;1;3014.82
+8.00943;crizotinib:imidazothiazole derivatives;1;1;3014.82
+8.00943;anaplastic lymphoma kinase (alk) inhibitors:levamisole;1;1;3014.82
+8.00943;anaplastic lymphoma kinase (alk) inhibitors:imidazothiazole derivatives;1;1;3014.82
+8.00943;protein kinase inhibitors:levamisole;1;1;3014.82
+8.00943;protein kinase inhibitors:imidazothiazole derivatives;1;1;3014.82
+8.00943;cefazolin:chlorphenamine;1;1;3014.82
+8.00943;cefazolin:other antidepressants:chlorphenamine;1;1;3014.82
+8.00943;cefazolin:antidepressants:chlorphenamine;1;1;3014.82
+8.00943;cefazolin:hypnotics and sedatives:chlorphenamine;1;1;3014.82
+8.00943;cefazolin:ceftazidime:psycholeptics:chlorphenamine;1;1;3014.82
+8.00943;first-generation cephalosporins:psycholeptics:chlorphenamine;1;1;3014.82
+8.00943;first-generation cephalosporins:ceftazidime:psycholeptics:chlorphenamine;1;1;3014.82
+8.00943;first-generation cephalosporins:ceftazidime:nervous system:chlorphenamine;1;1;3014.82
+8.00943;atenolol:basiliximab:clonidine;1;1;3014.82
+8.00943;other antianemic preparations:macrolides:other antibacterials:bortezomib:antipsychotics;1;1;3014.82
+8.00943;vitamin k antagonists:hydromorphone:antidepressants:chlorhexidine;1;1;3014.82
+8.00943;vitamin k antagonists:hormone antagonists and related agents:psychoanaleptics:chlorhexidine;1;1;3014.82
+8.00943;thiamine (vit b1):cefepime:ciprofloxacin;1;1;3014.82
+8.00943;thiazolidinediones:thiamine (vit b1):ciprofloxacin;1;1;3014.82
+8.00943;thiazolidinediones:thiamine (vit b1):cardiovascular system:ciprofloxacin;1;1;3014.82
+8.00943;thiazolidinediones:vitamin b1, plain:ciprofloxacin;1;1;3014.82
+8.00943;thiazolidinediones:vitamin b1, plain and in combination with vitamin b6 and b12:ciprofloxacin;1;1;3014.82
+8.0047;drugs used in diabetes:preparations with no effect on uric acid metabolism:acetylsalicylic acid;79;2;76.4639
+7.99701;lipid modifying agents:antimalarials;965;4;12.5596
+7.97975;spironolactone:lipid modifying agents;1757;5;8.63468
+7.9796;hmg coa reductase inhibitors:pamidronic acid;80;2;75.508
+7.93034;hmg coa reductase inhibitors:fusidic acid;82;2;73.6663
+7.92212;hmg coa reductase inhibitors:gabapentin;2749;6;6.63095
+7.89216;hmg coa reductase inhibitors:risedronic acid;409;3;22.191
+7.8823;lipid modifying agents:steroid antibacterials;84;2;71.9122
+7.87725;cardiac therapy;29016;22;2.33644
+7.86785;enzyme preparations;1801;5;8.4235
+7.85363;antiemetics and antinauseants:analgesics;3906;7;5.45096
+7.82892;hmg coa reductase inhibitors:ciclosporin;418;3;21.7131
+7.72283;lipid modifying agents:pamidronic acid;91;2;66.3802
+7.71881;dipeptidyl peptidase 4 (dpp-4) inhibitors:hmg coa reductase inhibitors;2858;6;6.37762
+7.58275;nervous system;380410;160;1.37872
+7.53519;corticosteroids for systemic use, plain:beta-lactamase resistant penicillins;100;2;60.4057
+7.52248;lipid modifying agents, plain:prednisone;2968;6;6.14083
+7.52248;lipid modifying agents:prednisone;2968;6;6.14083
+7.49582;antigout preparations:other analgesics and antipyretics:amitriptyline;102;2;59.2212
+7.44644;lipid modifying agents:risedronic acid;477;3;19.0267
+7.41034;atorvastatin:lorazepam;483;3;18.7903
+7.31645;blood glucose lowering drugs, excl. insulins:thiamine (vit b1):calcium channel blockers:ciprofloxacin;2;1;1507.41
+7.31645;blood glucose lowering drugs, excl. insulins:vitamin b1, plain and in combination with vitamin b6 and b12:penicillins with extended spectrum:ciprofloxacin;2;1;1507.41
+7.31645;blood glucose lowering drugs, excl. insulins:vitamin b1, plain and in combination with vitamin b6 and b12:other mineral supplements:ciprofloxacin;2;1;1507.41
+7.28377;clonazepam;10088;11;3.32904
+7.17953;vitamin k antagonists:lipid modifying agents;4384;7;4.85518
+7.1785;proteasome inhibitors;5712;8;4.26327
+7.15682;lipid modifying agents:erythromycin;121;2;49.9214
+7.14673;fibrates;4409;7;4.82758
+7.03113;dexchlorpheniramine;551;3;16.4706
+7.03002;domperidone:decongestants and other nasal preparations for topical use;129;2;46.8252
+6.91115;crizotinib:antinematodal agents;3;1;1004.94
+6.91115;crizotinib:anthelmintics;3;1;1004.94
+6.91115;nucleoside and nucleotide reverse transcriptase inhibitors:pneumococcal vaccines;3;1;1004.94
+6.91115;other antibacterials:indometacin:hypnotics and sedatives;3;1;1004.94
+6.91115;first-generation cephalosporins:chlorphenamine;3;1;1004.94
+6.91115;beta blocking agents, selective:basiliximab:clonidine;3;1;1004.94
+6.91115;blood glucose lowering drugs, excl. insulins:vitamin b1, plain:beta blocking agents:quinolone antibacterials;3;1;1004.94
+6.91059;dopaminergic agents;8959;10;3.4037
+6.86816;hmg coa reductase inhibitors:beta-lactamase resistant penicillins;140;2;43.1458
+6.8541;ciprofloxacin:various;141;2;42.8398
+6.73495;folic acid and derivatives:antiinfectives for systemic use;2323;5;6.52854
+6.62363;macrolides, lincosamides and streptogramins:fluconazole:thalidomide:cough and cold preparations;4;1;753.704
+6.62088;hmg coa reductase inhibitors:sulfamethoxazole;636;3;14.2686
+6.55594;ispaghula (psylla seeds):hmg coa reductase inhibitors;164;2;36.8313
+6.44529;glucosamine;1469;4;8.24796
+6.42033;esomeprazole:antiinfectives for systemic use;2497;5;6.07295
+6.40065;crizotinib:antiparasitic products, insecticides and repellents;5;1;602.963
+6.40065;anaplastic lymphoma kinase (alk) inhibitors:antiparasitic products, insecticides and repellents;5;1;602.963
+6.40065;vitamin b1, plain:ciprofloxacin:hydrocodone;5;1;602.963
+6.30829;eplerenone:hmg coa reductase inhibitors;186;2;32.4744
+6.29243;methylprednisolone:prednisone;714;3;12.7092
+6.28739;other antiinflammatory and antirheumatic agents, non-steroids;2575;5;5.88871
+6.23752;omeprazole:anesthetics;728;3;12.4647
+6.20282;lipid modifying agents:sulfamethoxazole;737;3;12.3124
+6.07201;hmg coa reductase inhibitors:sulfonamides and trimethoprim;772;3;11.754
+6.06451;systemic hormonal preparations, excl. sex hormones and insulins:nelfinavir;7;1;430.687
+6.00363;hmg coa reductase inhibitors:sildenafil;791;3;11.4715
+5.97536;lipid modifying agents, plain:trimethoprim;799;3;11.3566
+5.9352;ispaghula (psylla seeds):lipid modifying agents;225;2;26.8449
+5.91955;folic acid:hmg coa reductase inhibitors;2806;5;5.40315
+5.91955;folic acid and derivatives:hmg coa reductase inhibitors;2806;5;5.40315
+5.89539;hmg coa reductase inhibitors:alprazolam;1712;4;7.07618
+5.86523;glucocorticoids:levofloxacin;831;3;10.9191
+5.81353;other immunosuppressants:chloroquine;9;1;334.979
+5.68304;lipid modifying agents:sulfonamides and trimethoprim;887;3;10.2293
+5.66114;levodopa and decarboxylase inhibitor:other dopaminergic agents;894;3;10.1492
+5.64369;lipid modifying agents:other immunosuppressants;1838;4;6.59058
+5.61319;corticosteroids for systemic use:galantamine;11;1;274.073
+5.61319;lipid modifying agents:etidronic acid;11;1;274.073
+5.60262;bisoprolol:corticosteroids for systemic use;913;3;9.93787
+5.52635;omeprazole:dosulepin;12;1;251.233
+5.49381;corticosteroids for systemic use:antigout preparations;1918;4;6.31537
+5.49235;simvastatin:antigout preparations;950;3;9.55059
+5.48831;vitamins:musculo-skeletal system:other analgesics and antipyretics:amitriptyline;283;2;21.3423
+5.44647;corticosteroids for systemic use, plain:flunisolide;13;1;231.908
+5.37613;hmg coa reductase inhibitors:antidepressants;11115;10;2.73979
+5.34499;omeprazole:antigout preparations;1002;3;9.05466
+5.32654;potassium:glucocorticoids;2012;4;6.01997
+5.32031;drugs for constipation:cardiovascular system;6130;7;3.46852
+5.30674;other dopaminergic agents;1016;3;8.92982
+5.29964;antiinfectives for systemic use:opium alkaloids and derivatives;3253;5;4.6594
+5.2027;lipid modifying agents:alprazolam;2085;4;5.80893
+5.1719;furosemide:hmg coa reductase inhibitors;6305;7;3.37188
+5.16964;drugs used in diabetes:systemic hormonal preparations, excl. sex hormones and insulins:musculo-skeletal system;2105;4;5.75367
+5.12188;salicylic acid and derivatives:cromoglicic acid;18;1;167.488
+5.00183;bulk-forming laxatives:lipid modifying agents;364;2;16.5922
+4.92849;natural opium alkaloids;34770;21;1.8508
+4.91287;lipid modifying agents:respiratory system;13804;11;2.42723
+4.90192;lipid modifying agents, plain:amitriptyline;1178;3;7.701
+4.90192;lipid modifying agents:amitriptyline;1178;3;7.701
+4.86758;hmg coa reductase inhibitors:drugs used in erectile dysfunction;1193;3;7.6041
+4.85171;lipid modifying agents, plain:psychostimulants, agents used for adhd and nootropics;1200;3;7.55971
+4.85171;lipid modifying agents:psychostimulants, agents used for adhd and nootropics;1200;3;7.55971
+4.84008;lercanidipine:lipid modifying agents, plain;396;2;15.2512
+4.84008;lercanidipine:lipid modifying agents;396;2;15.2512
+4.82923;lipid modifying agents:anesthetics;1210;3;7.49719
+4.81127;lipid modifying agents:hydrocortisone;402;2;15.0235
+4.78486;hmg coa reductase inhibitors:alendronic acid;1230;3;7.37519
+4.74656;levodopa and decarboxylase inhibitor;3726;5;4.06672
+4.6817;lipid modifying agents:famciclovir;28;1;107.67
+4.6817;amlodipine:galantamine;28;1;107.67
+4.66051;high-ceiling diuretics:antiinfectives for systemic use;3807;5;3.97999
+4.65434;hmg coa reductase inhibitors:endocrine therapy;1291;3;7.02645
+4.63858;lipid modifying agents, plain:drugs for treatment of bone diseases;3828;5;3.95811
+4.63858;lipid modifying agents:drugs for treatment of bone diseases;3828;5;3.95811
+4.61787;proton pump inhibitors:acetylsalicylic acid;10579;9;2.58669
+4.50504;dopa and dopa derivatives;3959;5;3.82682
+4.49908;lipid modifying agents:drugs used in erectile dysfunction;1368;3;6.63064
+4.49607;losartan:lipid modifying agents;3968;5;3.81812
+4.47598;lipid modifying agents:allopurinol;2581;4;4.69116
+4.43171;lipid modifying agents:deflazacort;36;1;83.7433
+4.43171;anabolic agents for systemic use:systemic hormonal preparations, excl. sex hormones and insulins:musculo-skeletal system;36;1;83.7433
+4.38828;prednisone:all other therapeutic products;502;2;12.03
+4.37025;hmg coa reductase inhibitors:thyroid therapy;7376;7;2.88036
+4.36208;omeprazole:vitamin a and d, incl. combinations of the two:antiinflammatory and antirheumatic products, non-steroids;509;2;11.8645
+4.3436;omeprazole:antimigraine preparations;514;2;11.7491
+4.29248;lipid modifying agents:antidepressants;13119;10;2.31837
+4.2845;h2-receptor antagonists;11192;9;2.44408
+4.27569;lipid modifying agents:endocrine therapy;1488;3;6.09545
+4.27154;triamterene:hmg coa reductase inhibitors;534;2;11.3089
+4.25747;hmg coa reductase inhibitors:fentanyl;538;2;11.2248
+4.24239;ascorbic acid (vitamin c), incl. combinations;5845;6;3.11265
+4.22649;anastrozole;1516;3;5.98277
+4.19212;rabeprazole:hmg coa reductase inhibitors;557;2;10.8417
+4.08589;lipid modifying agents:pyridostigmine;51;1;59.1123
+4.08589;lipid modifying agents:degarelix;51;1;59.1123
+4.07178;lipid modifying agents:antihistamines for systemic use;4425;5;3.42283
+4.07178;lipid modifying agents:antihistamines for systemic use;4425;5;3.42283
+4.02922;metformin:pitavastatin;54;1;55.8282
+4.01104;other alimentary tract and metabolism products:prednisone;55;1;54.8131
+3.99433;famotidine:hmg coa reductase inhibitors;619;2;9.75545
+3.97565;salsalate;57;1;52.8898
+3.93793;rabeprazole:lipid modifying agents, plain;638;2;9.46481
+3.92486;prednisone:dextropropoxyphene;60;1;50.2452
+3.90849;proton pump inhibitors:other drugs for disorders of the musculo-skeletal system;61;1;49.4215
+3.89289;hmg coa reductase inhibitors:urologicals;3083;4;3.92609
+3.84564;lipid modifying agents:anticholinesterases;65;1;46.38
+3.81566;omeprazole:emtricitabine;67;1;44.9955
+3.80101;lipid modifying agents:melphalan;68;1;44.3338
+3.78224;opium alkaloids and derivatives;22857;14;1.86576
+3.73987;drugs for constipation:glucocorticoids;1828;3;4.96068
+3.69409;magnesium:lipid modifying agents;1861;3;4.87261
+3.69111;prednisone:chlorphenamine;76;1;39.6669
+3.69111;corticosteroids for systemic use:rocuronium bromide;76;1;39.6669
+3.62822;hmg coa reductase inhibitors:general nutrients;81;1;37.2182
+3.62297;lipid modifying agents:thyroid hormones;8617;7;2.46363
+3.59969;enoxaparin:corticosteroids for systemic use, plain;766;2;7.8826
+3.58068;simvastatin:colchicine;85;1;35.4667
+3.53535;lipid modifying agents, plain:thalidomide;89;1;33.8726
+3.53535;lipid modifying agents:thalidomide;89;1;33.8726
+3.50912;thyroid therapy;35367;19;1.63928
+3.49018;lipid modifying agents:cough suppressants, excl. combinations with expectorants;3501;4;3.45643
+3.4813;hmg coa reductase inhibitors:antihistamines for systemic use;3511;4;3.44657
+3.4711;amlodipine:azithromycin;95;1;31.7331
+3.44198;lipid modifying agents:codeine;835;2;7.23091
+3.42956;corticosteroids for systemic use:diphenhydramine;2066;3;4.38857
+3.41625;hmg coa reductase inhibitors:pregabalin;2077;3;4.3653
+3.39157;sugammadex;103;1;29.2683
+3.39157;ciclosporin:preparations inhibiting uric acid production;103;1;29.2683
+3.37267;anabolic agents for systemic use:analgesics;105;1;28.7107
+3.35413;omeprazole:drugs for treatment of bone diseases:amitriptyline;107;1;28.1741
+3.29192;fingolimod:acetylsalicylic acid;114;1;26.444
+3.24488;acth;931;2;6.48491
+3.24409;pyrimidine analogues;17854;11;1.87189
+3.19348;hmg coa reductase inhibitors:antimigraine preparations;958;2;6.30204
+3.17077;lipid modifying agents:ketoprofen;129;1;23.3689
+3.14667;lipid modifying agents, plain:cough and cold preparations;3916;4;3.08934
+3.14206;rosuvastatin:analgesics;3922;4;3.0846
+3.1263;hmg coa reductase inhibitors:benzamides;135;1;22.3302
+3.07005;hmg coa reductase inhibitors:parasympathomimetics;143;1;21.0808
+3.06044;lipid modifying agents:pregabalin;2399;3;3.77862
+3.01693;lipid modifying agents, plain:integrase inhibitors;151;1;19.9639
+2.99144;atenolol:clonidine;155;1;19.4486
+2.99144;famotidine:drugs used in diabetes:acetylsalicylic acid;155;1;19.4486
+2.98965;vaccines;1074;2;5.62097
+2.96662;hmg coa reductase inhibitors:other hormone antagonists and related agents;159;1;18.9593
+2.91304;didanosine;168;1;17.9435
+2.91304;lipid modifying agents:ceftriaxone;168;1;17.9435
+2.89583;lipid modifying agents:other hormone antagonists and related agents;171;1;17.6287
+2.88453;cromoglicic acid;173;1;17.4249
+2.87893;hmg coa reductase inhibitors:colony stimulating factors;174;1;17.3247
+2.87216;drugs used in benign prostatic hypertrophy:corticosteroids for systemic use;1148;2;5.2584
+2.86664;folic acid:prednisone;2600;3;3.48607
+2.84602;lipid modifying agents:parasympathomimetics;180;1;16.7472
+2.84064;hmg coa reductase inhibitors:raloxifene;181;1;16.6546
+2.81365;ascorbic acid (vit c):hmg coa reductase inhibitors;1187;2;5.0855
+2.81365;ascorbic acid (vitamin c), plain:hmg coa reductase inhibitors;1187;2;5.0855
+2.80045;omeprazole:muscle relaxants;1196;2;5.04721
+2.75728;irbesartan:lipid modifying agents;1226;2;4.92361
+2.74579;fibrates:nervous system;2736;3;3.3125
+2.72479;isosorbide dinitrate:hmg coa reductase inhibitors;204;1;14.7767
+2.7014;lipid modifying agents:anastrozole;209;1;14.4231
+2.69679;lipid modifying agents, plain:colony stimulating factors;210;1;14.3544
+2.68764;drugs for peptic ulcer and gastro-oesophageal reflux disease (gord):drugs for treatment of bone diseases:amitriptyline;212;1;14.219
+2.6831;hmg coa reductase inhibitors:abatacept;213;1;14.1522
+2.67858;antiinfectives for systemic use:medical gases;214;1;14.0861
+2.64282;hmg coa reductase inhibitors:opium alkaloids and derivatives;2859;3;3.16975
+2.63551;organic nitrates:hmg coa reductase inhibitors;2868;3;3.15979
+2.62598;corticosteroids for systemic use, plain:carbonic anhydrase inhibitors;226;1;13.3381
+2.58432;lipid modifying agents:raloxifene;236;1;12.7728
+2.56817;lipid modifying agents:ibandronic acid;240;1;12.5599
+2.54837;omeprazole:other cardiac preparations;245;1;12.3035
+2.51422;lipid modifying agents:celecoxib;1412;2;4.27454
+2.514;hydrocortisone;3023;3;2.99748
+2.48096;organic nitrates:lipid modifying agents;3067;3;2.9544
+2.48042;deflazacort;263;1;11.4613
+2.47265;olmesartan medoxomil:lipid modifying agents;1447;2;4.17106
+2.46957;hmg coa reductase inhibitors:clarithromycin;266;1;11.3321
+2.42883;thiazolidinediones:hmg coa reductase inhibitors;1485;2;4.06423
+2.41716;hmg coa reductase inhibitors:azithromycin;281;1;10.727
+2.40703;lipid modifying agents:clarithromycin;284;1;10.6137
+2.40384;vasodilators used in cardiac diseases:hmg coa reductase inhibitors;3173;3;2.85552
+2.39961;systemic hormonal preparations, excl. sex hormones and insulins:colony stimulating factors;1511;2;3.99423
+2.39701;lipid modifying agents, plain:hydromorphone;287;1;10.5027
+2.39701;lipid modifying agents:hydromorphone;287;1;10.5027
+2.39039;erythropoietin:hmg coa reductase inhibitors;289;1;10.43
+2.3871;lipid modifying agents:third-generation cephalosporins;290;1;10.3941
+2.33863;hmg coa reductase inhibitors:direct acting antivirals;1567;2;3.85135
+2.32982;lipid modifying agents:fingolimod;308;1;9.78652
+2.32457;hmg coa reductase inhibitors:cough and cold preparations;3287;3;2.75629
+2.30293;calcium homeostasis;14042;8;1.72522
+2.2956;glyceryl trinitrate:lipid modifying agents, plain;1608;2;3.75306
+2.2956;glyceryl trinitrate:lipid modifying agents;1608;2;3.75306
+2.2906;low-ceiling diuretics, excl. thiazides:corticosteroids for systemic use;321;1;9.39011
+2.27887;lipid modifying agents:other sex hormones and modulators of the genital system;325;1;9.27451
+2.27001;lipid modifying agents:immunostimulants;1633;2;3.69554
+2.26441;remifentanil;330;1;9.13396
+2.26292;lipid modifying agents:other antineoplastic agents;1640;2;3.67975
+2.2587;amlodipine:anticholinesterases;332;1;9.07893
+2.25287;thiazolidinediones:lipid modifying agents;1650;2;3.65743
+2.23619;hmg coa reductase inhibitors:gemfibrozil;340;1;8.86526
+2.22514;nicorandil:lipid modifying agents;344;1;8.76215
+2.21153;hmg coa reductase inhibitors:phenothiazines with piperazine structure;349;1;8.6366
+2.20078;prednisone:tofacitinib;353;1;8.53871
+2.19281;hmg coa reductase inhibitors:anesthetics, local;356;1;8.46674
+2.18161;abacavir;1723;2;3.50231
+2.17876;glucocorticoids:interleukin inhibitors;1726;2;3.49622
+2.16416;hmg coa reductase inhibitors:temazepam;367;1;8.21291
+2.13642;lipid modifying agents:lidocaine;378;1;7.97386
+2.10712;antiarrhythmics, class ic:hmg coa reductase inhibitors;390;1;7.72845
+2.09711;lipid modifying agents:other antidepressants;5680;4;2.12757
+2.06887;hmg coa reductase inhibitors:urologicals;5742;4;2.10452
+2.05808;lipid modifying agents:clozapine;411;1;7.33347
+2.05466;ascorbic acid (vit c):lipid modifying agents;1863;2;3.23884
+2.05466;ascorbic acid (vitamin c), plain:lipid modifying agents;1863;2;3.23884
+2.05466;ascorbic acid (vitamin c), incl. combinations:lipid modifying agents;1863;2;3.23884
+2.04863;lipid modifying agents:zolpidem;1870;2;3.2267
+2.04679;lipid modifying agents:aripiprazole;416;1;7.2453
+2.03124;antiarrhythmics, class ic:lipid modifying agents;423;1;7.12538
+2.0203;lipid modifying agents:anesthetics, local;428;1;7.04211
+2.0095;salt solutions:corticosteroids for systemic use;433;1;6.96077
+1.99467;lansoprazole:hmg coa reductase inhibitors;1934;2;3.1198
+1.99459;sodium:hmg coa reductase inhibitors;440;1;6.85
+1.98202;other vasodilators used in cardiac diseases:lipid modifying agents;446;1;6.75783
+1.97168;hmg coa reductase inhibitors:alkylating agents;451;1;6.68289
+1.93152;lipid modifying agents:aromatase inhibitors;471;1;6.39903
+1.91684;lisinopril:hmg coa reductase inhibitors;6094;4;1.98252
+1.91597;angiotensin ii receptor blockers (arbs), plain:diclofenac;479;1;6.29213
+1.91001;lipid modifying agents:other centrally acting agents;2040;2;2.9575
+1.86187;hmg coa reductase inhibitors:aciclovir;508;1;5.93282
+1.86187;irrigating solutions:hmg coa reductase inhibitors;508;1;5.93282
+1.85826;omeprazole:oxicams;510;1;5.90955
+1.85467;sodium:lipid modifying agents;512;1;5.88646
+1.8387;indapamide:lipid modifying agents;521;1;5.78474
+1.83068;lansoprazole:lipid modifying agents;2146;2;2.81123
+1.82475;lipid modifying agents:hydroxyzine;529;1;5.69723
+1.78236;ceftriaxone;2214;2;2.72477
+1.78095;hmg coa reductase inhibitors:fampridine;555;1;5.43025
+1.74404;other alimentary tract and metabolism products:analgesics;578;1;5.21409
+1.74091;hmg coa reductase inhibitors:other nervous system drugs;580;1;5.1961
+1.69677;mesalazine:lipid modifying agents;609;1;4.94858
+1.6894;brentuximab vedotin;614;1;4.90827
+1.68538;lipid modifying agents:other antineoplastic agents;2359;2;2.55706
+1.68209;lipid modifying agents:aciclovir;619;1;4.86861
+1.68064;torasemide:hmg coa reductase inhibitors;620;1;4.86075
+1.65772;macrolides, lincosamides and streptogramins:acetylsalicylic acid;636;1;4.73842
+1.65349;colesevelam;639;1;4.71617
+1.64372;aminosalicylic acid and similar agents:hmg coa reductase inhibitors;646;1;4.66504
+1.63635;lipid modifying agents:muscle relaxants, centrally acting agents;2437;2;2.4751
+1.62046;torasemide:lipid modifying agents;663;1;4.54538
+1.59584;lipid modifying agents:hydrocodone;2504;2;2.40877
+1.59003;hmg coa reductase inhibitors:meloxicam;686;1;4.39292
+1.58615;pravastatin:antiinfectives for systemic use;689;1;4.37378
+1.58228;hmg coa reductase inhibitors:cyclobenzaprine;692;1;4.35481
+1.56943;carvedilol:hmg coa reductase inhibitors;2549;2;2.36618
+1.56827;ondansetron:hmg coa reductase inhibitors;703;1;4.28664
+1.55731;lipid modifying agents:benzodiazepine related drugs;2570;2;2.34682
+1.54585;hmg coa reductase inhibitors:other antipsychotics;721;1;4.17958
+1.53731;cardiovascular system:parathyroid hormones and analogues;728;1;4.13937
+1.52049;rosiglitazone:lipid modifying agents;742;1;4.06124
+1.51693;doxazosin:hmg coa reductase inhibitors;745;1;4.04487
+1.50574;valsartan:hmg coa reductase inhibitors;2662;2;2.26558
+1.492;vasoprotectives;9730;5;1.5515
+1.4879;beta-lactamase sensitive penicillins;770;1;3.91349
+1.48728;alpha and beta blocking agents:hmg coa reductase inhibitors;2696;2;2.23696
+1.4747;antithrombotic agents;109087;41;1.14185
+1.47248;hmg coa reductase inhibitors:antineoplastic agents;7342;4;1.64425
+1.46936;oxycodone;22770;10;1.32768
+1.46765;lipid modifying agents:fampridine;788;1;3.82405
+1.46654;lipid modifying agents:quetiapine;789;1;3.8192
+1.45806;opioid anesthetics;12386;6;1.46289
+1.45772;lipid modifying agents:baclofen;797;1;3.78085
+1.45662;rosuvastatin:other antidepressants;798;1;3.77611
+1.45226;blood substitutes and perfusion solutions:lipid modifying agents, plain;802;1;3.75726
+1.45181;antihypertensives:hmg coa reductase inhibitors;2763;2;2.18262
+1.44576;lipid modifying agents:progestogens;808;1;3.72935
+1.44536;other antineoplastic agents;33702;14;1.25674
+1.43504;lipid modifying agents, plain:other nervous system drugs;818;1;3.68374
+1.43504;lipid modifying agents:other nervous system drugs;818;1;3.68374
+1.42238;corticosteroids for systemic use:ciprofloxacin;830;1;3.63045
+1.41716;verapamil:lipid modifying agents;835;1;3.6087
+1.40377;ondansetron:lipid modifying agents, plain;848;1;3.55335
+1.40377;ondansetron:lipid modifying agents;848;1;3.55335
+1.39162;lipid modifying agents:cyclobenzaprine;860;1;3.50374
+1.38561;systemic hormonal preparations, excl. sex hormones and insulins:immune sera and immunoglobulins;866;1;3.47945
+1.3651;various;23411;10;1.2908
+1.3611;gemfibrozil;891;1;3.38177
+1.35342;lipid modifying agents:oxicams;899;1;3.35166
+1.34592;alpha and beta blocking agents:lipid modifying agents;2977;2;2.02546
+1.34394;lipid modifying agents:testosterone;909;1;3.31477
+1.34176;other beta-lactam antibacterials;10327;5;1.46126
+1.33086;lipid modifying agents:loratadine;923;1;3.26446
+1.31892;antiadrenergic agents, peripherally acting:hmg coa reductase inhibitors;936;1;3.2191
+1.31856;valsartan:lipid modifying agents;3036;2;1.98602
+1.31438;sulfonamides, plain:hmg coa reductase inhibitors;941;1;3.20198
+1.31257;glucocorticoids:other drugs for obstructive airway diseases, inhalants;943;1;3.19519
+1.31077;softeners, emollients:lipid modifying agents, plain;945;1;3.18842
+1.31077;softeners, emollients:lipid modifying agents;945;1;3.18842
+1.2851;antiemetics and antinauseants:lipid modifying agents;974;1;3.09343
+1.23716;gliclazide:lipid modifying agents;1031;1;2.92231
+1.21949;osmotically acting laxatives:hmg coa reductase inhibitors;1053;1;2.86121
+1.18015;biotin;1104;1;2.72895
+1.17667;atenolol:lipid modifying agents;3370;2;1.78882
+1.16973;hmg coa reductase inhibitors:escitalopram;1118;1;2.69475
+1.15063;apixaban;5942;3;1.52221
+1.1472;hmg coa reductase inhibitors:venlafaxine;1149;1;2.622
+1.13445;hmg coa reductase inhibitors:naproxen;1167;1;2.58153
+1.13026;anthelmintics;1173;1;2.56831
+1.11988;diltiazem:acetylsalicylic acid;1188;1;2.53586
+1.11788;triamcinolone;3524;2;1.71048
+1.10898;prednisone:other antidepressants;1204;1;2.50214
+1.10763;osmotically acting laxatives:lipid modifying agents;1206;1;2.49799
+1.04833;zidovudine;1298;1;2.3208
+1.03975;hmg coa reductase inhibitors:diazepines, oxazepines, thiazepines and oxepines;1312;1;2.29602
+1.0368;other monoclonal antibodies and antibody drug conjugates;3754;2;1.60546
+1.0331;lipid modifying agents:fluoxetine;1323;1;2.27691
+1.0283;ranitidine:hmg coa reductase inhibitors;1331;1;2.26321
+1.02473;bile acid sequestrants;1337;1;2.25305
+0.969555;beta blocking agents, non-selective:hmg coa reductase inhibitors;1434;1;2.10052
+0.966838;digitalis glycosides:hmg coa reductase inhibitors;1439;1;2.09321
+0.966838;cardiac glycosides:hmg coa reductase inhibitors;1439;1;2.09321
+0.943957;prednisone:cough and cold preparations;1482;1;2.03243
+0.938755;digoxin:lipid modifying agents, plain;1492;1;2.01879
+0.916385;amlodipine:corticosteroids;1536;1;1.96091
+0.906976;lipid modifying agents, plain:ibuprofen;1555;1;1.93692
+0.901109;digitalis glycosides:lipid modifying agents;1567;1;1.92208
+0.896747;hmg coa reductase inhibitors:oxycodone;1576;1;1.91109
+0.866164;beta blocking agents, non-selective:lipid modifying agents;1641;1;1.83532
+0.863421;lisinopril:glucocorticoids;1647;1;1.82863
+0.851232;diltiazem:hmg coa reductase inhibitors;1674;1;1.7991
+0.823339;sodium chloride:cardiovascular system;1738;1;1.73278
+0.777645;lipid modifying agents:estrogens;1850;1;1.62777
+0.769873;diltiazem:lipid modifying agents;1870;1;1.61034
+0.726194;hmg coa reductase inhibitors:folic acid analogues;1988;1;1.51464
+0.685592;vasoprotectives:hmg coa reductase inhibitors;2107;1;1.42899
+0.661289;dabigatran etexilate:lipid modifying agents;2183;1;1.37918
+0.640233;lipid modifying agents:drugs for urinary frequency and incontinence;2252;1;1.33686
+0.576222;lipid modifying agents:methotrexate;2482;1;1.21281
+0.560679;antimycobacterials;2543;1;1.18367
+0.556941;lipid modifying agents:folic acid analogues;2558;1;1.17672
+0.540774;lipid modifying agents, plain:decongestants and other nasal preparations for topical use;5884;2;1.02293
+0.504766;hmg coa reductase inhibitors:omega-3-triglycerides incl. other esters and acids;2782;1;1.08182
+0.488795;pituitary and hypothalamic hormones and analogues;9522;3;0.947786
+0.459819;potassium:hmg coa reductase inhibitors;3000;1;1.00307
+0.394654;oxaliplatin;3368;1;0.893269
+0.362661;lipid modifying agents:selective serotonin reuptake inhibitors;7271;2;0.827081
+0.334846;cardiovascular system:salbutamol;7552;2;0.796167
+0.326365;pantoprazole:lipid modifying agents, plain;3842;1;0.782833
+0.320065;sildenafil;18273;5;0.821738
+0.273392;lipid modifying agents:antiepileptics;4298;1;0.699579
+0.254574;lipid modifying agents:adalimumab;4485;1;0.670332
+0.155494;immunoglobulins, normal human;5820;1;0.516142
+0.132275;other antiepileptics;22836;5;0.65566
+0.106364;immunoglobulins;6886;1;0.43595
+0.104656;lipid modifying agents:tumor necrosis factor alpha (tnf-α) inhibitors;6932;1;0.433045
+0.101467;immune sera and immunoglobulins;7020;1;0.427593
+0.000406561;antihypertensives;57493;7;0.357998
