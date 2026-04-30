@@ -1472,7 +1472,7 @@ mcmc_chain <- DistributionApproximation(
   observations  = toy_data,
   temperature   = 25,
   Smax          = 2, # Size of cocktail
-  num_thread    = 8
+  num_thread    = 4
 )
 
 plot_frequency(
@@ -1507,7 +1507,7 @@ true_dist <- trueDistributionSizeTwoCocktail(
   ATCtree      = ATC_Tree_UpperBound_2014,
   observations = toy_data,
   beta         = 4,
-  num_thread = 8
+  num_thread = 4
 )
 
 # Compare via the package's qq-plot helper
@@ -1531,7 +1531,7 @@ ga_runs <- map(seq_len(n_runs), \(i) {
     nbIndividuals = 200,
     ATCtree       = ATC_Tree_UpperBound_2014,
     observations  = toy_data,
-    num_thread    = 8,
+    num_thread    = 4,
     alpha         = 1.6, 
     diversity     = TRUE,
     p_mutation    = .09,
