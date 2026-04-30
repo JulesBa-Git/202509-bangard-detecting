@@ -647,7 +647,7 @@ areas under the curves allow to compare different methods. RR, PRR, Omega shrink
 phyper and the CSS are defined in @sec-risk-definition.
 :::
 
-## Application to Dataset $D_1$
+## Application to Dataset $D_1${#sec-appli_d1}
 
 ### Estimation of Risk Distribution
 
@@ -897,7 +897,7 @@ The first conclusion is that the clusters are well separated in terms of the edi
 
 The second conclusion is that the algorithm effectively found the true solutions or at least very similar solutions. Indeed, the embedding of the true solutions yields the four squares, that clearly belong to four different clusters among the seven. The method therefore identifies and separates regions of the cocktail space containing the true solutions. That simulation thus enhances the confidence that investigating the high-score cocktails returned by the methods may allow to detect relevant phenomena.
 
-## Application to the FAERS Spontaneous Reporting Data
+## Application to the FAERS Spontaneous Reporting Data {#sec-appli-FAERS}
 
 ### Estimation of Risk Distribution
 
@@ -1335,6 +1335,293 @@ $$T_{eval} = \mathcal{O}(N \cdot K \cdot R)$$
 - $K$ (Cocktail Size): The number of drugs in the candidate cocktail. In this study, $K$ is typically small since there is a limit to the number of drugs a patient takes.
 
 - $R$ (Drugs per Report): The number of medications listed in a single patient report. On our data the mean size of drug cocktails per patient is approximately $2.2$. Because $K$ and $R$ are bounded, the complexity simplifies to $O(N)$ per candidate evaluation.
+
+## Appendix E: Illustrative Example of Package Usage {.appendix}
+
+This appendix demonstrates the end-to-end usage of the `emcAdr`
+package on a small simulated dataset that compiles in under a
+minute. It is intended as a hands-on illustration of the API: full
+reproduction of the results in @sec-appli_d1 and
+@sec-appli-FAERS requires the
+longer-running scripts available in the article's GitHub repository. An accompanying `README.md` file in the article's GitHub repository documents the full reproduction workflow.
+
+The toy dataset follows the same simulation design as Dataset $D_1$ (@sec-simu_data), at a reduced scale and with deliberately inflated adverse-event probabilities so that the signals remain detectable in a small sample. Patients taking only one of the two component drugs are added as decoys to break the spurious equivalence between the size-two cocktail and either of its components in a small dataset.
+
+### E.1 Setup and Toy Dataset Generation
+
+```{r}
+#| label: setup-toy
+#| message: false
+#| warning: false
+
+library(emcAdr)
+library(dplyr)
+library(purrr)
+library(tidyr)
+library(ggplot2)
+library(umap)
+# we load data in order to have the ATC_Tree_UpperBound_2014
+load("./figures/datasets/simulated_dataset_2_3_med.RData")
+set.seed(42)
+
+# ATC tree leaves (active substances) -- 0-indexed for the C++ backend
+leaves <- which(ATC_Tree_UpperBound_2014$ATC_length == 7) - 1L
+
+# Two size-two cocktails solution, each defined by two drug-family ranges
+solutions <- list(
+  C1 = list(d1_range = 48:53,    d2_range = 1394:1396, ae_prob = 1/5),
+  C2 = list(d1_range = 889:892,  d2_range = 660:661,   ae_prob = 1/7)
+)
+
+N           <- 5000
+prop_full   <- 0.02    # patients taking BOTH drugs of a cocktail
+prop_decoy  <- 0.03    # patients taking ONLY ONE drug of a cocktail
+ae_baseline <- 1/300
+
+# Decoy mechanism: for each cocktail we add patients who take ONLY one
+# of the two component drugs, with no elevated AE risk. Without these
+# decoys, in such a small dataset, every taker of d1 would also take d2,
+# so H({d1}) would match H({d1, d2}) and the algorithm would surface size-1
+# solutions "equivalent" to the size-2 cocktail solutions. Decoys break that
+# perfect correlation: a sizeable share of d1-takers are now AE-free.
+# This mirrors the "2 out of 3" decoys used for D1 in Section 2.6.1.
+group_spec <- imap(solutions, \(cock, cname) list(
+  full     = list(p = prop_full,  ae_p = cock$ae_prob,
+                  draw = \() c(sample(cock$d1_range, 1),
+                               sample(cock$d2_range, 1))),
+  decoy_d1 = list(p = prop_decoy, ae_p = ae_baseline,
+                  draw = \() sample(cock$d1_range, 1)),
+  decoy_d2 = list(p = prop_decoy, ae_p = ae_baseline,
+                  draw = \() sample(cock$d2_range, 1))
+)) |>
+  list_flatten(name_spec = "{outer}_{inner}")
+
+# The remaining patients receive a random Poisson-sized cocktail
+group_spec$random <- list(
+  p    = 1 - sum(map_dbl(group_spec, "p")),
+  ae_p = ae_baseline,
+  draw = \() sample(leaves, 1 + rpois(1, 4), replace = FALSE)
+)
+stopifnot(group_spec$random$p > 0)
+
+# Sample a group label for each patient, then realize their data
+group <- sample(names(group_spec), N, replace = TRUE,
+                prob = map_dbl(group_spec, "p"))
+
+# Note : columns of observations must have those names
+toy_data <- tibble(group = group) |>
+  mutate(
+    patientATC = map(group, \(g) group_spec[[g]]$draw()),
+    patientADR = map_lgl(group, \(g) runif(1) <= group_spec[[g]]$ae_p)
+  ) |>
+  select(patientATC, patientADR)
+
+# Patient counts and AE counts by group
+tibble(group = group, ADR = toy_data$patientADR) |>
+  count(group, ADR) |>
+  pivot_wider(names_from = ADR, values_from = n,
+              names_prefix = "AE_", values_fill = 0L)
+```
+
+The dataset contains `r N` patients, of whom approximately
+`r 100 * prop_full`% take the full cocktail $C_1$, `r 100 * prop_full`%
+the full cocktail $C_2$, and `r 100 * prop_decoy`% take a single drug
+from each cocktail as a decoy. The remaining patients receive a
+random combination of active substances drawn from the ATC tree leaves.
+
+C1_full patients show a $20$% AE rate vs $0.4$% in the random group. Decoys show baseline AE rates as designed.
+
+Please note that the column of the patient dataframe has to be `PatientATC` and 
+`PatientADR`.
+
+### E.2 Evaluating Cocktail Risk via the Hypergeometric Score
+
+We start by computing the hypergeometric score $H(C)$
+(@sec-risk-definition) for a solutions cocktail and for a random
+combination, to confirm that $C_1$ is clearly separated on the score
+scale.
+
+```{r}
+#| label: hyper-score
+
+# Pick the C1 family and a random size-2 cocktail
+solution_C1 <- c(47, 1393)
+
+random_C   <- sample(leaves, 2)
+
+compute_hypergeom_on_list(list(solution_C1, random_C), 
+                     ATCtree      = ATC_Tree_UpperBound_2014,
+                     observations = toy_data)
+
+```
+
+In datasets of this scale, the score function is sparse: most randomly drawn size-2 pairs are taken by zero or one patient. A random pair therefore has near $100$% probability of scoring exactly zero, as illustrated by random_C above. The solution family $C_1$ scores $H(C_1) \approx 38$, but whether this magnitude is extreme among cocktails actually present in the data is the question answered by the next section.
+
+### E.3 Estimating the Null Distribution via MCMC
+
+A short Metropolis-Hastings run (@sec-MCMC) approximates the
+distribution of $H(C)$ for size-two cocktails. The full-scale
+analysis uses substantially longer chains.
+
+```{r}
+#| label: mcmc-null
+
+mcmc_chain <- DistributionApproximation(
+  epochs        = 200000,
+  ATCtree       = ATC_Tree_UpperBound_2014,
+  observations  = toy_data,
+  temperature   = 25,
+  Smax          = 2, # Size of cocktail
+  num_thread    = 8
+)
+
+plot_frequency(
+  mcmc_chain$ScoreDistribution[-1],
+  binwidth = .3, xlab = "H"
+)
+
+# Convert the histogram-style MCMC output to a flat score vector.
+# Index 1 corresponds to score = 0 cocktails, we drop it since we work only on
+# non zero score. 
+mcmc_null <- histogramToDitribution(mcmc_chain$ScoreDistribution[-1])
+
+# Empirical p-value of a solution cocktail under the estimated null
+solution_score <- compute_hypergeom_on_list(
+  list(solution_C1), 
+  ATC_Tree_UpperBound_2014,
+  toy_data
+)
+
+cat("p-value of  solution C1 (", solution_C1, ") :",
+    mean(mcmc_null >= solution_score))
+```
+The bulk of the distribution sits near zero. The visible spike around $H(C) \approx 4-5$  corresponds to a small-sample artifact, cocktails taken by only one patient where the patient happens to experience the AE. With only $\sim 45$ AE cases over $5000$ patients, such configurations are common enough to form a visible noise peak. Furthermore, with only $5000$ data points, each cocktail tend to be taken by few patient. The solution families generate $H(C)$ values in the $18$-$40$ range, above this peak, which is why the empirical p-value of $C_1$ comes out at $\sim 2.5 \times 10^{-3}$. 
+
+For size-two cocktails, computing the *exact* score distribution is tractable and offered by the package via `trueDistributionSizeTwoCocktail()`. This allows assessing the MCMC approximation directly (see also @fig-distri_simu in the body):
+
+```{r}
+#| label: mcmc-vs-true
+#| eval: false
+
+true_dist <- trueDistributionSizeTwoCocktail(
+  ATCtree      = ATC_Tree_UpperBound_2014,
+  observations = toy_data,
+  beta         = 4,
+  num_thread = 8
+)
+
+# Compare via the package's qq-plot helper
+qq_plot_output(mcmc_chain, true_dist)
+```
+
+The PP/QQ-plot comparison would confirm that the MCMC tracks the null faithfully on the regions of $H$ that actually occur in the data.
+
+### E.4 Identifying High-Risk Cocktails with the Genetic Algorithm
+
+To mirror the multi-run aggregation workflow of @sec-appli_d1, we run the genetic algorithm five times with different seeds and pool the final populations. A single short run typically converges on one of the two solutions. Aggregation across runs increases the chance of recovering both. For full-scale runs on $D_1$, parallel execution scripts compatible with SLURM and similar workflow managers are available in the article's GitHub repository under `figures/scripts/`.
+
+```{r}
+#| label: ga-run
+
+n_runs <- 5
+ga_runs <- map(seq_len(n_runs), \(i) {
+  set.seed(100 + i)
+  GeneticAlgorithm(
+    epochs        = 400,
+    nbIndividuals = 200,
+    ATCtree       = ATC_Tree_UpperBound_2014,
+    observations  = toy_data,
+    num_thread    = 8,
+    alpha         = 1.6, 
+    diversity     = TRUE,
+    p_mutation    = .09,
+    summary       = FALSE
+  )$FinalPopulation |> as_tibble()
+})
+
+ga_top <- bind_rows(ga_runs) |>
+  mutate(cocktails = lapply(cocktails, sort)) |>
+  group_by(cocktails) |>
+  summarise(score = max(score), .groups = "drop") |>
+  filter(score > 0) |>
+  arrange(desc(score)) |>
+  mutate(cocktails_display = map_chr(cocktails, paste, collapse = ", "))
+
+ga_top |> head(10)
+```
+
+The top outputs correspond to the solution families. Cocktails involving the parent ATC nodes for $C_1$ (nodes $0$, $45$, $47$ paired with $1391$, $1393$) score in the $36$-$40$ range. Those for $C_2$ (nodes $630$, $658$, $659$ paired with $888$, $863$) score around $18$-$19$. 
+
+### E.5 Output Clustering
+
+For didactic purposes we apply the same UMAP + DBSCAN pipeline as described in @sec-clust on the recovered cocktails. We expect only a handful of distinct signals at this scale.
+
+```{r}
+#| label: clustering
+
+# We put solution C1 and C2 in order to compare them to the projection 
+# of found cocktail in the plane.
+ga_cocktails <- c(list(c(47, 1393), c(888, 659)), ga_top$cocktails)
+
+# Compute the distance between cocktails
+divergence <- get_dissimilarity_from_cocktail_list(
+  ga_cocktails, ATC_Tree_UpperBound_2014, normalization = TRUE
+)
+divergence <- as.matrix(do.call(rbind, divergence))
+
+umap_config = umap::umap.defaults
+umap_config$n_neighbors <- 10
+# Precise UMAP that the input is a dissimilarity matrix
+umap_config$input <- "dist"
+umap_config$min_dist <- .001
+
+umap_results <- umap::umap(divergence, config = umap_config)
+
+dbscan_results <- dbscan::dbscan(umap_results$layout, eps = 1)
+
+ga_plot <- tibble(cocktails = ga_cocktails) |>
+  mutate(
+    UMAP1    = umap_results$layout[, 1],
+    UMAP2    = umap_results$layout[, 2],
+    cluster  = factor(dbscan_results$cluster),
+    solution = ifelse(
+      row_number() %in% 1:2, 1, 0 # First two points are the true signals
+      )
+  )
+
+ggplot(ga_plot, aes(UMAP1, UMAP2, colour = cluster)) +
+  geom_point(alpha = 0.8, size = 2,aes(shape=as.factor(solution))) +
+  labs(colour = "Cluster", shape = "Solution") +
+  theme_minimal()
+```
+
+The two triangles (true solutions) embed in clusters 1 and 2 alongside related GA cocktails, demonstrating that the dissimilarity-based clustering groups variants of the same underlying signal in a reasonable way.
+
+### E.6 Post-Treatment with Firth's Penalized Logistic Regression
+
+For the $C_1$ cocktails, we apply the post-treatment of
+@sec-firth to test whether the signal reflects a true synergistic
+interaction or merely the additive effect of its components. A function in 
+`emcAdr` has been added in order to test a cocktail.
+
+```{r}
+#| label: firth-posttreat
+
+firth_reg <- run_firth_regression(
+  cocktail = solution_C1,
+  upper_bound  = ATC_Tree_UpperBound_2014$upperBound,
+  patient_data = toy_data, 
+  adr_column   = "patientADR"
+)
+
+summary(firth_reg)
+```
+
+The p-value of $0.032$ on the interaction term confirms that this synergistic effect is statistically distinguishable, even with only 16 AE cases in the `C1_full` group.
+It confirms that the genetic algorithm's discovery reflects a true drug–drug interaction rather than the marginal contribution of either family alone.
+
+Genetic algorithm output also contains cocktail $1393$ which contributes 
+significantly to the AE on his own as depicted in the summary.
 
 # Code and Results {.appendix}
 
