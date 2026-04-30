@@ -1347,7 +1347,7 @@ longer-running scripts available in the article's GitHub repository. An accompan
 
 The toy dataset follows the same simulation design as Dataset $D_1$ (@sec-simu_data), at a reduced scale and with deliberately inflated adverse-event probabilities so that the signals remain detectable in a small sample. Patients taking only one of the two component drugs are added as decoys to break the spurious equivalence between the size-two cocktail and either of its components in a small dataset.
 
-### E.1 Setup and Toy Dataset Generation
+### E.1 Setup and Toy Dataset Generation {.appendix}
 
 ```{r}
 #| label: setup-toy
@@ -1434,7 +1434,7 @@ C1_full patients show a $20$% AE rate vs $0.4$% in the random group. Decoys show
 Please note that the column of the patient dataframe has to be `PatientATC` and 
 `PatientADR`.
 
-### E.2 Evaluating Cocktail Risk via the Hypergeometric Score
+### E.2 Evaluating Cocktail Risk via the Hypergeometric Score {.appendix}
 
 We start by computing the hypergeometric score $H(C)$
 (@sec-risk-definition) for a solutions cocktail and for a random
@@ -1457,7 +1457,7 @@ compute_hypergeom_on_list(list(solution_C1, random_C),
 
 In datasets of this scale, the score function is sparse: most randomly drawn size-2 pairs are taken by zero or one patient. A random pair therefore has near $100$% probability of scoring exactly zero, as illustrated by random_C above. The solution family $C_1$ scores $H(C_1) \approx 38$, but whether this magnitude is extreme among cocktails actually present in the data is the question answered by the next section.
 
-### E.3 Estimating the Null Distribution via MCMC
+### E.3 Estimating the Null Distribution via MCMC {.appendix}
 
 A short Metropolis-Hastings run (@sec-MCMC) approximates the
 distribution of $H(C)$ for size-two cocktails. The full-scale
@@ -1516,7 +1516,7 @@ qq_plot_output(mcmc_chain, true_dist)
 
 The PP/QQ-plot comparison would confirm that the MCMC tracks the null faithfully on the regions of $H$ that actually occur in the data.
 
-### E.4 Identifying High-Risk Cocktails with the Genetic Algorithm
+### E.4 Identifying High-Risk Cocktails with the Genetic Algorithm {.appendix}
 
 To mirror the multi-run aggregation workflow of @sec-appli_d1, we run the genetic algorithm five times with different seeds and pool the final populations. A single short run typically converges on one of the two solutions. Aggregation across runs increases the chance of recovering both. For full-scale runs on $D_1$, parallel execution scripts compatible with SLURM and similar workflow managers are available in the article's GitHub repository under `figures/scripts/`.
 
@@ -1552,7 +1552,7 @@ ga_top |> head(10)
 
 The top outputs correspond to the solution families. Cocktails involving the parent ATC nodes for $C_1$ (nodes $0$, $45$, $47$ paired with $1391$, $1393$) score in the $36$-$40$ range. Those for $C_2$ (nodes $630$, $658$, $659$ paired with $888$, $863$) score around $18$-$19$. 
 
-### E.5 Output Clustering
+### E.5 Output Clustering {.appendix}
 
 For didactic purposes we apply the same UMAP + DBSCAN pipeline as described in @sec-clust on the recovered cocktails. We expect only a handful of distinct signals at this scale.
 
@@ -1570,10 +1570,11 @@ divergence <- get_dissimilarity_from_cocktail_list(
 divergence <- as.matrix(do.call(rbind, divergence))
 
 umap_config = umap::umap.defaults
-umap_config$n_neighbors <- 10
+umap_config$n_neighbors <- 5
 # Precise UMAP that the input is a dissimilarity matrix
 umap_config$input <- "dist"
 umap_config$min_dist <- .001
+umap_config$random_state <- 123
 
 umap_results <- umap::umap(divergence, config = umap_config)
 
@@ -1597,7 +1598,7 @@ ggplot(ga_plot, aes(UMAP1, UMAP2, colour = cluster)) +
 
 The two triangles (true solutions) embed in clusters 1 and 2 alongside related GA cocktails, demonstrating that the dissimilarity-based clustering groups variants of the same underlying signal in a reasonable way.
 
-### E.6 Post-Treatment with Firth's Penalized Logistic Regression
+### E.6 Post-Treatment with Firth's Penalized Logistic Regression {.appendix}
 
 For the $C_1$ cocktails, we apply the post-treatment of
 @sec-firth to test whether the signal reflects a true synergistic
