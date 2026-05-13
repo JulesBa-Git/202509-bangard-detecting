@@ -20,21 +20,21 @@ author:
     orcid: 0000-0002-9728-2088
     affiliations:
       - name: Faculty of Science and Technology, UiT-The Arctic University of Norway, PO, Box 6050 Stakkevollan, N-9037 Tromsø, Norway
-        url: https://en.uit.no/startsida/
+        url: https://en.uit.no/startsida
   - name: Kristian Svendsen
     email: kristian.svendsen@uit.no
-    url: https://en.uit.no/ansatte/kristian.svendsen/
+    url: https://en.uit.no/ansatte/kristian.svendsen
     orcid: 0000-0003-3481-3539
     affiliations:
       - name: Faculty of Health Sciences, UiT the Arctic University of Norway, Tromsø, Norway
-        url: https://en.uit.no/startsida/
+        url: https://en.uit.no/startsida
   - name: Vittorio Perduca
     email: vittorio.perduca@parisdescartes.fr
     url: https://helios2.mi.parisdescartes.fr/~vperduca/
     orcid: 0000-0003-0339-0473
     affiliations:
       - name: CNRS, MAP5, Université Paris Cité, F-75006 Paris, France
-        url: https://irma.math.unistra.fr/
+        url: https://map5.mi.parisdescartes.fr/
   - name: Étienne Birmelé
     email: birmele@unistra.fr
     url: https://irma.math.unistra.fr/~birmele/
