@@ -1,7 +1,7 @@
 project:
   type: default
   render:
-    - submission-202509-bangard-detecting.qmd
+    - published-202605-bangard-adverse.qmd
     - README.qmd
 title: >- 
   Detecting adverse high-order drug combinations from individual case safety reports using computational statistics on disproportionality measures
