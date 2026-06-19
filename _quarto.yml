@@ -73,10 +73,10 @@ abstract: >+
 keywords: [Disproportionality Analysis, Drug-Combinations, Drug-Interactions, Genetic Algorithm, Markov
   Chain Monte Carlo, Pharmacovigilance, Spontaneous Reporting Systems]
 bibliography: references.bib
-github-user: JulesBa-Git
-repo: "202509-bangard-detecting"
+github-user: computorg
+repo: "published-202605-bangard-adverse"
 draft: true # set to false once the build is running
-published: false # will be set to true once accepted
+published: true # will be set to true once accepted
 license: CC-BY-4.0
 format:
   computo-html: default

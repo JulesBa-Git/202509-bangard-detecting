@@ -4,7 +4,7 @@ Jules Bangard, Einar Holsbø, Kristian Svendsen, Vittorio Perduca, Étienne Birm
 
 *Adverse drug interaction detection using individual case safety reports*
 
-[![build and publish](https://github.com/JulesBa-Git/202509-bangard-detecting/actions/workflows/build.yml/badge.svg)](https://github.com/JulesBa-Git/202509-bangard-detecting/actions/workflows/build.yml) [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
+[![build and publish](https://github.com/JulesBa-Git/202509-bangard-detecting/actions/workflows/build.yml/badge.svg)](https://github.com/computorg/published-202605-bangard-adverse/actions/workflows/build.yml) [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
 
 ### Authors
 
