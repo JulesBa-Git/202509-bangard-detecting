@@ -30,8 +30,8 @@ logo_text_white.pdf
 logo_notext_white.png
 
 # Quarto output files
-submission-202509-bangard-detecting.html
-submission-202509-bangard-detecting.pdf
+published-202605-bangard-adverse.html
+published-202605-bangard-adverse.pdf
 template-computo-python.html
 template-computo-python.pdf
 template-computo-python.ipynb
@@ -46,7 +46,7 @@ template-computo-julia.tex
 *.toc
 
 # Various system files
-DS_Store
+.DS_Store
 /.luarc.json
 
 

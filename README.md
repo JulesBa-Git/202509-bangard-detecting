@@ -1,16 +1,16 @@
 # Detecting adverse high-order drug combinations from individual case safety reports using computational statistics on disproportionality measures
 Jules Bangard, Einar Holsbø, Kristian Svendsen, Vittorio Perduca, Étienne Birmelé
-2025-09-29
+2026-06-25
 
-*Adverse drug interaction detection using individual case safety reports*
+*Adverse drug combination detection using individual case safety reports*
 
-[![build and publish](https://github.com/JulesBa-Git/202509-bangard-detecting/actions/workflows/build.yml/badge.svg)](https://github.com/computorg/published-202605-bangard-adverse/actions/workflows/build.yml) [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
+[![build and publish](https://github.com/computorg/published-202605-bangard-adverse/actions/workflows/build.yml/badge.svg)](https://github.com/computorg/published-202605-bangard-adverse/actions/workflows/build.yml) [![DOI:10.57750/7e54-2z98](https://img.shields.io/badge/DOI-10.57750/7e54-2z98-034E79.svg)](https://doi.org/10.57750/7e54-2z98) [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
 
 ### Authors
 
 - [Jules Bangard](https://bangard.xyz) (Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France)
 - [Einar Holsbø](https://einar.sh/) (Faculty of Science and Technology, UiT-The Arctic University of Norway, PO, Box 6050 Stakkevollan, N-9037 Tromsø, Norway)
-- [Kristian Svendsen](https://en.uit.no/ansatte/kristian.svendsen/) (Faculty of Health Sciences, UiT the Arctic University of Norway, Tromsø, Norway)
+- [Kristian Svendsen](https://en.uit.no/ansatte/kristian.svendsen) (Faculty of Health Sciences, UiT the Arctic University of Norway, Tromsø, Norway)
 - [Vittorio Perduca](https://helios2.mi.parisdescartes.fr/~vperduca/) (CNRS, MAP5, Université Paris Cité, F-75006 Paris, France)
 - [Étienne Birmelé](https://irma.math.unistra.fr/~birmele/) (Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France)
 
