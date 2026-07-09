@@ -45,7 +45,7 @@ author:
 date: last-modified
 date-modified: last-modified
 description: |
-  Adverse drug interaction detection using individual case safety reports
+  Adverse drug combination detection using individual case safety reports
 abstract: >+
   Adverse drug reactions linked to the intake of drug combinations are a critical concern 
   in pharmacovigilance, particularly as the controlled environment of clinical
@@ -72,6 +72,12 @@ abstract: >+
   surveillance.
 keywords: [Disproportionality Analysis, Drug-Combinations, Drug-Interactions, Genetic Algorithm, Markov
   Chain Monte Carlo, Pharmacovigilance, Spontaneous Reporting Systems]
+citation:
+  type: article-journal
+  container-title: "Computo"
+  doi: "10.57750/7e54-2z98"
+  publisher: "French Statistical Society"
+  issn: "2824-7795"
 bibliography: references.bib
 github-user: computorg
 repo: "published-202605-bangard-adverse"
