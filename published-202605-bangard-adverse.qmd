@@ -819,9 +819,17 @@ adverse-event rate on the Dataset $D_1$. The theoretical p-values  following a U
 @fig-calibration shows a histogram of these p-values, which appears
 approximately flat.
 
-![Histogram of p-values for cocktails presumed to satisfy the null
-hypothesis on Dataset $D_1$ (no elevated adverse-event
-risk)](figures/accuracy_under_the_null.svg){#fig-calibration}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "hide"
+#| out-width: "90%"
+#| label: fig-calibration
+#| fig-cap: "Histogram of p-values for cocktails presumed to satisfy the null hypothesis on Dataset $D_1$ (no elevated adverse-event risk)."
+
+{{< include scripts/fig-calibration.R >}}
+```
 
 ## Appendix C : FAERS Clustering {.appendix}
 
