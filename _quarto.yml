@@ -81,7 +81,7 @@ citation:
 bibliography: references.bib
 github-user: computorg
 repo: "published-202605-bangard-adverse"
-status: accepted
+status: published
 license: CC-BY-4.0
 format:
   computo-html: default
