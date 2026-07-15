@@ -36,7 +36,7 @@ proportional reporting ratio (PRR) [@evans2001use], reporting odds ratio
 Network (BCPNN) [@bate1998bayesian], and the Gamma Poisson Shrinker
 (GPS) [@dumouchel1999bayesian] allow for the identification of signals
 that warrant further investigation in the context of single drug
-assessment. The tree-based scan statistic [@kulldorff2003tree;@heo2024signal] takes advantage of the tree structure of the Anatomical Therapeutic Chemical (ATC) drug classification in order to allow to select a drug family rather than a single drug, a family corresponding to a subtree of the ATC tree. Likelihood-ratios tests then allow to choose the most relevant family.
+assessment. The tree-based scan statistic [@kulldorff2003tree;@heo2024signal] takes advantage of the tree structure of the Anatomical Therapeutic Chemical (ATC) drug classification in order to allow selection of a drug family rather than a single drug, a family corresponding to a subtree of the ATC tree. Likelihood-ratio tests then allow selection of the most relevant family.
 
 In order not to overinterpret high proportions in case of rare drug cocktails, it is possible to derive a score from an independence test on the contingency table counting the presence or absence of the adverse event depending on the consumption of the drug cocktail. [@gosho2017utilization] use a chi-square statistic to do so, while [@ahmed2010false] rather use the Fisher exact test which has the advantage of being non-asymptotic.
 
@@ -45,7 +45,7 @@ consumption, such as the $\Omega$ shrinkage method
 [@noren2008statistical]. This method allows the use of a DA measure in
 order to detect sets of the type *Drug-Drug-Adverse Event* and stands as
 the standard measure when it comes to detecting the interactions of two
-drugs. Adaptations of the PRR for a single drug has been proposed like the Concomitant Signal Score (CSS) [@noguchi2020improved] and the PRR adaptation for DDIs [@wang2020propensity].
+drugs. Adaptations of the PRR for a single drug have been proposed like the Concomitant Signal Score (CSS) [@noguchi2020improved] and the PRR adaptation for DDIs [@wang2020propensity].
 
 
 Other methods than DA measures exist in order to detect DDIs. Among
@@ -127,37 +127,11 @@ $$H(C) = -\log(\mathbb{P}(X \ge x))$$
 
 where $X \sim \mathcal{H}(n_C, K, N)$. This measure effectively functions as the log p-value under the null hypothesis that the number of people with AE in a uniform sample of $n_C$ out of $N$ people follows the hypergeometric distribution. It has the distinct advantage of accounting for the total number of patients exposed to the cocktail; for instance, $H(C)$ will assign a higher risk to a cocktail taken by 100 patients with 50 AE cases than to a cocktail taken by 10 patients with 5 AE cases, whereas simple ratios like the RR might treat them identically. Such hypergeometric measures are well-established in other high-dimensional fields like bioinformatics for functional enrichment analysis [@grossmann2007improved].
 
-<!-- In the field of pharmacology, accurately characterizing the risk
-associated with drug administration is a hard task. Highly used methods
-to evaluate drug interactions are limited to the evaluation of two
-concomitant drugs [@noren2008statistical; @wang2020propensity], while
-other, like the PRR [@evans2001use; @wang2020propensity], are biased
-toward drugs or drugs cocktails taken by few patients, assigning high
-risk to them (also see @fig-comparison_score). In order to mitigate this
-phenomenon, we propose to use the hypergeometric distribution to
-evaluate the hazard of medication cocktails. Consider a dataset of $N$
-patients, among which $K$ experience the adverse event AE. Let $n_C$ be
-the number of people taking a cocktail $C$ and $x$ the number of
-patients taking $C$ and experiencing AE . We define the risk to be $$
-H(C) = -\log(\mathbb{P}(X \ge x))
-$$ where $X \sim \mathcal{H}(n_C, K, N)$. This measure is the log
-p-value under the null hypothesis that the number of people with AE in a
-uniform sample of $n_C$ out of $N$ people follow the hypergeometric
-distribution. It has the advantage to take into account the relative
-number of patients taking the cocktail $C$. For example, $H(C)$ will be
-greater for a cocktail taken by $100$ patients, among whom $50$
-experience AE, than for a cocktail taken by 10 patients, among whom 5
-experience AE. In contrast, the PRR @evans2001use makes no distinction
-between the two.
-
-Such measures are commonplace in bioinformatics, especially when working
-on functional enrichment analysis @grossmann2007improved. -->
-
 ## Distinguishing Combined Risk from True Interaction{#sec-firth}
 
 While the $H(C)$ score effectively identifies cocktails associated with a significant increase in the AE frequency, it does not inherently distinguish a synergistic pharmacological interaction from situations corresponding to the independent addition of individual effects or an effect driven by a subset of the cocktail (e.g., "innocent" medications co-prescribed with a high-risk drug).
 
-To address this, we propose a post-treatment of detected signals using Firth’s penalized likelihood logistic regression [@firth1993bias]. This method is particularly suited for spontaneous reporting systems as it reduces bias in maximum likelihood estimates and provides a solution to the problem of separation, which often occurs with rare adverse events. Using the *logistf *R package [@R-logistf], we estimate a model for a given cocktail $C$ (e.g., $d_1, d_2$) as follows:
+To address this, we propose a post-treatment of detected signals using Firth’s penalized likelihood logistic regression [@firth1993bias]. This method is particularly suited for spontaneous reporting systems as it reduces bias in maximum likelihood estimates and provides a solution to the problem of separation, which often occurs with rare adverse events. Using the *logistf* R package [@R-logistf], we estimate a model for a given cocktail $C$ (e.g., $d_1, d_2$) as follows:
 
 $$\text{logit}(P(AE=1)) = \beta_0 + \beta_1 \mathbb{1}_{d_1} + \beta_2 \mathbb{1}_{d_2} + \beta_{3} \mathbb{1}_{d_1 \cap d_2}$$
 
@@ -273,12 +247,12 @@ $d(C_1,C_2) = \min\limits_{f} \text{cost}(f : f(C_1) = C_2 )$.
 
 Finally, the maximum distance between $C_1$ and $C_2$ being
 $(n_1 + n_2) \frac{depth(T)}{2}$, we define the similarity as
-$$ Sim(C_1,C_2) = 1 - \frac{2D(C_1,C_2)}{(n_1 + n_2)depth(T)}$$
+$$ Sim(C_1,C_2) = 1 - \frac{2d(C_1,C_2)}{(n_1 + n_2)depth(T)}$$
 
 The computation of the similarity is achievable in
 $\mathcal{O}(n_1 \times n_2 \times   \text{depth}(T) + |\Delta|)$ operations
 in the worst case. The algorithm to compute the similarity
-is detailed in the @sec-appA (see @algo-distance).
+is detailed in @sec-appA (see @algo-distance).
 
 ### Output Clustering {#sec-clust}
 
@@ -288,8 +262,8 @@ are unique. It is moreover common to encounter solutions that are merely
 variations of others, differing only by transformations such as changing
 a node in the ATC tree to its parent or child. To streamline analysis
 and enhance the efficiency, a post-treatment clustering of similar drug
-cocktails is implemented. This method allows to focus on the most risky
-cocktails within each cluster or to interpret pharmaceutically clusters
+cocktails is implemented. This method allows focusing on the most risky
+cocktails within each cluster or pharmaceutically interpreting clusters
 rather than individual cocktails.
 
 To do so, drug cocktails are embedded into a two-dimensional space using
@@ -367,14 +341,13 @@ very long realization of such a walk, therefore, allows for the
 approximation of the distribution that can be used to determine an
 empirical p-value for the score of a cocktail of interest. This enables
 the possibility to say whether or not a high-risk is truly significant
-(e.g. among the top 5% of scores). It defines what a high-risk is in our
-case.
+(e.g. among the top 5% of scores). It defines what a high-risk is in our case.
 
 ## Datasets {#sec-datasets}
 
 ### Simulated Data {#sec-simu_data}
 
-Multiple datasets were simulated to evaluate the method performance
+Multiple datasets were simulated to evaluate the method's performance
 against known outcomes. The datasets, designed to challenge the
 algorithm, simulate various patient scenarios. Each patient record
 includes prescribed medications and the corresponding occurrence of an
@@ -395,7 +368,7 @@ characteristics:
 A small percentage of the dataset ($1.5 \%$ per combination) are
 combinations of 2 out of the 3 drugs from $C_1$ and $C_2$, but with no
 risk of $AE$. This helps to mitigate the false identification of
-sub-cocktails of $C_1$ and $C_2$ as high-risk cocktail because those who
+sub-cocktails of $C_1$ and $C_2$ as high-risk cocktails because those who
 take two drugs of these cocktails will almost surely take the remaining
 drug of the cocktail.
 
@@ -428,7 +401,7 @@ the ATC codes of each active ingredient. This process involved matching
 drug names to their respective active ingredients and converting these
 ingredients to their corresponding ATC codes. The DiAna dictionary
 [@fusaroli2024enhancing] facilitated the standardization of FAERS drug
-names to ATC codes. It is important to note that the DiAna dictionary handles combination products by splitting them into their constituent active substances rather than assigning a single ATC combination code. <!-- Within our framework, this decomposition is advantageous as it allows the methodology to treat combination products as sets of individual ingredients facilitating the detection of risk signals driven by specific chemical components across different formulation --> Reports with unmatchable drug names in the DiAna
+names to ATC codes. It is important to note that the DiAna dictionary handles combination products by splitting them into their constituent active substances rather than assigning a single ATC combination code. Reports with unmatchable drug names in the DiAna
 dictionary were excluded, reducing the dataset from 2,043,231 to
 1,612,931 patients.
 
@@ -462,8 +435,6 @@ toward cocktails taken by only a few patients.
 
 The good behavior of the hypergeometric score and its easy generalization to cocktails of any size justify the use of that scoring function for the exploration of the cocktail space.
 
-<!-- ![Comparison of scores for cocktail of size-two. Each dots denotes a cocktail while his risk computed on the formerly presented synthetic dataset (@sec-simu_data) is showed on the x-axis. Red dots represent cocktails that do not induce adverse event (negative controls), green ones represent cocktail inducing adverse event (positive controls). The bottom-right corner shows the Precision-Recall curves for each score. The perfect classification corresponds to the upper right corner. The areas under the curves allow to compare different methods](figures/comparison_metrics_omega_025.svg){#fig-comparison_score} -->
-
 
 ::: {#fig-comparison_score}
 ```{r}
@@ -473,177 +444,17 @@ The good behavior of the hypergeometric score and its easy generalization to coc
 #| message: false
 #| echo: false
 
-library(emcAdr)
-library(dplyr)
-library(dbscan)
-library(ggplot2)
-library(umap)
-library(stringr)
-
-load("figures/datasets/PRC_without_computation.RData")
-
-Metrics_computation_size2_1M_count$omega_025[Metrics_computation_size2_1M_count$omega_025 <= -2e+09] <- -4
-zero_score <- Metrics_computation_size2_1M_count[Metrics_computation_size2_1M_count$RR == 0, ]
-non_zero_score <- Metrics_computation_size2_1M_count[Metrics_computation_size2_1M_count$RR != 0, ]
-set.seed(42)
-
-zero_score_sample <- zero_score[sample(nrow(zero_score), size = 0.05 * nrow(zero_score)), ]
-reduced_data <- rbind(non_zero_score, zero_score_sample)
-
-ggplot(reduced_data, aes(x = RR, y = as.factor(Label), color = as.factor(Label))) +
-  geom_jitter(width = 0, height = 0.1, size = 2, alpha = 0.7) +
-  scale_color_manual(values = c("red", "limegreen")) +
-  labs(
-    title = "RR by Label",
-    x = "RR",
-    y = "Label",
-    color = "Label"
-  ) +
-  theme_minimal(base_size = 16) + 
-  theme(
-    plot.title = element_text(size = 20, hjust = 0.5), 
-    axis.title = element_text(size = 16),              
-    axis.text = element_text(size = 14),                              
-    legend.title = element_text(size = 16),            
-    legend.text = element_text(size = 14),                            
-    legend.position = "right"
-  )
-
-ggplot(reduced_data, aes(x = phyper, y = as.factor(Label), color = as.factor(Label))) +
-  geom_jitter(width = 0, height = 0.1, size = 2, alpha = 0.7) +
-  scale_color_manual(values = c("red", "limegreen")) +
-  labs(
-    title = "Hypergeometric Score by Label",
-    x = "phyper",
-    y = "Label",
-    color = "Label"
-  ) +
-  theme_minimal(base_size = 16) + 
-  theme(
-    plot.title = element_text(size = 20, hjust = 0.5), 
-    axis.title = element_text(size = 16),              
-    axis.text = element_text(size = 14),                              
-    legend.title = element_text(size = 16),            
-    legend.text = element_text(size = 14),                            
-    legend.position = "right"
-  )
-
-ggplot(reduced_data, aes(x = CSS, y = as.factor(Label), color = as.factor(Label))) +
-  geom_jitter(width = 0, height = 0.1, size = 2, alpha = 0.7) +
-  scale_color_manual(values = c("red", "limegreen")) +
-  labs(
-    title = "CSS by Label",
-    x = "CSS",
-    y = "Label",
-    color = "Label"
-  ) +
-  theme_minimal(base_size = 16) + 
-  theme(
-    plot.title = element_text(size = 20, hjust = 0.5), 
-    axis.title = element_text(size = 16),              
-    axis.text = element_text(size = 14),                              
-    legend.title = element_text(size = 16),            
-    legend.text = element_text(size = 14),                            
-    legend.position = "right"
-  )
-
-ggplot(reduced_data, aes(x = omega_025, y = as.factor(Label), color = as.factor(Label))) +
-  geom_jitter(width = 0, height = 0.1, size = 2, alpha = 0.7) +
-  scale_color_manual(values = c("red", "limegreen")) +
-  labs(
-    title = "Omega Shrinkage by Label",
-    x = expression(Omega[025]),
-    y = "Label",
-    color = "Label"
-  ) +
-  theme_minimal(base_size = 16) + 
-  theme(
-    plot.title = element_text(size = 20, hjust = 0.5), 
-    axis.title = element_text(size = 16),              
-    axis.text = element_text(size = 14),                              
-    legend.title = element_text(size = 16),            
-    legend.text = element_text(size = 14),                            
-    legend.position = "right"
-  )
-
-custom_pr_curve <- function(data, truth_col, score_col) {
-  data <- data[order(data[[score_col]], decreasing = TRUE), ]
-  
-  is_positive <- data[[truth_col]] == 1
-  
-  cum_true_positives <- cumsum(is_positive)
-  cum_false_positives <- cumsum(!is_positive)
-  
-  total_positives <- sum(is_positive)
-  
-  precision <- cum_true_positives / (cum_true_positives + cum_false_positives)
-  recall <- cum_true_positives / total_positives
-  
-  thresholds <- data[[score_col]]
-  
-  pr_data <- data.frame(
-    threshold = thresholds,
-    precision = precision,
-    recall = recall
-  )
-  
-  return(pr_data)
-}
-
-pr_curves <- list()
-pr_curves$RR <- custom_pr_curve(Metrics_computation_size2_1M_count, "Label", "RR")
-pr_curves$phyper <- custom_pr_curve(Metrics_computation_size2_1M_count, "Label", "phyper")
-pr_curves$CSS <- custom_pr_curve(Metrics_computation_size2_1M_count, "Label", "CSS")
-pr_curves$omega_025 <- custom_pr_curve(Metrics_computation_size2_1M_count, "Label", "omega_025")
-pr_curves_list <- lapply(seq_along(pr_curves), function(i) {
-  pr_curves[[i]] %>%
-    mutate(Curve = paste(names(pr_curves)[i]))
-})
-combined_pr_data <- bind_rows(pr_curves_list)
-
-### For the PRR since it has only a single threshold
-true_positives <- sum(Metrics_computation_size2_1M_count$Label == 1 & Metrics_computation_size2_1M_count$PRR == 1)
-false_positives <- sum(Metrics_computation_size2_1M_count$Label == 0 & Metrics_computation_size2_1M_count$PRR == 1)
-total_positives <- sum(Metrics_computation_size2_1M_count$Label == 1)
-precision_single <- true_positives / (true_positives + false_positives)
-recall_single <- true_positives / total_positives
-
-
-single_pr_point <- data.frame(
-  recall = recall_single,
-  precision = precision_single,
-  Curve = "PRR"
-)
-
-combined_pr_data_with_point <- bind_rows(
-  combined_pr_data,
-  single_pr_point
-)
-
-ggplot(combined_pr_data_with_point, aes(x = recall, y = precision, color = Curve, linetype = Curve)) +
-  geom_line(data = combined_pr_data, linewidth = 1.1) +
-  geom_point(data = single_pr_point, size = 6, shape = 17) +
-  labs(title = "Precision-Recall Curves for Cocktail Score",
-       x = "Recall",
-       y = "Precision",
-       color = "Score",
-       linetype = "Score") +
-  theme_minimal() +
-  guides(
-    color = guide_legend(keywidth = unit(1, "lines"), keyheight = unit(0.8, "lines")),
-    linetype = guide_legend(keywidth = unit(1, "lines"), keyheight = unit(0.8, "lines"))
-  )
-
+{{< include scripts/fig-comparison_score.R >}}
 ```
 
 
-Comparison of scores for cocktail of size-two. Each dot denotes a
+Comparison of scores for cocktails of size-two. Each dot denotes a
 cocktail, and its risk computed on Dataset $D_2$ (@sec-simu_data) is shown on the x-axis. Red dots represent
 cocktails that do not induce adverse event (negative controls), green
-ones represent cocktail inducing adverse event (positive controls). The
+ones represent cocktails inducing adverse event (positive controls). The
 bottom-right corner shows the Precision-Recall curves for each score.
 The perfect classification corresponds to the upper right corner. The
-areas under the curves allow to compare different methods. RR, PRR, Omega shrinkage,
+areas under the curves allow comparison of different methods. RR, PRR, Omega shrinkage,
 phyper and the CSS are defined in @sec-risk-definition.
 :::
 
@@ -654,7 +465,7 @@ phyper and the CSS are defined in @sec-risk-definition.
 Risk distribution was estimated for size-two drug cocktails on Dataset $D_1$ (@sec-simu_data). Estimation of risk distribution for higher
 cocktail sizes is possible but it is nearly impossible to compare it
 to the true distribution as it is computationally prohibitive to obtain.
-The distribution estimated by the MCMC algorithm, is compared to the
+The distribution estimated by the MCMC algorithm is compared to the
 true risk distributions in @fig-distri_simu.
 
 The left panels display the distributions of risk scores for both the
@@ -665,8 +476,6 @@ However, some differences can be observed, particularly in the tail of
 the distribution, where cocktails of higher risks are under-represented
 in the estimated distribution.
 
-<!-- ![Comparison of estimated and true risk distributions for size-two drug cocktails. Left panels show comparison of risk distribution among size-two cocktails, right panels allows to compare probabilities and quantiles of both distributions](figures/simu_plt.svg){#fig-distri_simu}-->
-
 ::: {#fig-distri_simu}
 ```{r}
 #| layout: [[50,50], [50,50]]
@@ -675,77 +484,13 @@ in the estimated distribution.
 #| message: false
 #| echo: false
 
-load("figures/datasets/plot_MCMC_simu.RData")
-
-plot_estimated_distribution <- plot_frequency(
-  aprox_distri_size_2$Filtered_score_distribution[2:length(aprox_distri_size_2$Filtered_score_distribution)],
-  binwidth = .30, sqrt = FALSE, xlab = "H(C)"
-) + 
-  labs(title = "Estimated Distribution of Risk Among Size 2 Cocktails") +
-  ylim(0, 0.35) + 
-  xlim(0, 55) +
-  theme(
-    plot.title = element_text(size = 15, hjust = .5),
-    axis.text.x = element_text(size = 12)
-  )
-plot_estimated_distribution
-
-# true Size 2
-plot_true_distribution <- plot_frequency(
-  true_dist_size2_2_3med$Filtered_score_distribution[2:length(true_dist_size2_2_3med$Filtered_score_distribution)],
-  binwidth = .30, sqrt = FALSE, xlab = "H(C)"
-) + 
-  labs(title = "True Distribution of Risk Among Size 2 Cocktails") +
-  ylim(0, 0.35) + 
-  xlim(0, 55) +
-  theme(
-    plot.title = element_text(size = 15, hjust = .5),
-    axis.text = element_text(size = 12)
-  )
-
-# QQ-plot size 2
-qq_plot_output(aprox_distri_size_2,
-               true_dist_size2_2_3med, filtered = T) +
-  labs(title = str_wrap("QQ Plot of Estimated vs True Distribution of Risk Among Size 2 Cocktail",50)) +
-  theme(
-    plot.title = element_text(size = 16, hjust = .5),
-    axis.text = element_text(size = 13)
-    )
-
-plot_true_distribution
-# PP-plot size 2
-
-estimated_data <- histogramToDitribution(aprox_distri_size_2$Filtered_score_distribution[2:length(aprox_distri_size_2$Filtered_score_distribution)])
-true_data <- histogramToDitribution(true_dist_size2_2_3med$Filtered_score_distribution[2:length(true_dist_size2_2_3med$Filtered_score_distribution)])
-
-ecdf_estimated_data <- ecdf(estimated_data)
-ecdf_true_data <- ecdf(true_data)
-
-common_sorted_data <- sort(unique(c(estimated_data, true_data)))
-cp_estimated_data <- ecdf_estimated_data(common_sorted_data)
-cp_true_data <- ecdf_true_data(common_sorted_data)
-
-pp_df <- data.frame(EmpiricalCP1 = cp_estimated_data, EmpiricalCP2 = cp_true_data)
-
-pp_plot <- ggplot(pp_df, aes(x = EmpiricalCP1, y = EmpiricalCP2)) +
-  geom_point(alpha = 0.5) +
-  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "red") +
-  theme_minimal() +
-  labs(x = "Cumulative Probabilities of Estimated Distribution",
-       y = "Cumulative Probabilities of True Distribution",
-       title = str_wrap("PP Plot of Estimated vs True Distribution of Risk Among Size 2 Cocktail",50)) +
-  theme(
-    plot.title = element_text(size = 16, hjust = .5),
-    axis.text = element_text(size = 13)
-  )
-pp_plot
-
+{{< include scripts/fig-distri_simu.R >}}
 ```
 
 Comparison of estimated and true risk distributions for size-two drug
 cocktails on Dataset $D_1$. Left panels show comparison of risk distribution among
 size-two cocktails, right panels allow comparison of probabilities and
-quantiles of both distributions
+quantiles of both distributions.
 :::
 
 The right panels of @fig-distri_simu present a Probability-Probability
@@ -762,8 +507,8 @@ with reasonable accuracy. The slight underestimations which are present
 for high-risk cocktails are not a problem since the interest of the
 method is to assign p-values. P-values are still reliable as shown in
 the PP-plot, @fig-distri_simu. Consequently, we can assign robust
-empirical p-values to any size-two cocktails based on their risks.
-Furthermore the calibration under the null hypothesis for the p-values
+empirical p-values to any size-two cocktail based on its risk.
+Furthermore, the calibration under the null hypothesis for the p-values
 attributed by the algorithm is assessed in @sec-appB.
 
 ### Genetic Algorithm Output and Clustering
@@ -786,12 +531,10 @@ cocktails were filtered using the empirical p-value by setting a
 threshold of $5\%$. Clustering techniques were then applied to group
 similar cocktails together. As discussed in @sec-clust, the UMAP
 algorithm has been used for dimensionality reduction, followed by the
-DBSCAN clustering method. This post-processing step allows to reduce
-redundancy by grouping cocktails that differed only slightly, such as by
+DBSCAN clustering method. This post-processing step allows reducing
+redundancy by grouping cocktails that differ only slightly, such as by
 substituting a drug for another within the same pharmacological family.
 Such cocktails would have similar medical interpretations.
-
-<!-- ![Clustering of high-risk drug cocktails identified by the genetic algorithm on the simulated dataset. Each dot represents a drug cocktail, true cocktail solutions are the centers of the squares](figures/clustering_simu.svg){#fig-cluster_simu} -->
 
 
 ```{r}
@@ -803,99 +546,15 @@ Such cocktails would have similar medical interpretations.
 #| label: fig-cluster_simu
 #| fig-cap: "Clustering of high-risk drug cocktails identified by the genetic algorithm on the simulated dataset. Each dot represents a drug cocktail, true cocktail solutions are the centers of the squares"
 
-
-load("figures/datasets/clustering_genetic_algorithm.RData")
-
-distribution_list <- list(aprox_distribution_size2_5Mstep_2_3med_t800,
-                          aprox_distribution_size3_60Mstep_2_3med_t800)
-
-file.copy("./figures/datasets/solutions_simu_no_p_value.csv", 
-          "./figures/datasets/tmp_copy_solutions_simu_no_p_value.csv")
-
-p_value_csv_file(distribution_list,
-                 "figures/datasets/tmp_copy_solutions_simu_no_p_value.csv")
-
-
-df_results_genetic_algorithm <- read.csv("figures/datasets/tmp_copy_solutions_simu_no_p_value.csv", sep=";")
-
-file.remove("./figures/datasets/tmp_copy_solutions_simu_no_p_value.csv")
-
-threshold <- .05
-
-df_results_genetic_algorithm_signif <- df_results_genetic_algorithm %>%
-  filter(!is.na(p_value), p_value <= threshold, n.patient.taking.C > 4)
-
-df_results_genetic_algorithm_signif$cocktail_index <- 
-  string_list_to_int_cocktails(ATC_name = ATC_Tree_UpperBound_2014$Name,
-                               lines = df_results_genetic_algorithm_signif$Cocktail)
-
-# We add the true signals of the simulated datasets in order to plot all cocktails
-# after
-empty_rows <- data.frame(matrix(NA,nrow=4,ncol=ncol(df_results_genetic_algorithm_signif)))
-names(empty_rows) <- names(df_results_genetic_algorithm_signif)
-df_results_genetic_algorithm_signif <- rbind(df_results_genetic_algorithm_signif, empty_rows)
-df_results_genetic_algorithm_signif$cocktail_index[[(nrow(df_results_genetic_algorithm_signif)-3)]] <- c(47,1393,2199)
-df_results_genetic_algorithm_signif$cocktail_index[[(nrow(df_results_genetic_algorithm_signif)-2)]] <- c(888,659,2338)
-df_results_genetic_algorithm_signif$cocktail_index[[(nrow(df_results_genetic_algorithm_signif)-1)]] <- c(2590, 2740)
-df_results_genetic_algorithm_signif$cocktail_index[[(nrow(df_results_genetic_algorithm_signif))]] <- c(919,3760)
-df_results_genetic_algorithm_signif$true_cocktail <- 0
-df_results_genetic_algorithm_signif$true_cocktail[(nrow(df_results_genetic_algorithm_signif)-3):(nrow(df_results_genetic_algorithm_signif))] <- 1
-
-
-# Compute the dissimilarity for the clust
-dissimilarity <- get_dissimilarity_from_cocktail_list(df_results_genetic_algorithm_signif$cocktail_index,
-                                                      ATC_Tree_UpperBound_2014)
-
-# Set the UMAP config
-umap_config <- umap.defaults
-umap_config$random_state <- 42
-umap_config$input <- "dist"
-umap_config$min_dist <- .001
-umap_config$n_neighbors <- 13
-
-umap_results <- umap(do.call(rbind, as.matrix(dissimilarity)), config = umap_config)
-
-df_results_genetic_algorithm_signif$X <- umap_results$layout[,1]
-df_results_genetic_algorithm_signif$Y <- umap_results$layout[,2]
-
-# Set up the dbscan config
-dbscan_results <- dbscan(umap_results$layout, eps= 2)
-df_results_genetic_algorithm_signif$cluster <- dbscan_results$cluster
-
-# Plot final results
-ggplot(df_results_genetic_algorithm_signif, aes(
-  x = X, 
-  y = Y, 
-  color = factor(cluster),
-  shape = factor(true_cocktail),
-  size  = factor(true_cocktail)
-)) +
-  geom_point(stroke = 1) + 
-  scale_shape_manual(values = c("0" = 16, "1" = 0)) +  
-  scale_size_manual(values = c("0" = .8, "1" = 4)) +
-  labs(
-    title = "Clustered Points with DBSCAN used on UMAP projection",
-    shape = "True Signal",
-    x = "UMAP1",
-    y = "UMAP2",
-    color = "DBSCAN Cluster"
-  ) +
-  guides(size = "none") +
-  theme_minimal() +
-  theme(
-    plot.title = element_text(size = 12, hjust = 0.5),
-    axis.text = element_text(size = 10),
-    axis.title = element_text(size = 11)
-  )
-
+{{< include scripts/fig-cluster_simu.R >}}
 ```
 
 
 @fig-cluster_simu illustrates the results of the clustering process after mapping the selected cocktails in the plane. Each point represents a drug cocktail, and the $7$ automatically determined clusters are represented by the colors.
 
-The first conclusion is that the clusters are well separated in terms of the editing distance defined in @sec-diversity. The genetic algorithm thus identified seven regions of the cocktails space of high score that are different in terms of interpretation as their cocktails are far away between classes. On the other hand, cocktails in the same clusters are close, indicating a possible pharmacological interpretation of the cluster.
+The first conclusion is that the clusters are well separated in terms of the editing distance defined in @sec-diversity. The genetic algorithm thus identified seven regions of the cocktails space of high score that are different in terms of interpretation as their cocktails are far apart across classes. On the other hand, cocktails in the same clusters are close, indicating a possible pharmacological interpretation of the cluster.
 
-The second conclusion is that the algorithm effectively found the true solutions or at least very similar solutions. Indeed, the embedding of the true solutions yields the four squares, that clearly belong to four different clusters among the seven. The method therefore identifies and separates regions of the cocktail space containing the true solutions. That simulation thus enhances the confidence that investigating the high-score cocktails returned by the methods may allow to detect relevant phenomena.
+The second conclusion is that the algorithm effectively found the true solutions or at least very similar solutions. Indeed, the embedding of the true solutions yields the four squares, that clearly belong to four different clusters among the seven. The method therefore identifies and separates regions of the cocktail space containing the true solutions. That simulation thus enhances the confidence that investigating the high-score cocktails returned by the methods may allow detecting relevant phenomena.
 
 ## Application to the FAERS Spontaneous Reporting Data {#sec-appli-FAERS}
 
@@ -908,8 +567,6 @@ shows the distributions of risk scores, while the right panel presents
 the QQ plot and the PP plot, comparing the quantiles and probabilities
 of both distributions.
 
-<!-- ![Comparison of estimated and true risk distributions for size-two drug cocktails on the FAERS dataset presented @sec-datasets. Left panels show comparison of risk distribution among size-two cocktails, right panels allows to compare probabilities and quantiles of both distributions](figures/FAERS_plt.svg){#fig-qqplot_FAERS} -->
-
 ::: {#fig-qqplot_FAERS}
 ```{r}
 #| layout: [[50,50], [50,50]]
@@ -921,78 +578,13 @@ of both distributions.
 #| fig-height: 5
 #| dpi: 300
 
-load("figures/datasets/plot_MCMC_FAERS.RData")
-
-plot_estimated_distribution <- plot_frequency(
-  aprox_distribution_size2_5Mstep$Filtered_score_distribution[2:length(aprox_distribution_size2_5Mstep$Filtered_score_distribution)],
-  binwidth = .40, sqrt = FALSE, xlab = "H(C)"
-) + 
-  labs(title = "Estimated Distribution of Risk Among Size 2 Cocktails") +
-  ylim(0, 0.20) + 
-  xlim(0, 80) +
-  theme(
-    plot.title = element_text(size = 15, hjust = .5),
-    axis.text = element_text(size = 13)
-  )
-plot_estimated_distribution
-
-# true Size 2
-plot_true_distribution <- plot_frequency(
-  true_distribution_myopathy_size2$Filtered_score_distribution[2:length(true_distribution_myopathy_size2$Filtered_score_distribution)],
-  binwidth = .40, sqrt = FALSE, xlab = "H(C)"
-) + 
-  labs(title = "True Distribution of Risk Among Size 2 Cocktails") +
-  ylim(0, 0.20) + 
-  xlim(0, 80) +
-  theme(
-    plot.title = element_text(size = 15, hjust = .5),
-    axis.text = element_text(size = 13)
-  )
-
-
-# QQ-plot size 2
-qq_plot_output(aprox_distribution_size2_5Mstep,
-               true_distribution_myopathy_size2, filtered = T) +
-  labs(title = str_wrap("QQ Plot of Estimated vs True Distribution of Risk Among Size 2 Cocktail",50)) +
-  theme(
-    plot.title = element_text(size = 15, hjust = .5),
-    axis.text = element_text(size = 13)
-  )
-
-plot_true_distribution
-
-# PP-plot size 2
-
-estimated_data <- histogramToDitribution(aprox_distribution_size2_5Mstep$Filtered_score_distribution[2:length(aprox_distribution_size2_5Mstep$Filtered_score_distribution)])
-true_data <- histogramToDitribution(true_distribution_myopathy_size2$Filtered_score_distribution[2:length(true_distribution_myopathy_size2$Filtered_score_distribution)])
-
-ecdf_estimated_data <- ecdf(estimated_data)
-ecdf_true_data <- ecdf(true_data)
-
-common_sorted_data <- sort(unique(c(estimated_data, true_data)))
-cp_estimated_data <- ecdf_estimated_data(common_sorted_data)
-cp_true_data <- ecdf_true_data(common_sorted_data)
-
-pp_df <- data.frame(EmpiricalCP1 = cp_estimated_data, EmpiricalCP2 = cp_true_data)
-
-pp_plot <- ggplot(pp_df, aes(x = EmpiricalCP1, y = EmpiricalCP2)) +
-  geom_point(alpha = 0.5) +
-  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "red") +
-  theme_minimal() +
-  labs(x = "Cumulative Probabilities of Estimated Distribution",
-       y = "Cumulative Probabilities of True Distribution",
-       title = str_wrap("PP Plot of Estimated vs True Distribution of Risk Among Size 2 Cocktail",50)) +
-  theme(
-    plot.title = element_text(size = 15, hjust = .5),
-    axis.text = element_text(size = 13)
-  )
-pp_plot
+{{< include scripts/fig-qqplot_FAERS.R >}}
 ```
 
 Comparison of estimated and true risk distributions for size-two drug
-cocktails on the FAERS dataset presented @sec-datasets. Left panels show
+cocktails on the FAERS dataset presented in @sec-datasets. Left panels show
 comparison of risk distribution among size-two cocktails, right panels
-allow comparison probabilities and quantiles of both distributions. Left distributions are truncated to $80$ for visualization purposes. A few cocktails have a risk around $300$ as shown on the Y-axis of the QQ plot.
+allow comparison of probabilities and quantiles of both distributions. Left distributions are truncated to $80$ for visualization purposes. A few cocktails have a risk around $300$ as shown on the Y-axis of the QQ plot.
 :::
 
 
@@ -1003,11 +595,11 @@ distribution. Specifically, 15 of the riskiest cocktails in the true
 distribution were not captured by the estimated distribution as we see
 in the QQ plot. This explains the observed shift in the QQ plot at the
 highest quantiles since higher risk cocktails have not been found by the
-MCMC algorithm, highlighting the need of a complementary method like the
-genetic algorithm in order to find riskiest cocktails.
+MCMC algorithm, highlighting the need for a complementary method like the
+genetic algorithm in order to find the riskiest cocktails.
 
 Despite this slight deviation, the empirical p-values remain robust for
-both lower and higher-risk cocktails as shown by the PP-plot in the
+both lower and higher-risk cocktails as shown by the PP-plot in
 @fig-qqplot_FAERS.
 
 ### Genetic Algorithm Output and Clustering
@@ -1028,7 +620,7 @@ drug cocktails compose the final list. Applying Benjamini-Hochberg corrections t
 
 The clustering procedure was applied to the $682$ cocktails, leading to $15$ clusters.
 To validate the results, the first $150$ solutions were tagged with the families they correspond to, if any, without knowledge of the clustering's result. To do so, some drugs or drug families known to be linked to myopathy adverse events were considered, that is hypolipemic drugs,
-Colchicine, corticosteroids, Ciclosporine, Beta blocking agents,
+Colchicine, corticosteroids, Cyclosporine, Beta blocking agents,
 Fluoroquinolones, and anti-malaria drugs [@miernik2024drug;
 @hall2011musculoskeletal; @valiyil2010drug]. 
 
@@ -1061,7 +653,7 @@ cluster $i$ that include the drug or drug family $j$
 
 This table shows the method's capability to detect known ADRs from the FAERS dataset and highlights the ability of the clustering method to group cocktails with similar pharmacological interpretations.
 Specifically, cluster $1$ corresponds to cocktails containing Hypolipemic Drugs, cluster $2$ to Colchicine and Cyclosporine, cluster
-$3$ to beta blocking agents and cluster $6$ to Fluoroquinolones. These
+$3$ to Beta blocking agents and cluster $6$ to Fluoroquinolones. These
 clusters align with previously reported pharmacological associations
 [@miernik2024drug]. Similarly, clusters $4$ and $5$ correspond to
 Domperidone-containing cocktails which have been associated with adverse
@@ -1076,7 +668,7 @@ as shown in the complete solution table.
 ### Post-Treatment Interaction Analysis{#sec-resFirth}
 
 The penalized logistic regression described in @sec-firth was applied to the strongest signals identified by the genetic algorithm to assess whether
-the detected cocktails reflect true pharmacological interactions. For the cyclosporine–colchicine combination, the interaction coefficient remained positive and highly significant ($p = 1.02 × 10^{−6}$) after accounting for individual drug effects, corroborating existing medical literature indicating a potentiation of muscle toxicity [@ducloux1997colchicine].
+the detected cocktails reflect true pharmacological interactions. For the cyclosporine–colchicine combination, the interaction coefficient remained positive and highly significant ($p = 1.02 \times 10^{-6}$) after accounting for individual drug effects, corroborating existing medical literature indicating a potentiation of muscle toxicity [@ducloux1997colchicine].
 
 Conversely, the analysis of the identified size-four cocktail (metformin, prasugrel, bisoprolol, simvastatin) revealed that the risk signal was almost entirely explained by a size-three sub-cocktail (metformin, bisoprolol, simvastatin). In this instance, the addition of prasugrel did not yield a significant additional interaction effect, illustrating the importance of the post-treatment step in identifying the core of a detected signal.
 
@@ -1140,11 +732,11 @@ combinations.
 
 The proposed method is implemented as an R package *emcAdr*, available
 on GitHub and on the CRAN [@R-emcAdr]. A tool allowing the processing of
-quarterly FAERS xml files to csv file directly usable by our method is
+quarterly FAERS XML files to CSV files directly usable by our method is
 also available on
 [GitHub](https://github.com/JulesBa-Git/FAERS-xml-parser).
 
-For researchers and stakeholders it is crucial to remember that our method is hypothesis generating as are other signal detection methods in single medications. These methods aim to generate as few false negative results as possible but with the trade-off of more false positives. This means that any results should firstly be assessed for biological plausibility as well as validated in a more formal causal framework such as RCTs and target trial emulations. Furthermore, while spontaneous reporting systems have a key role in pharmacovigilance, they have known drawbacks as underlined in the introduction. They however provide important knowledge about the safety of drugs, and with our method also drug cocktails.
+For researchers and stakeholders, it is crucial to remember that our method is hypothesis-generating as are other signal detection methods for single medications. These methods aim to generate as few false-negative results as possible but with the trade-off of more false positives. This means that any results should firstly be assessed for biological plausibility as well as validated in a more formal causal framework such as RCTs and target trial emulations. Furthermore, while spontaneous reporting systems have a key role in pharmacovigilance, they have known drawbacks as underlined in the introduction. They however provide important knowledge about the safety of drugs, and with our method also drug cocktails.
 
 # Funding {.unnumbered}
 
@@ -1227,16 +819,22 @@ adverse-event rate on the Dataset $D_1$. The theoretical p-values  following a U
 @fig-calibration shows a histogram of these p-values, which appears
 approximately flat.
 
-![Histogram of p-values for cocktails presumed to satisfy the null
-hypothesis on Dataset $D_1$ (no elevated adverse-event
-risk)](figures/accuracy_under_the_null.svg){#fig-calibration}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "hide"
+#| out-width: "90%"
+#| label: fig-calibration
+#| fig-cap: "Histogram of p-values for cocktails presumed to satisfy the null hypothesis on Dataset $D_1$ (no elevated adverse-event risk)."
+
+{{< include scripts/fig-calibration.R >}}
+```
 
 ## Appendix C : FAERS Clustering {.appendix}
 
 @fig-cluster_FAERS shows the clustering applied to the results of the
 genetic algorithm run on the FAERS datasets.
-
-<!-- ![Clustering of High-Risk Drug Cocktails Identified by the Genetic Algorithm on the FAERS dataset. This Figure allows to see proximity between multiple clusters and better understand why some cluster like the $4$ and $5$ exhibits similarities (Domperidone related cocktails).](figures/clustering_FAERS_Myopathy.svg){#fig-cluster_FAERS}-->
 
 
 ```{r}
@@ -1246,81 +844,9 @@ genetic algorithm run on the FAERS datasets.
 #| results: "hide"
 #| out-width: "90%"
 #| label: fig-cluster_FAERS
-#| fig-cap: "Clustering of High-Risk Drug Cocktails Identified by the Genetic Algorithm on the FAERS dataset. This Figure allows to see proximity between multiple clusters and better understand why some cluster exhibits similarities."
+#| fig-cap: "Clustering of High-Risk Drug Cocktails Identified by the Genetic Algorithm on the FAERS dataset. This figure allows one to see proximity between multiple clusters and better understand why some clusters exhibit similarities."
 
-load("figures/datasets/plot_genetic_FAERS.RData")
-
-distribution_list <- list(drugs_distribution_myopathy,
-                          aprox_distribution_size2_5Mstep,
-                          aprox_distribution_size3_Myopathy_13Mstep,
-                          aprox_distribution_size4_20Mstep,
-                          aprox_distribution_size5_25Mstep,
-                          aprox_distribution_size6_30Mstep)
-
-file.copy("./figures/datasets/solutions_myopathy.csv", 
-          "./figures/datasets/tmp_copy_solutions_myopathy.csv")
-
-p_value_csv_file(distribution_list,
-                 "figures/datasets/tmp_copy_solutions_myopathy.csv")
-
-
-df_results_genetic_algorithm <- read.csv("figures/datasets/tmp_copy_solutions_myopathy.csv", sep=";")
-
-file.remove("./figures/datasets/tmp_copy_solutions_myopathy.csv")
-
-threshold <- .05
-
-df_results_genetic_algorithm_signif <- df_results_genetic_algorithm %>%
-  filter(!is.na(p_value), p_value <= threshold, n.patient.taking.C > 4)
-
-df_results_genetic_algorithm_signif$cocktail_index <- 
-  string_list_to_int_cocktails(ATC_name = ATC_Tree_UpperBound_2024$Name,
-                               lines = df_results_genetic_algorithm_signif$Cocktail)
-
-
-# Compute the dissimilarity for the clust
-dissimilarity <- get_dissimilarity_from_cocktail_list(df_results_genetic_algorithm_signif$cocktail_index,
-                                                      ATC_Tree_UpperBound_2024)
-
-# Set the UMAP config
-umap_config <- umap.defaults
-umap_config$random_state <- 42
-umap_config$input <- "dist"
-umap_config$min_dist <- .01 
-umap_config$n_neighbors <- 8
-
-umap_results <- umap(do.call(rbind, as.matrix(dissimilarity)), config = umap_config)
-
-df_results_genetic_algorithm_signif$X <- umap_results$layout[,1]
-df_results_genetic_algorithm_signif$Y <- umap_results$layout[,2]
-
-# Set up the dbscan config
-dbscan_results <- dbscan(umap_results$layout, eps= 1.2)
-df_results_genetic_algorithm_signif$cluster <- dbscan_results$cluster
-
-# Plot final results
-ggplot(df_results_genetic_algorithm_signif, aes(
-  x = X, 
-  y = Y, 
-  color = factor(cluster)
-)) +
-  geom_point(size = .8) + 
-  labs(
-    title = "Clustered Points with DBSCAN used on UMAP projection",
-    x = "UMAP1",
-    y = "UMAP2",
-    color = "DBSCAN Cluster"
-  ) +
-  guides(size = "none") +
-  theme_minimal() +
-  theme(
-    plot.title = element_text(size = 12, hjust = 0.5), 
-    axis.text = element_text(size = 9),
-    axis.title = element_text(size = 10),
-    legend.text = element_text(size = 8),
-    legend.key.height= unit(0.35, 'cm')
-  )
-
+{{< include scripts/fig-cluster_FAERS.R >}}
 ```
 
 ## Appendix D : Algorithmic Complexity {.appendix}
@@ -1431,7 +957,7 @@ random combination of active substances drawn from the ATC tree leaves.
 
 C1_full patients show a $20$% AE rate vs $0.4$% in the random group. Decoys show baseline AE rates as designed.
 
-Please note that the column of the patient dataframe has to be `PatientATC` and 
+Please note that the columns of the patient dataframe have to be named `PatientATC` and
 `PatientADR`.
 
 ### E.2 Evaluating Cocktail Risk via the Hypergeometric Score {.appendix}
@@ -1482,7 +1008,7 @@ plot_frequency(
 
 # Convert the histogram-style MCMC output to a flat score vector.
 # Index 1 corresponds to score = 0 cocktails, we drop it since we work only on
-# non zero score. 
+# non-zero scores.
 mcmc_null <- histogramToDitribution(mcmc_chain$ScoreDistribution[-1])
 
 # Empirical p-value of a solution cocktail under the estimated null
@@ -1495,7 +1021,7 @@ solution_score <- compute_hypergeom_on_list(
 cat("p-value of  solution C1 (", solution_C1, ") :",
     mean(mcmc_null >= solution_score))
 ```
-The bulk of the distribution sits near zero. The visible spike around $H(C) \approx 4-5$  corresponds to a small-sample artifact, cocktails taken by only one patient where the patient happens to experience the AE. With only $\sim 45$ AE cases over $5000$ patients, such configurations are common enough to form a visible noise peak. Furthermore, with only $5000$ data points, each cocktail tend to be taken by few patient. The solution families generate $H(C)$ values in the $18$-$40$ range, above this peak, which is why the empirical p-value of $C_1$ comes out at $\sim 2.5 \times 10^{-3}$. 
+The bulk of the distribution sits near zero. The visible spike around $H(C) \approx 4-5$ corresponds to a small-sample artifact: cocktails taken by only one patient where the patient happens to experience the AE. With only $\sim 45$ AE cases over $5000$ patients, such configurations are common enough to form a visible noise peak. Furthermore, with only $5000$ data points, each cocktail tends to be taken by few patients. The solution families generate $H(C)$ values in the $18$-$40$ range, above this peak, which is why the empirical p-value of $C_1$ comes out at $\sim 2.5 \times 10^{-3}$. 
 
 For size-two cocktails, computing the *exact* score distribution is tractable and offered by the package via `trueDistributionSizeTwoCocktail()`. This allows assessing the MCMC approximation directly (see also @fig-distri_simu in the body):
 
@@ -1518,7 +1044,7 @@ The PP/QQ-plot comparison would confirm that the MCMC tracks the null faithfully
 
 ### E.4 Identifying High-Risk Cocktails with the Genetic Algorithm {.appendix}
 
-To mirror the multi-run aggregation workflow of @sec-appli_d1, we run the genetic algorithm five times with different seeds and pool the final populations. A single short run typically converges on one of the two solutions. Aggregation across runs increases the chance of recovering both. For full-scale runs on $D_1$, parallel execution scripts compatible with SLURM and similar workflow managers are available in the article's GitHub repository under `figures/scripts/`.
+To mirror the multi-run aggregation workflow of @sec-appli_d1, we run the genetic algorithm five times with different seeds and pool the final populations. A single short run typically converges on one of the two solutions. Aggregation across runs increases the chance of recovering both. For full-scale runs on $D_1$, parallel execution scripts compatible with Slurm and similar workflow managers are available in the article's GitHub repository under `scripts/`.
 
 ```{r}
 #| label: ga-run
@@ -1559,8 +1085,8 @@ For didactic purposes we apply the same UMAP + DBSCAN pipeline as described in @
 ```{r}
 #| label: clustering
 
-# We put solution C1 and C2 in order to compare them to the projection 
-# of found cocktail in the plane.
+# We put solutions C1 and C2 in order to compare them to the projection
+# of found cocktails in the plane.
 ga_cocktails <- c(list(c(47, 1393), c(888, 659)), ga_top$cocktails)
 
 # Compute the distance between cocktails
@@ -1571,7 +1097,7 @@ divergence <- as.matrix(do.call(rbind, divergence))
 
 umap_config = umap::umap.defaults
 umap_config$n_neighbors <- 5
-# Precise UMAP that the input is a dissimilarity matrix
+# Specify to UMAP that the input is a dissimilarity matrix
 umap_config$input <- "dist"
 umap_config$min_dist <- .001
 umap_config$random_state <- 123
@@ -1622,7 +1148,7 @@ The p-value of $0.032$ on the interaction term confirms that this synergistic ef
 It confirms that the genetic algorithm's discovery reflects a true drug–drug interaction rather than the marginal contribution of either family alone.
 
 Genetic algorithm output also contains cocktail $1393$ which contributes 
-significantly to the AE on his own as depicted in the summary.
+significantly to the AE on its own as depicted in the summary.
 
 # Code and Results {.appendix}
 
@@ -1640,7 +1166,7 @@ here :
     [JulesBa-Git/emcAdr](https://github.com/JulesBa-Git/emcAdr).
 -   The code of the methodology is also available on the
     [CRAN](https://cran.r-project.org/web/packages/emcAdr/index.html).
--   The code to obtain figures is available on the `figures/scripts`
+-   The code to obtain figures is available in the `scripts`
     folder of this repository.
 
 # References {.unnumbered}

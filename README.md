@@ -1,11 +1,11 @@
 # Detecting adverse high-order drug combinations from individual case safety reports using computational statistics on disproportionality measures
 Jules Bangard, Einar Holsbø, Kristian Svendsen, Vittorio
 Perduca, Étienne Birmelé
-2026-07-07
+2026-07-15
 
 ### Citation
 
-Submitted to Computo.
+{{< cite-as >}}
 
 ### Badges
 
@@ -13,17 +13,13 @@ Submitted to Computo.
 publish](https://github.com/computorg/published-202605-bangard-adverse/actions/workflows/build.yml/badge.svg)](https://github.com/computorg/published-202605-bangard-adverse/actions/workflows/build.yml)
 [![reviews](https://img.shields.io/badge/review-report-blue)](https://github.com/computorg/published-202605-bangard-adverse/issues?q=is%3Aopen+is%3Aissue+label%3Areview)
 [![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/computorg/published-202605-bangard-adverse)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/computorg/published-202605-bangard-adverse)
-[![DOI:**?meta:citation.doi**](https://img.shields.io/badge/DOI--034E79.svg)](https://doi.org/?meta:citation.doi)
+[![DOI:10.57750/7e54-2z98](https://img.shields.io/badge/DOI-{{< shields-encode citation.doi >}}-034E79.svg)](https://doi.org/10.57750/7e54-2z98)
 [![Creative Commons
 License](https://i.creativecommons.org/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
 
 ### Authors’ affiliations
 
-- [Jules Bangard](https://bangard.xyz) (Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France)
-- [Einar Holsbø](https://einar.sh/) (Faculty of Science and Technology, UiT-The Arctic University of Norway, PO, Box 6050 Stakkevollan, N-9037 Tromsø, Norway)
-- [Kristian Svendsen](https://en.uit.no/ansatte/kristian.svendsen) (Faculty of Health Sciences, UiT the Arctic University of Norway, Tromsø, Norway)
-- [Vittorio Perduca](https://helios2.mi.parisdescartes.fr/~vperduca/) (CNRS, MAP5, Université Paris Cité, F-75006 Paris, France)
-- [Étienne Birmelé](https://irma.math.unistra.fr/~birmele/) (Institut de Recherche Mathématique Avancée, UMR 7501 Université de Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France)
+{{< author-list >}}
 
 ### Abstract
 
