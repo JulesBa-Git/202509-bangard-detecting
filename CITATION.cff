@@ -1,0 +1,68 @@
+cff-version: 1.2.0
+message: If you use or cite this article, please use the metadata provided in 'preferred-citation'.
+title: Detecting adverse high-order drug combinations from individual case safety
+  reports using computational statistics on disproportionality measures
+authors:
+- family-names: Bangard
+  given-names: Jules
+  orcid: https://orcid.org/0009-0007-4670-7860
+  affiliation: Institut de Recherche Mathématique Avancée, UMR 7501 Université de
+    Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France
+- family-names: Holsbø
+  given-names: Einar
+  orcid: https://orcid.org/0000-0002-9728-2088
+  affiliation: Faculty of Science and Technology, UiT-The Arctic University of Norway,
+    PO, Box 6050 Stakkevollan, N-9037 Tromsø, Norway
+- family-names: Svendsen
+  given-names: Kristian
+  orcid: https://orcid.org/0000-0003-3481-3539
+  affiliation: Faculty of Health Sciences, UiT the Arctic University of Norway, Tromsø,
+    Norway
+- family-names: Perduca
+  given-names: Vittorio
+  orcid: https://orcid.org/0000-0003-0339-0473
+  affiliation: CNRS, MAP5, Université Paris Cité, F-75006 Paris, France
+- family-names: Birmelé
+  given-names: Étienne
+  orcid: https://orcid.org/0000-0002-6996-4014
+  affiliation: Institut de Recherche Mathématique Avancée, UMR 7501 Université de
+    Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France
+url: https://computo-journal.org/published-202605-bangard-adverse/
+preferred-citation:
+  type: article
+  title: Detecting adverse high-order drug combinations from individual case safety
+    reports using computational statistics on disproportionality measures
+  authors:
+  - family-names: Bangard
+    given-names: Jules
+    orcid: https://orcid.org/0009-0007-4670-7860
+    affiliation: Institut de Recherche Mathématique Avancée, UMR 7501 Université de
+      Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France
+  - family-names: Holsbø
+    given-names: Einar
+    orcid: https://orcid.org/0000-0002-9728-2088
+    affiliation: Faculty of Science and Technology, UiT-The Arctic University of Norway,
+      PO, Box 6050 Stakkevollan, N-9037 Tromsø, Norway
+  - family-names: Svendsen
+    given-names: Kristian
+    orcid: https://orcid.org/0000-0003-3481-3539
+    affiliation: Faculty of Health Sciences, UiT the Arctic University of Norway,
+      Tromsø, Norway
+  - family-names: Perduca
+    given-names: Vittorio
+    orcid: https://orcid.org/0000-0003-0339-0473
+    affiliation: CNRS, MAP5, Université Paris Cité, F-75006 Paris, France
+  - family-names: Birmelé
+    given-names: Étienne
+    orcid: https://orcid.org/0000-0002-6996-4014
+    affiliation: Institut de Recherche Mathématique Avancée, UMR 7501 Université de
+      Strasbourg et CNRS 7 rue René-Descartes, 67000 Strasbourg, France
+  journal: Computo
+  issn: 2824-7795
+  url: https://computo-journal.org/published-202605-bangard-adverse/
+  publisher:
+    name: French Statistical Society
+  doi: 10.57750/7e54-2z98
+  year: 2026
+doi: 10.57750/7e54-2z98
+date-released: '2026-05-01'
